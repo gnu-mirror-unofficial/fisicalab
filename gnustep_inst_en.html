@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <title>Guia para instalar GNUstep</title>
+  <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
+</head>
+
+<body>
+<h1>Guide to install GNUstep on GNU/Linux systems</h1>
+
+<p>The following packages are requirements to install GNUstep (the names can
+change with the operative system):</p>
+<ul>
+  <li>libffi-dev</li>
+  <li>libssl-dev</li>
+  <li>libxml2-dev</li>
+  <li>libxslt1-dev</li>
+  <li>libjpeg62-dev</li>
+  <li>libtiff4-dev</li>
+  <li>libpng12-dev</li>
+  <li>libungif4-dev</li>
+  <li>libart-2.0-dev</li>
+  <li>libcairo2-dev</li>
+  <li>libfreetype6-dev</li>
+  <li>libx11-dev</li>
+  <li>libxft-dev</li>
+  <li>libxmu-dev</li>
+</ul>
+
+<p>The more easy way to install GNUstep is through the package
+<strong>gnustep-startup</strong>. The last version is available <a
+href="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-startup-0.22.0.tar.gz">here</a>.
+Once extracted the files, on a terminal go to the extracted folder and, with
+root permission:</p>
+
+<p></p>
+
+<p><code>./InstallGNUstep</code></p>
+
+<p></p>
+
+<p>This install GNUstep. Finished the instalation, you need to make sure the
+start of GNUstep's services. To do this, in the file
+<strong>rc.local</strong>, commonly in the path /etc, write the following
+code before the line <strong>exit 0</strong> (you need root permission): </p>
+
+<p></p>
+
+<p><code>GNUSTEP_SYSTEM_ROOT=/usr/GNUstep/System</code></p>
+
+<p><code>if [ -f $GNUSTEP_SYSTEM_ROOT/Tools/gdomap ]; then</code></p>
+
+<p><code>$GNUSTEP_SYSTEM_ROOT/Tools/gdomap</code></p>
+
+<p><code>fi</code></p>
+
+<p></p>
+
+<p>Now, in the file <strong>.profile</strong> or
+<strong>.bash_profile</strong> at your personal folder (this are hidden
+files) write:</p>
+
+<p></p>
+
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+
+<p><code>gdnc</code></p>
+
+<p><code>gpbs</code></p>
+
+<p><code>make_services</code></p>
+
+<p></p>
+
+<p>This is all. We recommend you install the app <strong>System
+Preferences</strong> to configure GNUstep. You can get this <a
+href="ftp://ftp.gnustep.org/pub/gnustep/usr-apps/SystemPreferences-1.0.2.tar.gz">here</a>.</p>
+
+<p></p>
+</body>
+</html>

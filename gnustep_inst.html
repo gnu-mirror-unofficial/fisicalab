@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <title>Guia para instalar GNUstep</title>
+  <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
+</head>
+
+<body>
+<h1>Guia para instalar GNUstep en sistemas GNU/Linux</h1>
+
+<p>Los siguientes paquetes son requisitos para poder instalar GNUstep (los
+nombres pueden cambiar con el sistema operativo):</p>
+<ul>
+  <li>libffi-dev</li>
+  <li>libssl-dev</li>
+  <li>libxml2-dev</li>
+  <li>libxslt1-dev</li>
+  <li>libjpeg62-dev</li>
+  <li>libtiff4-dev</li>
+  <li>libpng12-dev</li>
+  <li>libungif4-dev</li>
+  <li>libart-2.0-dev</li>
+  <li>libcairo2-dev</li>
+  <li>libfreetype6-dev</li>
+  <li>libx11-dev</li>
+  <li>libxft-dev</li>
+  <li>libxmu-dev</li>
+</ul>
+
+<p>La forma más fácil de instalar GNUstep es con el paquete
+<strong>gnustep-startup</strong>. La última versión puede obtenerse <a
+href="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-startup-0.22.0.tar.gz">aquí</a>.
+Una vez que el arhivo ha sido extraido, en una terminal vamos a la carpeta
+extraida y, con permisos de root:</p>
+
+<p></p>
+
+<p><code>./InstallGNUstep</code></p>
+
+<p></p>
+
+<p>Esto inicia la instalación de GNUstep. Terminada la instalación, solo
+falta asegurar el inicio de los servicios de GNUstep al arrancar el sistema.
+Para ello en el archivo <strong>rc.local</strong>, generalmente ubicado en la
+ruta /etc, agregamos el siguiente código antes de <strong>exit 0</strong> (se
+necesitan permisos de root):</p>
+
+<p></p>
+
+<p><code>GNUSTEP_SYSTEM_ROOT=/usr/GNUstep/System</code></p>
+
+<p><code>if [ -f $GNUSTEP_SYSTEM_ROOT/Tools/gdomap ]; then</code></p>
+
+<p><code>$GNUSTEP_SYSTEM_ROOT/Tools/gdomap</code></p>
+
+<p><code>fi</code></p>
+
+<p></p>
+
+<p>Ahora, en el archivo <strong>.profile</strong> o
+<strong>.bash_profile</strong> de tu carpeta personal (observa que estos son
+archivos ocultos) necesitas agregar el siguiente código:</p>
+
+<p></p>
+
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+
+<p><code>gdnc</code></p>
+
+<p><code>gpbs</code></p>
+
+<p><code>make_services</code></p>
+
+<p></p>
+
+<p>Con esto realizado, al iniciar tu sesion los servicios
+<strong>gdomap</strong>, <strong>gdnc</strong> y <strong>gpbs</strong> deben
+estar corriendo. Tal vez desees instalar también la aplicación <strong>System
+Preferences</strong> para configurar GNUstep. Dicha aplicación se puede
+obtener <a
+href="ftp://ftp.gnustep.org/pub/gnustep/usr-apps/SystemPreferences-1.0.2.tar.gz">aquí</a>.</p>
+
+<p></p>
+</body>
+</html>
