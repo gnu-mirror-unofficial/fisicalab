@@ -168,16 +168,22 @@ a[href] {
 <h1
 style="background-;color:#ffffff;text-align:justify;background-color:#0000ff">Bugs
 conocidos en la versión 0.1</h1>
-
-<p style="text-align:justify;">El único bug conocido ocurre con los elementos
-contenedores. Es decir, aquellos que hacen referencia a otros elementos. Por
-ejemplo el elemento <strong>Distancia</strong> en el submódulo <em>Cinemática
-lineal de partículas</em>. Si este elemento es agregado en un problema, pero no
-se le asigna ningún móvil o punto, al querer obtener la respuesta FísicaLab no
-mostrara nada, y el botón de <strong>Resolver</strong> se quedara presionado.
-Dando un clic en el icono de <strong>Borrar todo</strong> el botón
-<strong>Resolver</strong> regresa a su estado normal. Pero, por supuesto, se
-borran todos los elementos del problema. Para evitar esto, no agregue elementos
-contenedores si no los va a utilizar.</p>
+<ol>
+  <li style="text-align:justify;">Este bug ocurre con los elementos
+    contenedores. Es decir, aquellos que hacen referencia a otros elementos.
+    Por ejemplo el elemento <strong>Distancia</strong> en el submódulo
+    <em>Cinemática lineal de partículas</em> . Si este elemento es agregado en
+    un problema, pero no se le asigna ningún móvil o punto, al querer obtener
+    la respuesta FísicaLab no mostrara nada, y el botón de
+    <strong>Resolver</strong> se quedara presionado. Dando un clic en el icono
+    de <strong>Borrar todo</strong> el botón <strong>Resolver</strong> regresa
+    a su estado normal. Pero, por supuesto, se borran todos los elementos del
+    problema. Para evitar esto, no agregue elementos contenedores si no los va
+    a utilizar.</li>
+  <li style="text-align:justify;">Las conversiones que implican pulgadas (inch)
+    son incorrectas. Así como las conversiones para millas por hora (mph) y
+    nudo, son también incorrectas en algunos sistemas de unidades (SI o
+    inglés). Por lo tanto, no se recomienda el uso de dichas conversiones.</li>
+</ol>
 </body>
 </html>
