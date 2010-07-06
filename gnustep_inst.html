@@ -167,79 +167,96 @@ a[href] {
 <body>
 <p style="background-color:#000000;color:#ffffff;font-size: 26pt">GNUSTEP</p>
 
-<h1>Guia para instalar GNUstep en sistemas GNU/Linux</h1>
+<h1 style="text-align:left;margin-left:0;margin-right:auto;">Guia para instalar
+GNUstep en sistemas GNU/Linux</h1>
 
-<p>Los siguientes paquetes son requisitos para poder instalar GNUstep (los
-nombres pueden cambiar con el sistema operativo):</p>
-<ul>
-  <li>libffi-dev</li>
-  <li>libssl-dev</li>
-  <li>libxml2-dev</li>
-  <li>libxslt1-dev</li>
-  <li>libjpeg62-dev</li>
-  <li>libtiff4-dev</li>
-  <li>libpng12-dev</li>
-  <li>libungif4-dev</li>
-  <li>libart-2.0-dev</li>
-  <li>libcairo2-dev</li>
-  <li>libfreetype6-dev</li>
-  <li>libx11-dev</li>
-  <li>libxft-dev</li>
-  <li>libxmu-dev</li>
+<p style="text-align:justify;">Los siguientes paquetes son requisitos para
+poder instalar GNUstep, deben instalarse las librerías y las cabeceras de
+desarrollo:</p>
+<ul style="text-align:justify;">
+  <li>GCC</li>
+  <li>Compilador para Objective C</li>
+  <li>librería ffi</li>
+  <li>librería ssl</li>
+  <li>librería xml</li>
+  <li>librería xslt</li>
+  <li>librería jpeg</li>
+  <li>librería tiff4</li>
+  <li>librería png</li>
+  <li>librería ungif</li>
+  <li>librería cairo</li>
+  <li>librería gmp3</li>
+  <li>freetype</li>
+  <li>librería x11</li>
+  <li>librería xext</li>
+  <li>librería xft</li>
+  <li>librería xmu</li>
+  <li>librería cups</li>
+  <li>librería aspell y aspell-es</li>
 </ul>
 
-<p>La forma más fácil de instalar GNUstep es con el paquete
-<strong>gnustep-startup</strong>. La última versión puede obtenerse <a
-href="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-startup-0.22.0.tar.gz">aquí</a>.
-Una vez que el arhivo ha sido extraido, en una terminal vamos a la carpeta
+<p style="text-align:justify;">La forma más fácil de instalar GNUstep es con el
+paquete <strong>gnustep-startup</strong>. La última versión puede obtenerse <a
+href="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-startup-0.25.0.tar.gz">aquí</a>.
+Una vez que el archivo ha sido extraido, en una terminal vamos a la carpeta
 extraida y, con permisos de root:</p>
 
-<p></p>
+<p style="text-align:justify;"></p>
 
-<p><code>./InstallGNUstep</code></p>
+<p style="text-align:justify;"><code>./InstallGNUstep</code></p>
 
-<p></p>
+<p style="text-align:justify;"></p>
 
-<p>Esto inicia la instalación de GNUstep. Terminada la instalación, solo falta
-asegurar el inicio de los servicios de GNUstep al arrancar el sistema. Para
-ello en el archivo <strong>rc.local</strong>, generalmente ubicado en la ruta
-/etc, agregamos el siguiente código antes de <strong>exit 0</strong> (se
-necesitan permisos de root):</p>
+<p style="text-align:justify;">Esto inicia la configuración de GNUstep. Una vez
+terminada la configuración, se presenta un resumen de la misma indicando algun
+error en caso de que falte alguna libraría. Si todo esta bien presionamos ENTER
+para continuar con la instalación. Terminada esta, solo falta asegurar el
+inicio de los servicios de GNUstep al arrancar el sistema. Para ello en el
+archivo <strong>rc.local</strong>, generalmente ubicado en la ruta /etc,
+agregamos el siguiente código antes de <strong>exit 0</strong> (se necesitan
+permisos de root):</p>
 
-<p></p>
+<p style="text-align:justify;"></p>
 
-<p><code>GNUSTEP_SYSTEM_ROOT=/usr/GNUstep/System</code></p>
+<p
+style="text-align:justify;"><code>GNUSTEP_SYSTEM_ROOT=/usr/GNUstep/Local</code></p>
 
-<p><code>if [ -f $GNUSTEP_SYSTEM_ROOT/Tools/gdomap ]; then</code></p>
+<p style="text-align:justify;"><code>if [ -f $GNUSTEP_SYSTEM_ROOT/Tools/gdomap
+]; then</code></p>
 
-<p><code>$GNUSTEP_SYSTEM_ROOT/Tools/gdomap</code></p>
+<p
+style="text-align:justify;"><code>$GNUSTEP_SYSTEM_ROOT/Tools/gdomap</code></p>
 
-<p><code>fi</code></p>
+<p style="text-align:justify;"><code>fi</code></p>
 
-<p></p>
+<p style="text-align:justify;"></p>
 
-<p>Ahora, en el archivo <strong>.profile</strong> o
+<p style="text-align:justify;">Ahora, en el archivo <strong>.profile</strong> o
 <strong>.bash_profile</strong> de tu carpeta personal (observa que estos son
 archivos ocultos) necesitas agregar el siguiente código:</p>
 
-<p></p>
+<p style="text-align:justify;"></p>
 
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+<p style="text-align:justify;"><code>.
+/usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
 
-<p><code>gdnc</code></p>
+<p style="text-align:justify;"><code>gdnc</code></p>
 
-<p><code>gpbs</code></p>
+<p style="text-align:justify;"><code>gpbs</code></p>
 
-<p><code>make_services</code></p>
+<p style="text-align:justify;"><code>make_services</code></p>
 
-<p></p>
+<p style="text-align:justify;"></p>
 
-<p>Con esto realizado, al iniciar tu sesion los servicios
-<strong>gdomap</strong>, <strong>gdnc</strong> y <strong>gpbs</strong> deben
-estar corriendo. Tal vez desees instalar también la aplicación <strong>System
-Preferences</strong> para configurar GNUstep. Dicha aplicación se puede obtener
-<a
-href="ftp://ftp.gnustep.org/pub/gnustep/usr-apps/SystemPreferences-1.0.2.tar.gz">aquí</a>.</p>
+<p style="text-align:justify;">Con esto realizado, al iniciar tu sesion los
+servicios <strong>gdomap</strong>, <strong>gdnc</strong> y
+<strong>gpbs</strong> deben estar corriendo. Tal vez desees instalar también la
+aplicación <strong>System Preferences</strong> para configurar GNUstep. Dicha
+aplicación se puede obtener <a
+href="ftp://ftp.gnustep.org/pub/gnustep/usr-apps/SystemPreferences-1.1.0.tar.gz">aquí</a>.
+Así como la aplicacion <strong>IconManager</strong>, muy útil en escritorios
+Gnome, KDE, Xfce, etc. Y que puede descargarse <a
+href="ftp://ftp.gnustep.org/pub/gnustep/contrib/IconManager-0.2.tar.gz">aquí</a>.</p>
 
 <p></p>
 </body>

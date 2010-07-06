@@ -165,8 +165,9 @@ a[href] {
 </head>
 
 <body>
-<h1 style="background-;color:#ffffff;background-color:#0000ff">Guide to install
-FísicaLab on Windows (only 32 bits)</h1>
+<h1
+style="background-;color:#ffffff;background-color:#0000ff;text-align:justify;">Guide
+to install on Windows (only 32 bits)</h1>
 
 <p>You need donwload the following packages:</p>
 
@@ -177,20 +178,17 @@ FísicaLab on Windows (only 32 bits)</h1>
     <tr>
       <td><ul>
           <li><a
-            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-system-0.23.0-setup.exe">GNUstep
-            System.</a></li>
+            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-msys-system-0.25.0-setup.exe">GNUstep
+            System</a></li>
           <li><a
-            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.23.0-setup.exe">GNUstep
-            Core.</a></li>
+            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.25.0-setup.exe">GNUstep
+            Core</a></li>
           <li><a
-            href="http://gnuwin32.sourceforge.net/downlinks/gsl.php">GSL.</a></li>
-          <li><a
-            href="http://mirror.its.uidaho.edu/pub/savannah/fisicalab/FisicaLab-0.1-setup.exe">FísicaLab-setup.</a></li>
+            href="http://download.savannah.gnu.org/releases-noredirect/fisicalab/FisicaLab-0.2-setup.exe">FísicaLab-0.2</a></li>
         </ul>
       </td>
-      <td><a href="cap_windows.html"><img alt="FísicaLab Windows"
-        src="imagenes/fisicalab_win_icono.jpg" width="568" height="426"
-      /></a></td>
+      <td><img alt="Windows" src="imagenes/English/WindowsEng2.png" width="650"
+        /></td>
     </tr>
   </tbody>
 </table>
@@ -199,37 +197,26 @@ FísicaLab on Windows (only 32 bits)</h1>
 
 <p style="text-align:justify;">Now install first <strong>GNUstep
 System</strong>, without change the options. Second install <strong>GNUstep
-Core</strong>, without change the options too. This make a folder call
-<strong>GNUstep</strong> on the hard disck. Inside this folder, install
-<strong>GSL</strong>. Now install <strong>FisicaLab-setup</strong>, without
-change the options. Finally, in the path <em>/GNUstep/Gnuwin32/bin</em> copy
-the files:</p>
-<ul>
-  <li>libgsl.dll</li>
-  <li>libgslcblas.dll</li>
-</ul>
-
-<p>And paste these on the path <em>/GNUstep/GNUstep/System/Tools</em>. Now, you
-can launch the app from <em>Applications -&gt; GNUstep -&gt; Apps -&gt;
+Core</strong>, we recommend you active the Windows theme (see image below). Now
+install <strong>FisicaLab-0.2</strong>, without change the options. Now, you
+can launch the app from <em>Start -&gt; Applications -&gt; FisicaLab -&gt;
 FisicaLab</em>.</p>
 
-<h1>About the character @</h1>
+<p style="text-align:center;margin-left:auto;margin-right:auto;"><img
+alt="WindowsTheme" src="imagenes/windowsTheme.png" width="435" height="232"
+/></p>
 
-<p>On Windows systems you can't write the character <strong>@</strong>, needed
-to use conversion factors, with the combination <strong>Alt-164</strong>. You
-need write this character with the key <strong>Alt Gr</strong> or
-<strong>Alt</strong> in combination with another alfanumeric key.</p>
-
-<h1>Known problems on Windows</h1>
-
-<p>Currently GNUstep have some bugs on Windows, these cause some problems, none
-critical. Here there is a list of these problems:</p>
+<h2
+style="background-;color:#ff0000;text-align:justify;background-color:#ffff00">Notes</h2>
 <ul>
-  <li>Tooltips don't work.</li>
-  <li>The cursor don't change when you add or move elements on the
-  chalkboard.</li>
+  <li style="text-align:justify;">On Windows systems you can't write the
+    character <strong>@</strong>, needed to use conversion factors, with the
+    combination <strong>Alt-164</strong>. You need write this character with
+    the key <strong>Alt Gr</strong> in combination with another alfanumeric
+  key.</li>
+  <li style="text-align:justify;">The mouse pointer don't change when you add
+    or move elements on the chalkboard, as must be. This is a bug on
+  GNUstep.</li>
 </ul>
-
-<p></p>
 </body>
 </html>

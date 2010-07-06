@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <title>Instalación</title>
+  <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
+</head>
+
+<body>
+<h1
+style="text-align:left;margin-left:0;margin-right:auto;color:#ffffff;background-color:#0000ff">Instalación
+en sistemas GNU/Linux, BSD, ...</h1>
+
+<p style="text-align:justify;">FísicaLab necesita de GNUstep (Ver la <a
+href="gnustep_inst.html">Guía de instalación de GNUstep</a>) y de las librerías
+<a href="http://www.gnu.org/software/gsl/">GSL</a> (incluidas las cabeceras de
+desarrollo). Cumplidos estos requisitos, en una terminal nos ubicamos en la
+carpeta del código y tipeamos <strong>make</strong> y, con permisos de
+superusuario, <strong>make install</strong>. Se espera que las cabeceras de GSL
+esten en la ruta <strong>/usr/include</strong> y las librerías en
+<strong>/lib/gsl</strong>. De no ser así, debe modificarse el archivo
+<strong>G<em>NUmakefile.preamble</em></strong> acorde a las rutas apropiadas.
+La aplicación se corre con el comando <strong>openapp FisicaLab</strong>.</p>
+
+<p></p>
+
+<p style="text-align:justify;">Si no se esta utilizando el escritorio
+WindowMaker, recomendamos instalar la herramienta <a
+href="http://gnustep.wordpress.com/about/iconmanager/">IconManager</a> para una
+mejor experiencia (ver el archivo INSTALACION para las instrucciones de
+instalación). Asimismo, recomendamos instalar el tema <a
+href="http://download.savannah.gnu.org/releases-noredirect/fisicalab/Silver.theme.tar.gz">Silver</a>
+para una apariencia más adaptada a estos escritorios. Simplemente descomprima
+el paquete y copielo en el directorio
+<strong>~/GNUstep/Library/Themes/</strong> de su carpeta personal. Y establezca
+el tema mediante la aplicación <strong>SystemPreferences.app</strong>, o
+mediante una terminal con:</p>
+
+<p></p>
+
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+
+<p><code>defaults write NSGlobalDomain GSTheme Silver</code></p>
+
+<p></p>
+
+<p>O, si desea que únicamente FísicaLab utilice este tema:</p>
+
+<p></p>
+
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+
+<p><code>defaults write FisicaLab GSTheme Silver</code></p>
+
+<p></p>
+</body>
+</html>

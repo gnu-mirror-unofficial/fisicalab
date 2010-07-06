@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <title>Install</title>
+  <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
+</head>
+
+<body>
+<h1
+style="background-;color:#ffffff;text-align:justify;background-color:#0000ff">Install
+on systems GNU/Linux, BSD, ...</h1>
+
+<p style="text-align:justify;">FísicaLab need GNUstep (See <a
+href="gnustep_inst_en.html">Guide to install GNUstep</a>) and <a
+href="http://www.gnu.org/software/gsl/">GSL</a> libraries (the dev headers
+too). With these requirements, on a terminal <strong>cd</strong> to the source
+directory and execute <strong>make</strong> and, with root permissions,
+<strong>make install</strong>. It is expected that the GSL headers are in the
+path <strong>/usr/include</strong> and libraries in <strong>/lib/gsl</strong>.
+Otherwise, modify the file <em><strong>GNUmakefile.preamble</strong></em>
+according to the proper paths. To run the application type <strong>openapp
+FisicaLab</strong>. </p>
+
+<p></p>
+
+<p style="text-align:justify;">If you're using the WindowMaker desktop, we
+recommend install the <a
+href="ftp://ftp.gnustep.org/pub/gnustep/contrib/IconManager-0.2.tar.gz">IconManager</a>
+tool for a better experience (see the INSTALL file for installation
+instructions). We also recommend install the theme <a
+href="http://download.savannah.gnu.org/releases-noredirect/fisicalab/Silver.theme.tar.gz">Silver</a>
+a more suited theme to these desktops. Just unzip the package and copy it in
+the <strong>~/GNUstep/Library/Themes/</strong> in your user folder. And set the
+theme on <strong>SystemPreferences.app</strong>, or in a terminal with:</p>
+
+<p></p>
+
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+
+<p><code>defaults write NSGlobalDomain GSTheme Silver</code></p>
+
+<p></p>
+
+<p>Or, if you wish that only FísicaLab use this theme:</p>
+
+<p></p>
+
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+
+<p><code>defaults write FisicaLab GSTheme Silver</code></p>
+</body>
+</html>

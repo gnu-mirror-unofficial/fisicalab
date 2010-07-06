@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
@@ -165,8 +163,9 @@ a[href] {
 </head>
 
 <body>
-<h1 style="background-;color:#ffffff;background-color:#0000ff">Guia de
-instalación en Windows (sólo 32 bits)</h1>
+<h1
+style="background-;color:#ffffff;background-color:#0000ff;text-align:justify;">Guia
+de instalación en Windows (sólo 32 bits)</h1>
 
 <p>Para la instalación se deben descargar los siguientes paquetes:</p>
 
@@ -177,20 +176,17 @@ instalación en Windows (sólo 32 bits)</h1>
     <tr>
       <td><ul>
           <li><a
-            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-system-0.23.0-setup.exe">GNUstep
-            System.</a></li>
+            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-msys-system-0.25.0-setup.exe">GNUstep
+            System</a></li>
           <li><a
-            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.23.0-setup.exe">GNUstep
-            Core.</a></li>
+            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.25.0-setup.exe">GNUstep
+            Core</a></li>
           <li><a
-            href="http://gnuwin32.sourceforge.net/downlinks/gsl.php">GSL.</a></li>
-          <li><a
-            href="http://download.savannah.gnu.org/releases-noredirect/fisicalab/FisicaLab-0.1-setup.exe">FísicaLab-setup.</a></li>
+            href="http://download.savannah.gnu.org/releases-noredirect/fisicalab/FisicaLab-0.2-setup.exe">FísicaLab-0.2</a></li>
         </ul>
       </td>
-      <td><a href="cap_windows.html"><img alt="Windows"
-        src="imagenes/fisicalab_win_icono.jpg" width="568" height="426"
-      /></a></td>
+      <td><img alt="Windows" src="imagenes/Espanol/Windows2.png" width="650"
+      /></td>
     </tr>
   </tbody>
 </table>
@@ -199,46 +195,28 @@ instalación en Windows (sólo 32 bits)</h1>
 
 <p style="text-align:justify;">Una vez descargados, se instala primero
 <strong>GNUstep System</strong>, sin cambiar ninguna de las opciones.
-Seguidamente se instala <strong>GNUstep Core</strong>, tampoco se cambian las
-opciones. Estos intaladores crean una carpeta llamada <strong>GNUstep</strong>
-directamente en el disco duro. Es en esta carpeta donde debe instalarse
-<strong>GSL</strong>. Por último se instala <strong>FisicaLab-setup</strong>,
-sin cambiar las opciones. Ahora, en la ruta <em>/GNUstep/Gnuwin32/bin</em> se
-copian los archivos:</p>
+Seguidamente se instala <strong>GNUstep Core</strong>, se recomienda activar el
+tema para windows seleccionando la casilla correspondiente (ver la imagen
+abajo). Por último se instala <strong>FisicaLab-0.2-setup</strong>, sin cambiar
+las opciones. Instalada la aplicación, se puede acceder en <em>Inicio -&gt;
+Aplicaciones -&gt; FisicaLab -&gt; FisicaLab</em>.</p>
+
+<p style="text-align:center;margin-left:auto;margin-right:auto;"><img
+alt="WindowsTheme" src="imagenes/windowsTheme.png" width="435" height="232"
+/></p>
+
+<h1 style="text-align:justify;color:#ff0000;background-color:#ffff00">Notas
+importantes</h1>
 <ul>
-  <li>libgsl.dll</li>
-  <li>libgslcblas.dll</li>
+  <li style="text-align:justify;">El carácter <strong>@</strong>, necesario
+    para utilizar factores de conversión, no puede ingresarse utilizando la
+    combinación <strong>Alt-164</strong>. Este debe ingresarse utilizando la
+    tecla <strong>Alt Gr</strong> en combinación con alguna otra tecla
+    alfanúmerica (en teclados latinoamericanos la tecla alfanúmerica para el
+  2).</li>
+  <li style="text-align:justify;">Debido a un bug de GNUstep en Windows el
+    puntero del mouse no cambia como deberia hacerlo al agregar un elemento a
+    la pizarra o al mover un elemento en esta.</li>
 </ul>
-
-<p>Y se pegan en la ruta <em>/GNUstep/GNUstep/System/Tools</em>. Finalmente,
-para utilizar la aplicación en español, se abre el <em>Shell</em> de GNUstep en
-<em>Aplicaciones -&gt; GNUstep -&gt; Shell</em>, y se escribe:</p>
-
-<p><code>defaults write NSGlobalDomain NSLanguages "(Spanish)"</code></p>
-
-<p>Se cierra el <em>Shell</em>, y ahora la aplicación se puede acceder en
-<em>Aplicaciones -&gt; GNUstep -&gt; Apps -&gt; FisicaLab</em>.</p>
-
-<h1>Acerca del caracter @</h1>
-
-<p>En sistemas Windows el caracter <strong>@</strong>, necesario para utilizar
-factores de conversión, no puede ingresarse utilizando la combinación
-<strong>Alt-164</strong>. Este debe ingresarse utilizando la tecla <strong>Alt
-Gr</strong> o <strong>Alt</strong> en combinación con alguna otra tecla
-alfanúmerica.</p>
-
-<h1>Problemas conocidos en Windows</h1>
-
-<p>Actualmente GNUstep tiene aun algunos bugs en Windows, los cuales presentan
-algunos problemas. Sin embargo, ninguno de ellos es crítico. Estos se presentan
-a continuación:</p>
-<ul>
-  <li>Las etiquetas no funcionan (si se coloca el mouse sobre algun botón, se
-    ve un recuadro pero no el texto de descripción).</li>
-  <li>El cursor no cambia (a la hora de agregar elementos a la pizarra, o mover
-    elementos, el cursor no cambia como debería ser).</li>
-</ul>
-
-<p></p>
 </body>
 </html>
