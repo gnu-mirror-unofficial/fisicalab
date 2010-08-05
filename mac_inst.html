@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <title>Instalación en Mac OS</title>
+  <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
+  <style type="text/css" title="Amaya theme">
+/* Modern style for Amaya Editor Lite */
+
+/* default rules for the whole document */
+body {
+    font-size: 12pt;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: black;
+    background-color: white;
+    line-height: 1.2em;
+    margin-left: 4em;
+    margin-right: 2em;
+   }
+
+/* paragraphs */
+p  {
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+   }
+
+/* headings */
+h1 {
+    font-size: 180%;
+    font-weight: bold;
+    font-style: normal;
+    font-variant: small-caps;
+    text-align: left;
+    padding: 0;
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+   }
+h2 {
+    font-size: 150%;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0;
+    margin-top: 1.5em;
+    margin-bottom: 1.1em;
+   }
+h3 {
+    font-size: 130%;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0;
+    margin-top: 1.3em;
+    margin-bottom: 1.1em;
+   }
+h4 {
+    font-size: 110%;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0;
+    margin-top: 1.1em;
+    margin-bottom: 1.1em;
+   }
+h5 {
+    font-size: 100%;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+    font-style: italic;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+
+/* divisions */
+div {
+    padding: 0;
+    margin-top: 0em;
+    margin-bottom: 0em;
+   }
+
+/* lists */
+ul, ol {
+    padding: 0 0 0 3em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+ul ul, ol ol, ul ol, ol ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+li {
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+   }
+li p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+dl {
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+   }
+dl dl {
+    margin-top: 0em;
+    margin-bottom: 0em;
+   }
+dt {
+    padding: 0;
+    font-weight: bold;
+    margin-top: .3em;
+    margin-bottom: .3em;
+   }
+dd {
+    padding: 0;
+    margin-top: .3em;
+    margin-left: 3em;
+    margin-bottom: .3em;
+   }
+dl p {
+    margin-top: .3em;
+    margin-bottom: .3em;
+   }
+
+/* inline */
+strong {
+    font-weight: bold;
+   }
+em {
+    font-style: italic;
+   }
+code {
+    font-family: Courier New, Courier, monospace;
+   }
+ins {
+    background-color: yellow;
+    text-decoration: underline;
+   }
+del {
+    text-decoration: line-through;
+   }
+
+/* anchors */
+a[href] {
+    color: blue;
+    text-decoration: underline;
+   }
+
+/* end */
+  </style>
+</head>
+
+<body>
+<h1
+style="background-;text-align:justify;color:#ffffff;background-color:#0000ff">Guia
+de instalación en Mac OS</h1>
+
+<p style="text-align:justify;">Usted necesita tener instalado <a
+href="http://developer.apple.com/technologies/xcode.html">Xcode</a> para poder
+utilizar herramientas de compilación, así como SVN. Una vez instaladas estas
+herramientas, debe instalar los siguientes requisitos:</p>
+<ul style="text-align:justify;">
+  <li>Las librerías <a href="http://www.gnu.org/software/gsl/">GSL</a>.</li>
+  <li>El paquete <a
+    href="http://ftpmain.gnustep.org/pub/gnustep/core/gnustep-make-2.4.0.tar.gz">gnustep-make</a>.</li>
+  <li>El framework <a
+    href="http://www.gnustep.it/Renaissance/index.html">Renaissance</a> desde
+    SVN: 
+    <p><code>svn co http://svn.gna.org/svn/gnustep/libs/renaissance/trunk/
+    Renaissance</code></p>
+  </li>
+</ul>
+
+<p>Consulte las intrucciones de instalación de cada uno de estos paquetes.</p>
+
+<p style="text-align:justify;">Ahora descarge y extraiga el paquete <a
+href="http://mirrors.igsobe.com/nongnu/fisicalab/FisicaLab-Mac-0.2.tar.gz">FísicaLa-Mac-0.2</a>.
+Y en una terminal ubiquese en la carpeta extraida y corra primero el script de
+GNUstep (problamente en /Library/Makefiles/GNUstep.sh) con:</p>
+
+<p style="text-align:justify;"></p>
+
+<p style="text-align:justify;margin-left:2em"><code>.
+/Library/Makefiles/GNUstep.sh</code></p>
+
+<p></p>
+
+<p>Luego compile la aplicación:</p>
+
+<p> </p>
+
+<p style="text-align:justify;margin-left:2em"><code>make</code></p>
+
+<p></p>
+
+<p style="text-align:justify;">Y con privilegios de superusuario:</p>
+
+<p></p>
+
+<p style="text-align:justify;margin-left:2em;"><code>make install</code></p>
+
+<p></p>
+
+<p style="text-align:justify;">Una vez instalado el programa puede ejecutarse
+con:</p>
+
+<p style="text-align:justify;"></p>
+
+<p style="text-align:justify;margin-left:2em;"><code>open FisicaLab</code></p>
+
+<p style="text-align:justify;"></p>
+</body>
+</html>
