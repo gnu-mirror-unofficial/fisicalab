@@ -17,11 +17,12 @@ on systems GNU/Linux, BSD, ...</h1>
   <col />
   <tbody>
     <tr>
-      <td style="background-color:#9e8fec"><strong>FísicaLab 0.2 is available
-        in the following distros:</strong></td>
+      <td
+        style="background-;color:#001a64;background-color:#c594d7"><strong>FísicaLab
+        0.2 is available in the following distros:</strong></td>
     </tr>
     <tr>
-      <td style="background-color:#9e8fec"><ul>
+      <td style="background-;color:#001a64;background-color:#c594d7"><ul>
           <li><strong>Gentoo</strong></li>
           <li><strong>OpenBSD</strong></li>
         </ul>
@@ -37,7 +38,7 @@ on systems GNU/Linux, BSD, ...</h1>
 <p></p>
 <ul>
   <li><a
-    href="http://mirror.its.uidaho.edu/pub/savannah/fisicalab/FisicaLab-0.2.tar.gz">FisicaLab-0.2</a></li>
+    href="http://download.savannah.gnu.org/releases/fisicalab/FisicaLab-0.2.1.tar.gz">FisicaLab-0.2.1</a></li>
 </ul>
 
 <p></p>
@@ -54,20 +55,33 @@ directory and run the GNUstep script:</p>
 
 <p></p>
 
-<p style="text-align:justify;">then execute <strong>make</strong> and, with
-root permissions, <strong>make install</strong>. It is expected that the GSL
-headers are in the path <strong>/usr/include</strong> and libraries in
-<strong>/lib/gsl</strong>. Otherwise, modify the file
-<em><strong>GNUmakefile.preamble</strong></em> according to the proper paths.
-To run the application type <strong>openapp FisicaLab</strong>. </p>
+<p><code>(in some systems .
+/usr/share/GNUstep/System/Library/Makefiles/GNUstep.sh, or depending of GNUstep
+installation)</code></p>
 
 <p></p>
 
-<p style="text-align:justify;">If you aren't using the WindowMaker desktop, we
-recommend install the <a
-href="ftp://ftp.gnustep.org/pub/gnustep/contrib/IconManager-0.2.tar.gz">IconManager</a>
-tool for a better experience (see the INSTALL file for installation
-instructions). We also recommend install the theme <a
+<p style="text-align:justify;">then execute <strong>make</strong> and, with
+root permissions:</p>
+
+<p></p>
+
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+
+<p><code>make install</code></p>
+
+<p></p>
+
+<p style="text-align:justify;">It is expected that the GSL headers are in the
+path <strong>/usr/include</strong> and libraries in <strong>/lib/gsl</strong>.
+Otherwise, modify the file <em><strong>GNUmakefile.preamble</strong></em>
+according to the proper paths. To run the application type <strong>openapp
+FisicaLab</strong>. </p>
+
+<p></p>
+
+<p style="text-align:justify;">If you aren't using the WindowMaker desktop
+(this means GNOME, KDE, ...), we recommend install the theme <a
 href="http://wiki.gnustep.org/images/6/6d/Silver.theme.tar.bz2">Silver</a> a
 more suited theme to these desktops. Just unzip the package and copy it in the
 <strong>~/GNUstep/Library/Themes/</strong> in your user folder. And set the
@@ -88,5 +102,19 @@ theme on <strong>SystemPreferences.app</strong>, or in a terminal with:</p>
 <p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
 
 <p><code>defaults write FisicaLab GSTheme Silver</code></p>
+
+<p></p>
+
+<p>In desktops like GNOME, KDE, ... we also recommend this configuration:</p>
+
+<p></p>
+
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+
+<p><code>defaults write NSGlobalDomain GSAppOwnsMiniwindow NO</code></p>
+
+<p><code>defaults write NSGlobalDomain GSSuppressAppIcon YES</code></p>
+
+<p></p>
 </body>
 </html>

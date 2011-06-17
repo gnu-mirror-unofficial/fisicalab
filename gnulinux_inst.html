@@ -18,12 +18,12 @@ en sistemas GNU/Linux, BSD, ...</h1>
   <tbody>
     <tr>
       <td
-        style="background-;color:#3000ff;background-color:#9e8fec"><strong>FísicaLab
+        style="background-;color:#001a64;background-color:#c594d7"><strong>FísicaLab
         0.2 esta disponible en los repositorios oficiales de las siguientes
         distribuciones:</strong></td>
     </tr>
     <tr>
-      <td style="background-;color:#3000ff;background-color:#9e8fec"><ul>
+      <td style="background-;color:#001a64;background-color:#c594d7"><ul>
           <li><strong>Gentoo</strong></li>
           <li><strong>OpenBSD</strong></li>
         </ul>
@@ -39,7 +39,7 @@ en sistemas GNU/Linux, BSD, ...</h1>
 <p></p>
 <ul>
   <li><a
-    href="http://mirror.its.uidaho.edu/pub/savannah/fisicalab/FisicaLab-0.2.tar.gz">FisicaLab-0.2</a></li>
+    href="http://download.savannah.gnu.org/releases/fisicalab/FisicaLab-0.2.1.tar.gz">FisicaLab-0.2.1</a></li>
 </ul>
 
 <p></p>
@@ -52,14 +52,30 @@ carpeta del código y corremos primero el script de GNUstep:</p>
 
 <p></p>
 
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh </code></p>
+
+<p></p>
+
+<p><code>(en algunos sistemas puede ser .
+/usr/share/GNUstep/System/Library/Makefiles/GNUstep.sh dependiendo de como se
+instalo GNUstep)</code></p>
 
 <p></p>
 
 <p style="text-align:justify;">Luego ejecutamos <strong>make</strong> y, con
-permisos de superusuario, <strong>make install</strong>. Se espera que las
-cabeceras de GSL esten en la ruta <strong>/usr/include</strong> y las librerías
-en <strong>/lib/gsl</strong>. De no ser así, debe modificarse el archivo
+permisos de superusuario:</p>
+
+<p></p>
+
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh </code></p>
+
+<p><code>make install</code></p>
+
+<p></p>
+
+<p style="text-align:justify;">Se espera que las cabeceras de GSL esten en la
+ruta <strong>/usr/include</strong> y las librerías en
+<strong>/lib/gsl</strong>. De no ser así, debe modificarse el archivo
 <strong>G<em>NUmakefile.preamble</em></strong> acorde a las rutas apropiadas.
 La aplicación se corre con el comando <strong>openapp FisicaLab</strong>. Para
 poder utilizar FísicaLab en español, en una terminal ejecutamos:</p>
@@ -73,15 +89,13 @@ poder utilizar FísicaLab en español, en una terminal ejecutamos:</p>
 <p></p>
 
 <p style="text-align:justify;">Si no se esta utilizando el escritorio
-WindowMaker, recomendamos instalar la herramienta <a
-href="http://gnustep.wordpress.com/about/iconmanager/">IconManager</a> para una
-mejor experiencia (ver el archivo INSTALACION para las instrucciones de
-instalación). Asimismo, recomendamos instalar el tema <a
+WindowMaker (es decir GNOME, KDE, ...), recomendamos el tema <a
 href="http://wiki.gnustep.org/images/6/6d/Silver.theme.tar.bz2">Silver</a> para
-una apariencia más adaptada a estos escritorios. Simplemente descomprima el
-paquete y copielo en el directorio <strong>~/GNUstep/Library/Themes/</strong>
-de su carpeta personal. Y establezca el tema mediante la aplicación
-<strong>SystemPreferences.app</strong>, o mediante una terminal con:</p>
+una apariencia más adaptada a estos otros escritorios. Simplemente descomprima
+el paquete y copielo en el directorio
+<strong>~/GNUstep/Library/Themes/</strong> de su carpeta personal. Y establezca
+el tema mediante la aplicación <strong>SystemPreferences.app</strong>, o
+mediante una terminal con:</p>
 
 <p></p>
 
@@ -98,6 +112,20 @@ de su carpeta personal. Y establezca el tema mediante la aplicación
 <p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
 
 <p><code>defaults write FisicaLab GSTheme Silver</code></p>
+
+<p></p>
+
+<p style="text-align:justify;">También recomendamos establecer la siguiente
+configuración para una mejor experiencia en estos esritorios (GNOME, KDE, ...),
+desde una terminal:</p>
+
+<p></p>
+
+<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
+
+<p><code>defaults write NSGlobalDomain GSAppOwnsMiniwindow NO</code></p>
+
+<p><code>defaults write NSGlobalDomain GSSuppressAppIcon YES</code></p>
 
 <p></p>
 </body>
