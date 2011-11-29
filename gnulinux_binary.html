@@ -166,8 +166,8 @@ a[href] {
 
 <body>
 <h1
-style="text-align:left;margin-left:0;margin-right:auto;color:#ffffff;background-color:#0000ff">Instalación
-en sistemas GNU/Linux, BSD, ...</h1>
+style="background-;color:#ffffff;text-align:justify;background-color:#0000ff">Instalación
+en sistemas GNU/Linux 32 bits</h1>
 
 <table border="0" style="width: 100%">
   <col />
@@ -189,99 +189,30 @@ en sistemas GNU/Linux, BSD, ...</h1>
 
 <p></p>
 
-<p>Descarga el siguiente paquete:</p>
-
-<p></p>
+<p style="text-align:justify;">Este es un paquete binario que no ha sido
+probado extensamente. Pero es la forma más fácil de tener FísicaLab en un
+sistema GNU/Linux. Descarga el siguiente paquete:</p>
 <ul>
   <li><a
-    href="http://download.savannah.gnu.org/releases/fisicalab/FisicaLab-0.2.1.tar.gz">FisicaLab-0.2.1</a></li>
+    href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.2.1-glinux32.tar.gz">GNU/Linux
+    Binario</a></li>
 </ul>
 
-<p></p>
-
-<p style="text-align:justify;">FísicaLab necesita de GNUstep (Ver la <a
-href="gnustep_inst.html">Guía de instalación de GNUstep</a>) y de las librerías
-<a href="http://www.gnu.org/software/gsl/">GSL</a> (incluidas las cabeceras de
-desarrollo). Cumplidos estos requisitos, en una terminal nos ubicamos en la
-carpeta del código y corremos primero el script de GNUstep:</p>
+<p style="text-align:justify;">Descomprime el paquete y en una terminal
+ejecuta:</p>
 
 <p></p>
 
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh </code></p>
+<p><code>cd fisicalab-0.2.1-glinux32</code></p>
+
+<p><code>./fisicalab</code></p>
 
 <p></p>
 
-<p><code>(en algunos sistemas puede ser .
-/usr/share/GNUstep/System/Library/Makefiles/GNUstep.sh dependiendo de como se
-instalo GNUstep)</code></p>
-
-<p></p>
-
-<p style="text-align:justify;">Luego ejecutamos <strong>make</strong> y, con
-permisos de superusuario:</p>
-
-<p></p>
-
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh </code></p>
-
-<p><code>make install</code></p>
-
-<p></p>
-
-<p style="text-align:justify;">Se espera que las cabeceras de GSL esten en la
-ruta <strong>/usr/include</strong> y las librerías en
-<strong>/lib/gsl</strong>. De no ser así, debe modificarse el archivo
-<strong>G<em>NUmakefile.preamble</em></strong> acorde a las rutas apropiadas.
-La aplicación se corre con el comando <strong>openapp FisicaLab</strong>. Para
-poder utilizar FísicaLab en español, en una terminal ejecutamos:</p>
-
-<p></p>
-
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
-
-<p><code>defaults write NSGlobalDomain NSLanguages "(Spanish)"</code></p>
-
-<p></p>
-
-<p style="text-align:justify;">Si no se esta utilizando el escritorio
-WindowMaker (es decir GNOME, KDE, ...), recomendamos el tema <a
-href="http://wiki.gnustep.org/images/6/6d/Silver.theme.tar.bz2">Silver</a> para
-una apariencia más adaptada a estos otros escritorios. Simplemente descomprima
-el paquete y copielo en el directorio
-<strong>~/GNUstep/Library/Themes/</strong> de su carpeta personal. Y establezca
-el tema mediante la aplicación <strong>SystemPreferences.app</strong>, o
-mediante una terminal con:</p>
-
-<p></p>
-
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
-
-<p><code>defaults write NSGlobalDomain GSTheme Silver</code></p>
-
-<p></p>
-
-<p>O, si desea que únicamente FísicaLab utilice este tema:</p>
-
-<p></p>
-
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
-
-<p><code>defaults write FisicaLab GSTheme Silver</code></p>
-
-<p></p>
-
-<p style="text-align:justify;">También recomendamos establecer la siguiente
-configuración para una mejor experiencia en estos esritorios (GNOME, KDE, ...),
-desde una terminal:</p>
-
-<p></p>
-
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
-
-<p><code>defaults write NSGlobalDomain GSAppOwnsMiniwindow NO</code></p>
-
-<p><code>defaults write NSGlobalDomain GSSuppressAppIcon YES</code></p>
-
-<p></p>
+<p style="text-align:justify;">La primera vez que se corre FísicaLab el cursor
+no cambia como debe ser. Aunque no es un mayor problema, esto se corrige
+reiniciando la aplicación. Más informacion en los archivos INSTALACION y LEEME.
+Cualquier problema, por favor reportarlo a la lista de discusión <a
+href="https://lists.nongnu.org/mailman/listinfo/fisicalab-discusion">aquí</a>.</p>
 </body>
 </html>
