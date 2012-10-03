@@ -167,65 +167,63 @@ a[href] {
 <body>
 <h1
 style="background-;color:#ffffff;background-color:#0000ff;text-align:justify;line-height:1.5em;">Guide
-to install on Windows (only 32 bits)</h1>
-
-<table border="0" style="width: 100%;color:#ff0000;background-color:#ffff00">
-  <col />
-  <tbody>
-    <tr>
-      <td style="text-align:justify;">FísicaLab can run on 64-bits but, since I
-        don't have access to that operative system to build an installer, you
-        need compile it from source code.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p></p>
+to install on Windows</h1>
 
 <p>You need donwload the following packages:</p>
+<ul>
+  <li><a
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-msys-system-0.30.0-setup.exe">GNUstep
+    MSYS System</a></li>
+  <li><a
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.31.0-setup.exe">GNUstep
+    Core</a></li>
+  <li><a
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-cairo-0.31.0-setup.exe">GNUstep
+    Cairo</a></li>
+  <li><a
+    href="http://download.savannah.gnu.org/releases/fisicalab/FisicaLab-0.3.0-setup.exe">FísicaLab
+    0.3.0</a></li>
+</ul>
 
-<table border="0" style="width: 100%">
-  <col />
+<p style="text-align:justify;">Now install the packages in the order that these
+are listed. When install <strong>GNUstep Core</strong> be sure to activate the
+<strong>WinUXTheme</strong> theme. Also be sure to activate the backend
+<strong>Cairo</strong> when install the package <strong>GNUstep Cairo</strong>.
+Now you can launch the app from <em>Start -&gt; Applications -&gt; FisicaLab
+-&gt; FisicaLab</em>.</p>
+
+<table border="1" style="width: 100%">
   <col />
   <tbody>
     <tr>
-      <td><ul>
-          <li><a
-            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-msys-system-0.28.1-setup.exe">GNUstep
-            System</a></li>
-          <li><a
-            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.28.0-setup.exe">GNUstep
-            Core</a></li>
-          <li><a
-            href="http://download.savannah.gnu.org/releases/fisicalab/FisicaLab-0.2.1-setup.exe">FísicaLab-0.2.1</a></li>
-        </ul>
-      </td>
-      <td><img alt="FisicaLab" src="imagenes/Espanol/fisicalabWin2.png"
-        width="474" /></td>
+      <td style="background-color:#ffff00"><span
+        style="color:#ff0000"><strong>NOTES</strong></span></td>
+    </tr>
+    <tr>
+      <td style="background-color:#ffff00;text-align:justify;">On Windows
+        systems you can't write the character <strong>@</strong>, needed to use
+        conversion factors, with the combination <strong>Alt-64</strong>. You
+        need write this character with the key <strong>Alt</strong> or
+        <strong>Shift</strong> in combination with another alfanumeric key.</td>
     </tr>
   </tbody>
 </table>
 
-<p></p>
-
-<p style="text-align:justify;">Now install first <strong>GNUstep
-System</strong>, without change the options. Second install <strong>GNUstep
-Core</strong>, without change the options too. Now install
-<strong>FisicaLab-0.2</strong>, without change the options. Then you can launch
-the app from <em>Start -&gt; Applications -&gt; FisicaLab -&gt;
-FisicaLab</em>.</p>
-
 <h2
-style="background-;color:#ff0000;text-align:justify;background-color:#ffff00">Notes</h2>
+style="background-;background-color:#0000ff;color:#ffffff;text-align:justify;">Known
+problems</h2>
+
+<p>This version of FísicaLab uses an experimental backend
+(<strong>Cairo</strong>) so some problems are present:</p>
 <ul>
-  <li style="text-align:justify;">On Windows systems you can't write the
-    character <strong>@</strong>, needed to use conversion factors, with the
-    combination <strong>Alt-64</strong>. You need write this character with the
-    key <strong>Alt Gr</strong> in combination with another alfanumeric
-  key.</li>
-  <li style="text-align:justify;">The mouse pointer don't change when you add
-    or move elements on the chalkboard, as must be. This is a bug on
-  GNUstep.</li>
+  <li style="text-align:justify;">The mouse cursor don't change when you add or
+    move elements on the chalkboard, as must be.</li>
+  <li>The tooltips don't display text.</li>
+  <li style="text-align:justify;">Some texts aren't displayed correctly. If you
+    have this problem, download and install the <a
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/SystemPreferences-2012-08-21-setup.exe">SystemPreferences</a>
+    application. Launch this and in the section <strong>Fonts</strong> try
+    setting different fonts for each item.</li>
 </ul>
 </body>
 </html>

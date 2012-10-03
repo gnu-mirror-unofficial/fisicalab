@@ -165,68 +165,64 @@ a[href] {
 <body>
 <h1
 style="background-;color:#ffffff;background-color:#0000ff;text-align:justify;line-height:1.5em;">Guia
-de instalación en Windows (sólo 32 bits)</h1>
-
-<table border="0" style="width: 100%">
-  <col />
-  <tbody>
-    <tr>
-      <td
-        style="color:#ff0000;background-color:#ffff00;text-align:justify;">FísicaLab
-        puede correr en 64 bits, pero como no tengo acceso a un sistema como
-        ese para crear un instalador, es necesario compilar desde el código
-        fuente.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p></p>
+de instalación en Windows</h1>
 
 <p>Para la instalación se deben descargar los siguientes paquetes:</p>
+<ul>
+  <li><a
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-msys-system-0.30.0-setup.exe">GNUstep
+    MSYS System</a></li>
+  <li><a
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.31.0-setup.exe">GNUstep
+    Core</a></li>
+  <li><a
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-cairo-0.31.0-setup.exe">GNUstep
+    Cairo</a></li>
+  <li><a
+    href="http://download.savannah.gnu.org/releases/fisicalab/FisicaLab-0.3.0-setup.exe">FísicaLab
+    0.3.0</a></li>
+</ul>
 
-<table border="0" style="width: 100%">
-  <col />
+<p style="text-align:justify;">Una vez descargados, instale los paquetes en el
+orden en el que estan listados. Al instalar <strong>GNUstep Core</strong>
+asegurese de activar el tema <strong>WinUXTheme</strong> , y también asegurese
+de activar el backend <strong>Cairo</strong> al instalar el paquete
+<strong>GNUstep Cairo</strong>. Instalada la aplicación, se puede acceder en
+<em>Inicio -&gt; Aplicaciones -&gt; FisicaLab -&gt; FisicaLab</em>.</p>
+
+<table border="1" style="width: 100%">
   <col />
   <tbody>
     <tr>
-      <td><ul>
-          <li><a
-            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-msys-system-0.28.1-setup.exe">GNUstep
-            System</a></li>
-          <li><a
-            href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.28.0-setup.exe">GNUstep
-            Core</a></li>
-          <li><a
-            href="http://download.savannah.gnu.org/releases/fisicalab/FisicaLab-0.2.1-setup.exe">FísicaLab-0.2.1</a></li>
-        </ul>
-      </td>
-      <td><img alt="FisicaLab" src="imagenes/Espanol/fisicalabWin2.png"
-        width="474" /></td>
+      <td style="background-color:#ffff00"><span
+        style="color:#ff0000"><strong>NOTA IMPORTANTE</strong></span></td>
+    </tr>
+    <tr>
+      <td style="text-align:justify;background-color:#ffff00">El carácter
+        <strong>@</strong>, necesario para utilizar factores de conversión, no
+        puede ingresarse utilizando la combinación <strong>Alt-64</strong>.
+        Este debe ingresarse utilizando la tecla <strong>Alt Gr</strong> en
+        combinación con alguna otra tecla alfanumérica (en teclados
+        latinoamericanos la tecla alfanumérica para el 2).</td>
     </tr>
   </tbody>
 </table>
 
-<p></p>
+<h2 style="color:#ff0000;background-color:#0000ff;text-align:justify;"><span
+style="color:#ffffff">Problemas conocidos</span></h2>
 
-<p style="text-align:justify;">Una vez descargados, se instala primero
-<strong>GNUstep System</strong>, sin cambiar ninguna de las opciones.
-Seguidamente se instala <strong>GNUstep Core</strong>, sin cambiar ninguna
-opción. Por último se instala <strong>FisicaLab-0.2.1-setup</strong>, sin
-cambiar las opciones. Instalada la aplicación, se puede acceder en <em>Inicio
--&gt; Aplicaciones -&gt; FisicaLab -&gt; FisicaLab</em>.</p>
-
-<h1 style="text-align:justify;color:#ff0000;background-color:#ffff00">Notas
-importantes</h1>
+<p>Esta versión de FísicaLab utiliza un backend experimental
+(<strong>Cairo</strong>) por lo que se presentan algunos problemas:</p>
 <ul>
-  <li style="text-align:justify;">El carácter <strong>@</strong>, necesario
-    para utilizar factores de conversión, no puede ingresarse utilizando la
-    combinación <strong>Alt-64</strong>. Este debe ingresarse utilizando la
-    tecla <strong>Alt Gr</strong> en combinación con alguna otra tecla
-    alfanumérica (en teclados latinoamericanos la tecla alfanumérica para el
-  2).</li>
-  <li style="text-align:justify;">Debido a un bug de GNUstep en Windows el
-    puntero del mouse no cambia como deberia hacerlo al agregar un elemento a
-    la pizarra o al mover un elemento en esta.</li>
+  <li style="text-align:justify;">El puntero del mouse no cambia como deberia
+    hacerlo al agregar un elemento a la pizarra o al mover un elemento en
+  esta.</li>
+  <li>Las etiquetas (tooltips) no muestran texto.</li>
+  <li style="text-align:justify;">Algunos textos puede que no se muestren
+    correctamente. Si tiene este problema descarge e instale la aplicación <a
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/SystemPreferences-2012-08-21-setup.exe">SystemPreferences</a>.
+    Arranque esta aplicación y en la sección <strong>Fonts</strong> pruebe
+    utilizando otras fuentes.</li>
 </ul>
 </body>
 </html>
