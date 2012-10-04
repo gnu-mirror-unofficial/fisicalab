@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-  <title>Descargas</title>
+  <title>Deb packages</title>
   <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
   <style type="text/css" title="Amaya theme">
 /* Modern style for Amaya Editor Lite */
@@ -166,18 +166,66 @@ a[href] {
 
 <body>
 <h1
-style="background-;color:#ffffff;background-color:#0000ff;text-align:justify;line-height:1.5em;">Descargas</h1>
+style="background-color:#0000ff;color:#ffffff;text-align:justify;line-height:1.5em;">Deb
+packages for Ubuntu Precise and Debian Wheezy</h1>
 
-<p>Seleccione el enlace de acuerdo a su sistema operativo:</p>
-<ul>
-  <li><a href="gnulinux_binary.html"><strong>Paquete binario para GNU/Linux 32
-    bits.</strong></a></li>
-  <li><a href="deb.html"><strong>Paquetes Deb para Ubuntu Precise y Debian
-    Wheezy (i386 y amd64).</strong></a></li>
-  <li><strong><a href="gnulinux_inst.html">Desde código fuente en sistemas
-    GNU/Linux, BSD, Solaris, ...</a></strong></li>
-  <li><strong><a href="mac_inst.html">Mac OS</a>.</strong></li>
-  <li><strong><a href="win_inst.html">Windows.</a></strong></li>
-</ul>
+<p>Depending on your system and architecture you should add the respective
+repository:</p>
+
+<table border="1" style="width: 100%">
+  <col />
+  <col />
+  <tbody>
+    <tr>
+      <td style="color:#000000;background-color:#dfaaff">Debian Wheezy i386</td>
+      <td
+        style="color:#000000;background-color:#dfaaff">http://coyote.octets.fr/pub/gnustep/packages/wheezy/i386/</td>
+    </tr>
+    <tr>
+      <td style="color:#000000;background-color:#dfaaff">Debian Wheezy
+      amd64</td>
+      <td
+        style="color:#000000;background-color:#dfaaff">http://coyote.octets.fr/pub/gnustep/packages/wheezy/amd64/</td>
+    </tr>
+    <tr>
+      <td style="color:#000000;background-color:#dfaaff">Ubuntu Precise
+      i386</td>
+      <td
+        style="color:#000000;background-color:#dfaaff">http://coyote.octets.fr/pub/gnustep/packages/precise/i386/</td>
+    </tr>
+    <tr>
+      <td style="color:#000000;background-color:#dfaaff">Ubuntu Precise
+      amd64</td>
+      <td
+        style="color:#000000;background-color:#dfaaff">http://coyote.octets.fr/pub/gnustep/packages/precise/amd64/</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For example for Debian Wheezy amd64:</p>
+
+<p></p>
+
+<p><code>deb http://coyote.octets.fr/pub/gnustep/packages/wheezy/amd64/
+./</code></p>
+
+<p></p>
+
+<p style="text-align:justify;">And after update the packages list you can
+install the packages <strong>fisicalab.app</strong> and
+<strong>fisicalab.app-doc</strong>. If you aren't using the WindowMaker
+desktop, we recommend install the theme <a
+href="http://wiki.gnustep.org/images/6/6d/Silver.theme.tar.bz2">Silver</a>
+(just unpack and copy the content at ~/GNUstep/Library/Themes at your home
+directory) a more suited theme to other desktops. Once installed run in a
+terminal:</p>
+
+<p></p>
+
+<p><code>defaults write NSGlobalDomain GSTheme Silver</code></p>
+
+<p><code>defaults write NSGlobalDomain GSAppOwnsMiniwindow NO</code></p>
+
+<p><code>defaults write NSGlobalDomain GSSuppressAppIcon YES</code></p>
 </body>
 </html>
