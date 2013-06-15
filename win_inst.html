@@ -176,19 +176,27 @@ de instalación en Windows</h1>
     href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.31.0-setup.exe">GNUstep
     Core</a></li>
   <li><a
-    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-cairo-0.31.0-setup.exe">GNUstep
-    Cairo</a></li>
-  <li><a
-    href="http://download.savannah.gnu.org/releases/fisicalab/FisicaLab-0.3.0-setup.exe">FísicaLab
-    0.3.0</a></li>
+    href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.2-setup.exe">FísicaLab
+    0.3.2</a></li>
 </ul>
 
 <p style="text-align:justify;">Una vez descargados, instale los paquetes en el
-orden en el que estan listados. Al instalar <strong>GNUstep Core</strong>
-asegurese de activar el tema <strong>WinUXTheme</strong> , y también asegurese
-de activar el backend <strong>Cairo</strong> al instalar el paquete
-<strong>GNUstep Cairo</strong>. Instalada la aplicación, se puede acceder en
-<em>Inicio -&gt; Aplicaciones -&gt; FisicaLab -&gt; FisicaLab</em>.</p>
+orden en el que estan listados, no necesita cambiar nin&#x1f5;una opción.
+Instalada la aplicación, se puede acceder en <em>Inicio -&gt; Aplicaciones
+-&gt; FisicaLab -&gt; FisicaLab</em>.</p>
+
+<p style="text-align:justify;">Si usted esta actualizando desde la versión
+0.3.0, desinstale primero dicha versión. También es reccomendable desactivar el
+backend <strong>Cairo</strong>. Ejecute el <strong>Shell</strong> en <em>Inicio
+-&gt; Aplicaciones -&gt; GNUstep -&gt; Shell</em> y escriba:</p>
+
+<p><code>defaults delete NSGlobalDomain GSBackend</code></p>
+
+<p style="text-align:justify;">y presione <code>ENTER</code>. Esto le impedira
+ver la documentación, pero puede descarga esta en formato <strong>PDF</strong>
+en la sección <a href="manual.html">Manual</a>.</p>
+
+<p></p>
 
 <table border="1" style="width: 100%">
   <col />
@@ -210,19 +218,10 @@ de activar el backend <strong>Cairo</strong> al instalar el paquete
 
 <h2 style="color:#ff0000;background-color:#0000ff;text-align:justify;"><span
 style="color:#ffffff">Problemas conocidos</span></h2>
-
-<p>Esta versión de FísicaLab utiliza un backend experimental
-(<strong>Cairo</strong>) por lo que se presentan algunos problemas:</p>
 <ul>
   <li style="text-align:justify;">El puntero del mouse no cambia como deberia
     hacerlo al agregar un elemento a la pizarra o al mover un elemento en
   esta.</li>
-  <li>Las etiquetas (tooltips) no muestran texto.</li>
-  <li style="text-align:justify;">Algunos textos puede que no se muestren
-    correctamente. Si tiene este problema descarge e instale la aplicación <a
-    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/SystemPreferences-2012-08-21-setup.exe">SystemPreferences</a>.
-    Arranque esta aplicación y en la sección <strong>Fonts</strong> pruebe
-    utilizando otras fuentes.</li>
 </ul>
 </body>
 </html>

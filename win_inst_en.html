@@ -178,19 +178,24 @@ to install on Windows</h1>
     href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.31.0-setup.exe">GNUstep
     Core</a></li>
   <li><a
-    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-cairo-0.31.0-setup.exe">GNUstep
-    Cairo</a></li>
-  <li><a
-    href="http://download.savannah.gnu.org/releases/fisicalab/FisicaLab-0.3.0-setup.exe">FísicaLab
-    0.3.0</a></li>
+    href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.2-setup.exe">FísicaLab
+    0.3.2</a></li>
 </ul>
 
 <p style="text-align:justify;">Now install the packages in the order that these
-are listed. When install <strong>GNUstep Core</strong> be sure to activate the
-<strong>WinUXTheme</strong> theme. Also be sure to activate the backend
-<strong>Cairo</strong> when install the package <strong>GNUstep Cairo</strong>.
-Now you can launch the app from <em>Start -&gt; Applications -&gt; FisicaLab
--&gt; FisicaLab</em>.</p>
+are listed. You don't need change the options. Now you can launch the app from
+<em>Start -&gt; Applications -&gt; FisicaLab -&gt; FisicaLab</em>.</p>
+
+<p style="text-align:justify;">If you are updating from 0.3.0, first uninstall
+that version. Also is recommended deactivate the <strong>Cairo</strong>
+backend. Run <em>Start -&gt; Applications -&gt; GNUstep -&gt; Shell</em> and
+write:</p>
+
+<p><code>defaults delete NSGlobalDomain GSBackend</code></p>
+
+<p style="text-align:justify;">and hit <code>RETURN</code>. This will cause
+problems to see the documentation. But you can download this in
+<strong>PDF</strong> format at <a href="manual_en.html">Manual</a> section.</p>
 
 <table border="1" style="width: 100%">
   <col />
@@ -212,18 +217,9 @@ Now you can launch the app from <em>Start -&gt; Applications -&gt; FisicaLab
 <h2
 style="background-;background-color:#0000ff;color:#ffffff;text-align:justify;">Known
 problems</h2>
-
-<p>This version of FísicaLab uses an experimental backend
-(<strong>Cairo</strong>) so some problems are present:</p>
 <ul>
   <li style="text-align:justify;">The mouse cursor don't change when you add or
     move elements on the chalkboard, as must be.</li>
-  <li>The tooltips don't display text.</li>
-  <li style="text-align:justify;">Some texts aren't displayed correctly. If you
-    have this problem, download and install the <a
-    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/SystemPreferences-2012-08-21-setup.exe">SystemPreferences</a>
-    application. Launch this and in the section <strong>Fonts</strong> try
-    setting different fonts for each item.</li>
 </ul>
 </body>
 </html>
