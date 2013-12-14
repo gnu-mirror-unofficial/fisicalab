@@ -169,38 +169,17 @@ a[href] {
 style="margin-left:0;margin-right:auto;color:#ffffff;background-color:#0000ff;text-align:justify;line-height:1.5em;">Instalación
 en sistemas GNU/Linux, BSD, ...</h1>
 
-<table border="1" style="width: 100%">
-  <col />
-  <tbody>
-    <tr>
-      <td
-        style="background-;color:#001a64;background-color:#c594d7"><strong>FísicaLab
-        0.2.2 esta disponible en los repositorios oficiales de las siguientes
-        distribuciones:</strong></td>
-    </tr>
-    <tr>
-      <td style="background-;color:#001a64;background-color:#c594d7"><ul>
-          <li><strong>Gentoo</strong><strong></strong></li>
-          <li><strong>OpenBSD</strong><strong></strong></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<p></p>
-
 <p>Descarga el siguiente paquete:</p>
 <ul>
   <li><a
-    href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.2.tar.gz">FisicaLab-0.3.2</a></li>
+    href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.3.tar.gz">FisicaLab-0.3.3</a></li>
 </ul>
 
-<p style="text-align:justify;">FísicaLab necesita de GNUstep (Ver la <a
-href="gnustep_inst.html">Guía de instalación de GNUstep</a>) y de las librerías
-<a href="http://www.gnu.org/software/gsl/">GSL</a> (incluidas las cabeceras de
+<p style="text-align:justify;">FísicaLab necesita de <a
+href="http://www.gnustep.org/">GNUstep</a> y de las librerías <a
+href="http://www.gnu.org/software/gsl/">GSL</a> (incluidas las cabeceras de
 desarrollo). Cumplidos estos requisitos, en una terminal nos ubicamos en la
-carpeta del código y corremos primero el script de GNUstep:</p>
+carpeta del código y corremos, de ser necesario, el script de GNUstep:</p>
 
 <p></p>
 
@@ -208,29 +187,28 @@ carpeta del código y corremos primero el script de GNUstep:</p>
 
 <p></p>
 
-<p><code>(en algunos sistemas puede ser .
-/usr/share/GNUstep/System/Library/Makefiles/GNUstep.sh dependiendo de como se
-instalo GNUstep)</code></p>
+<p style="text-align:justify;">Luego ejecutamos:</p>
 
 <p></p>
 
-<p style="text-align:justify;">Luego ejecutamos <strong>./configure</strong> y
-<strong>make</strong> y, con permisos de superusuario:</p>
+<p style="text-align:justify;"><code>./configure</code></p>
+
+<p style="text-align:justify;"><code>make</code></p>
 
 <p></p>
 
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh </code></p>
+<p style="text-align:justify;">Y con permisos de superusuario (puede ser
+necesario ejecutar nuevamene el script):</p>
+
+<p></p>
 
 <p><code>make install</code></p>
 
 <p></p>
 
-<p style="text-align:justify;">Se espera que las cabeceras de GSL esten en la
-ruta <strong>/usr/include</strong> y las librerías en
-<strong>/lib/gsl</strong>. De no ser así, debe modificarse el archivo
-<strong>G<em>NUmakefile.preamble</em></strong> acorde a las rutas apropiadas.
-La aplicación se corre con el comando <strong>openapp FisicaLab</strong>. Para
-poder utilizar FísicaLab en español, en una terminal ejecutamos:</p>
+<p style="text-align:justify;">La aplicación se corre con el comando
+<code><strong>openapp FisicaLab</strong></code>. Para poder utilizar FísicaLab
+en español, en una terminal ejecutamos:</p>
 
 <p></p>
 
@@ -242,8 +220,8 @@ poder utilizar FísicaLab en español, en una terminal ejecutamos:</p>
 
 <p style="text-align:justify;">Si no se esta utilizando el escritorio
 WindowMaker, recomendamos el tema <a
-href="http://wiki.gnustep.org/images/6/6d/Silver.theme.tar.bz2">Silver</a> para
-una apariencia más adaptada. Una vez instalado el tema lo puede establecer
+href="http://download.gna.org/gnustep-nonfsf/Silver.theme-3.1.tar.gz">Silver</a>
+para una apariencia más adaptada. Una vez instalado el tema lo puede establecer
 mediante la aplicación <strong>SystemPreferences.app</strong>, o mediante una
 terminal con:</p>
 
@@ -255,27 +233,16 @@ terminal con:</p>
 
 <p></p>
 
-<p>O, si desea que únicamente FísicaLab utilice este tema:</p>
+<p>También se recomienda la siguiente configuración:</p>
 
 <p></p>
-
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
-
-<p><code>defaults write FisicaLab GSTheme Silver</code></p>
-
-<p></p>
-
-<p style="text-align:justify;">También recomendamos establecer la siguiente
-configuración para una mejor experiencia en estos esritorios (GNOME, KDE, ...),
-desde una terminal:</p>
-
-<p></p>
-
-<p><code>. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh</code></p>
 
 <p><code>defaults write NSGlobalDomain GSAppOwnsMiniwindow NO</code></p>
 
 <p><code>defaults write NSGlobalDomain GSSuppressAppIcon YES</code></p>
+
+<p><code>defaults write NSGlobalDomain NSMenuInterfaceStyle
+NSWindows95InterfaceStyle</code></p>
 
 <p></p>
 </body>
