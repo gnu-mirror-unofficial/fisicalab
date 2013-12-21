@@ -167,34 +167,45 @@ a[href] {
 style="background-;color:#ffffff;background-color:#0000ff;text-align:justify;line-height:1.5em;">Guia
 de instalación en Windows</h1>
 
+<p>Si tiene instalada una version anterior de FísicaLab, asegurese de
+desinstalar esta junto con los paquetes de GNUstep.</p>
+
 <p>Para la instalación se deben descargar los siguientes paquetes:</p>
 <ul>
   <li><a
     href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-msys-system-0.30.0-setup.exe">GNUstep
     MSYS System</a></li>
   <li><a
-    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.31.0-setup.exe">GNUstep
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.33.0-setup.exe">GNUstep
     Core</a></li>
   <li><a
-    href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.2-setup.exe">FísicaLab
-    0.3.2</a></li>
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-cairo-0.33.0-setup.exe">GNUstep
+    Cairo</a></li>
+  <li><a
+    href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.3-setup.exe">FísicaLab
+    0.3.3</a></li>
 </ul>
 
 <p style="text-align:justify;">Una vez descargados, instale los paquetes en el
-orden en el que estan listados, no necesita cambiar nin&#x1f5;una opción.
-Instalada la aplicación, se puede acceder en <em>Inicio -&gt; Aplicaciones
--&gt; FisicaLab -&gt; FisicaLab</em>.</p>
+orden en el que estan listados- Asegurese de activar el tema
+<strong>WinUXTheme</strong> al instalar el paquete <strong>Core</strong>, como
+se muestra en la siguiente imagen:</p>
 
-<p style="text-align:justify;">Si usted esta actualizando desde la versión
-0.3.0, desinstale primero dicha versión. También es recomendable desactivar el
-backend <strong>Cairo</strong>. Ejecute el <strong>Shell</strong> en <em>Inicio
--&gt; Aplicaciones -&gt; GNUstep -&gt; Shell</em> y escriba:</p>
+<p><img alt="Activar tema" src="imagenes/windowsTheme.png"
+style="display: block; text-align: center; margin-left: auto; margin-right: auto"
+width="435" height="232" /></p>
 
-<p><code>defaults delete NSGlobalDomain GSBackend</code></p>
+<p style="text-align:justify;">Las demás opciones no las modifique. Instalada
+la aplicación, se puede acceder en <em>Inicio -&gt; Aplicaciones -&gt;
+FisicaLab -&gt; FisicaLab</em>.</p>
 
-<p style="text-align:justify;">y presione <code>ENTER</code>. Esto le impedira
-ver la documentación, pero puede descarga esta en formato <strong>PDF</strong>
-en la sección <a href="manual.html">Manual</a>.</p>
+<p style="text-align:justify;">Si olvido activar el tema, ejecute el
+<strong>Shell</strong> en <em>Inicio -&gt; Aplicaciones -&gt; GNUstep -&gt;
+Shell</em> y escriba:</p>
+
+<p><code>defaults delete NSGlobalDomain GSTheme WinUXTheme</code></p>
+
+<p style="text-align:justify;">y presione <code>ENTER</code>.</p>
 
 <p></p>
 
@@ -210,8 +221,7 @@ en la sección <a href="manual.html">Manual</a>.</p>
         <strong>@</strong>, necesario para utilizar factores de conversión, no
         puede ingresarse utilizando la combinación <strong>Alt-64</strong>.
         Este debe ingresarse utilizando la tecla <strong>Alt Gr</strong> en
-        combinación con alguna otra tecla alfanumérica (en teclados
-        latinoamericanos la tecla alfanumérica para el 2).</td>
+        combinación con alguna otra tecla alfanumérica.</td>
     </tr>
   </tbody>
 </table>

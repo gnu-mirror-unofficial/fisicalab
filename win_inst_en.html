@@ -169,33 +169,44 @@ a[href] {
 style="background-;color:#ffffff;background-color:#0000ff;text-align:justify;line-height:1.5em;">Guide
 to install on Windows</h1>
 
+<p>First remove any previous version and the related GNUstep packages, if
+any.</p>
+
 <p>You need donwload the following packages:</p>
 <ul>
   <li><a
     href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-msys-system-0.30.0-setup.exe">GNUstep
     MSYS System</a></li>
   <li><a
-    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.31.0-setup.exe">GNUstep
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.33.0-setup.exe">GNUstep
     Core</a></li>
   <li><a
-    href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.2-setup.exe">FísicaLab
-    0.3.2</a></li>
+    href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-cairo-0.33.0-setup.exe">GNUstep
+    Cairo</a></li>
+  <li><a
+    href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.3-setup.exe">FísicaLab
+    0.3.3</a></li>
 </ul>
 
 <p style="text-align:justify;">Now install the packages in the order that these
-are listed. You don't need change the options. Now you can launch the app from
-<em>Start -&gt; Applications -&gt; FisicaLab -&gt; FisicaLab</em>.</p>
+are listed. Active the theme <strong>WinUXTheme</strong> when install the
+<strong>Core</strong> package, see image below:</p>
 
-<p style="text-align:justify;">If you are updating from 0.3.0, first uninstall
-that version. Also is recommended deactivate the <strong>Cairo</strong>
-backend. Run <em>Start -&gt; Applications -&gt; GNUstep -&gt; Shell</em> and
-write:</p>
+<p><img alt="Active theme" src="imagenes/windowsTheme.png"
+style="display: block; text-align: center; margin-left: auto; margin-right: auto"
+width="435" height="232" /></p>
 
-<p><code>defaults delete NSGlobalDomain GSBackend</code></p>
+<p style="text-align:justify;">You don't need change other options. After
+install all, you can launch the app from <em>Start -&gt; Applications -&gt;
+FisicaLab -&gt; FisicaLab</em>.</p>
 
-<p style="text-align:justify;">and hit <code>RETURN</code>. This will cause
-problems to see the documentation. But you can download this in
-<strong>PDF</strong> format at <a href="manual_en.html">Manual</a> section.</p>
+<p style="text-align:justify;">If you miss activate the theme at installation,
+run the <strong>Shell</strong> at <em>Start -&gt; Applications -&gt; GNUstep
+-&gt; Shell</em> and write:</p>
+
+<p><code>defaults write NSGlobalDomain GSTheme WinUXTheme</code></p>
+
+<p style="text-align:justify;">and hit <code>RETURN</code>.</p>
 
 <table border="1" style="width: 100%">
   <col />
