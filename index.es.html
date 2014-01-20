@@ -1,346 +1,455 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-  <title>FísicaLab</title>
-  <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
-  <style type="text/css" title="Amaya theme">
-/* Modern style for Amaya Editor Lite */
+<!-- start of server/head-include-1.html -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:webmasters@gnu.org" />
+<link rel="icon" type="image/png" href="/graphics/gnu-head-mini.png" />
+<meta name="ICBM" content="42.355469,-71.058627" />
+<meta name="DC.title" content="gnu.org" />
+<!-- end of server/head-include-1.html -->
 
-/* default rules for the whole document */
-body {
-    font-size: 12pt;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    color: black;
-    background-color: white;
-    line-height: 1.2em;
-    margin-left: 4em;
-    margin-right: 2em;
-   }
+<!-- end of server/header.html -->
 
-/* paragraphs */
-p  {
-    padding: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    text-align: left;
-   }
+<!-- Parent-Version: 1.75 -->
 
-/* headings */
-h1 {
-    font-size: 180%;
-    font-weight: bold;
-    font-style: normal;
-    font-variant: small-caps;
-    text-align: left;
-    padding: 0;
-    margin-top: 1.7em;
-    margin-bottom: 0.7em;
-   }
-h2 {
-    font-size: 150%;
-    font-weight: bold;
-    font-style: normal;
-    padding: 0;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-   }
-h3 {
-    font-size: 130%;
-    font-weight: bold;
-    font-style: normal;
-    padding: 0;
-    margin-top: 1.3em;
-    margin-bottom: 1.1em;
-   }
-h4 {
-    font-size: 110%;
-    font-weight: bold;
-    font-style: normal;
-    padding: 0;
-    margin-top: 1.1em;
-    margin-bottom: 1.1em;
-   }
-h5 {
-    font-size: 100%;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-   }
-h6 {
-    font-size: 100%;
-    font-weight: normal;
-    font-style: italic;
-    padding: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-   }
+<!-- This is the template document for GNU web pages.  We use
+     server side includes (#include) for common elements, for
+     instance, the very first line of the file.  If you're reading
+     this in its expanded form, you can retrieve the original source,
+     with the SSI statements intact, from
+     http://web.cvs.savannah.gnu.org/viewvc/*checkout*/www/server/standards/boilerplate.html?root=www&content-type=text%2Fplain
+-->
 
-/* divisions */
-div {
-    padding: 0;
-    margin-top: 0em;
-    margin-bottom: 0em;    
-   }
+<!-- Instructions for adapting this boilerplate to a new project: -->
 
-/* lists */
-ul, ol {
-    padding: 0 0 0 3em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-   }
-ul ul, ol ol, ul ol, ol ul {
-    margin-top: 1em;
-    margin-bottom: 1em;
-   }
-li {
-    padding: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    text-align: left;
-   }
-li p {
-    margin-top: 1em;
-    margin-bottom: 1em;
-   }
-dl {
-    padding: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 1em;
-   }
-dl dl {
-    margin-top: 0em;
-    margin-bottom: 0em;
-   }
-dt {
-    padding: 0;
-    font-weight: bold;
-    margin-top: .3em;
-    margin-bottom: .3em;
-   }
-dd {
-    padding: 0;
-    margin-top: .3em;
-    margin-left: 3em;
-    margin-bottom: .3em;
-   }
-dl p {
-    margin-top: .3em;
-    margin-bottom: .3em;
-   }
+<!-- 1. In the line above starting "Parent-Version:", remove the
+        "$Revision...$" from around the revision number,
+        leaving just Parent-Version: and the number. -->
 
-/* inline */
-strong {
-    font-weight: bold;
-   }
-em {
-    font-style: italic;
-   }
-code {
-    font-family: Courier New, Courier, monospace;
-   }
-ins {
-    background-color: yellow;
-    text-decoration: underline;
-   }
-del {
-    text-decoration: line-through;
-   }
+<!-- 2. Replace "baz" with the name of your project.
+        You should be able to do this with search and replace;
+        making sure that the search is case insensitive and
+        that the case of the replacement matches the case
+        of the string found. In Emacs, query-replace will do this
+        when case-fold-search and case-replace are both non-nil
+        and both search and replacement string are given in lower case. -->
 
-/* anchors */
-a[href] {
-    color: blue;
-    text-decoration: underline;
-   }
+<!-- 3. Of course update the actual information according to your project,
+        such as mailing lists, project locations, and maintainer name.  -->
 
-/* end */
-  </style>
+<!-- 4. You can use the patch-from-parent script to semi-automate
+        merging future changes to the boilerplate with your file:
+        http://web.cvs.savannah.gnu.org/viewvc/*checkout*/www/server/standards/patch-from-parent?root=www&content-type=text%2Fplain
+        -->
+
+<!-- If you would like to make sure your page validates with HTML5, that
+     would be a good thing.  To do that, change the first line from
+     to /server/html5-header.html before trying the validation.  Maybe
+     someday we will be able to make /server/header be HTML5.  -->
+
+<title>FisicaLab
+- GNU Project - Free Software Foundation</title>
+<!-- begin /server/initial-translations-list.html -->
+
+<!-- HTML head: set a flag for further expansion in body-include*.html. -->
+
+
+<!-- end /server/initial-translations-list.html -->
+
+<!-- start of server/banner.html -->
+<!-- start of head-include-2.html -->
+
+<link rel="stylesheet" href="/combo.css" media="screen" />
+<link rel="stylesheet" href="/layout.css" media="screen" />
+
+<link rel="stylesheet" href="/mini.css" media="handheld" />
+
+<link rel="stylesheet" href="/print.css" media="print" />
+
+<!-- end of head-include-2.html -->
+
 </head>
-
 <body>
+<!-- start of server/body-include-1.html -->
 
-<table border="0" style="width: 100%;background-color:#0000ff">
-  <col />
-  <col />
-  <col />
-  <tbody>
-    <tr>
-      <td><img alt="Logo FisicaLab" src="imagenes/logo.png" width="140"
-        height="101" /></td>
-      <td><h2 style="color:#ffffff;font-size: 32pt">FísicaLab</h2>
+<div id="toplinks"><a href="#content">Skip to main text</a> |
+<span class="netscape4">
+<a href="#navigation">Skip to navigation</a> |</span>
+<a href="/accessibility/">Accessibility</a></div>
 
-        <p style="color:#ffffff;font-size: 12pt">El software libre para la
-        física</p>
-      </td>
-      <td style="text-align:center;margin-left:auto;margin-right:auto;"><p
-        style="text-align:center;margin-left:auto;margin-right:auto;"><img
-        alt="Donate" src="imagenes/donate.png" width="75" height="97" /></p>
+<!-- if initial translation list isn't included before banner.html,
+     then the file may use an old boilerplate that contains
+     div#translations in its body, and we mustn't duplicate it here. -->
+<!-- begin /server/initial-translations-list.html -->
 
-        <p style="text-align:center;margin-left:auto;margin-right:auto;"><a
-        href="donacion.html"><span style="color:#ffff00"><strong>Donar
-        bitcoins</strong></span></a></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<!-- HTML body: expand unless already expanded. -->
+<div id="translations">
+<p>
+<span dir="ltr" class="original"><a lang="en" hreflang="en" href="/software/fisicalab/index.html">English</a>&nbsp;[en]</span>&nbsp;&nbsp;
+<span dir="ltr"><a lang="es" hreflang="es" href="/software/fisicalab/index.es.html">EspaÃ±ol</a>&nbsp;[es]</span>
+</p>
+</div>
 
-<p
-style="text-align:center;margin-left:auto;margin-right:auto;background-color:#d0d0ff"><a
-href="noticias.html">Diciembre 21, 2013: Binarios para Windows y
-GNU/Linux.</a></p>
 
-<table border="1" style="width: 100%">
-  <caption></caption>
-  <col />
-  <col />
-  <col />
-  <col />
-  <col />
-  <col />
-  <tbody>
-    <tr>
-      <td style="text-align:center;background-color:#c6c6c6"><a
-        href="noticias.html">Noticias</a> <a
-        href="http://savannah.nongnu.org/news/atom.php?group=fisicalab"><span
-        style="color:#ff0000">(RSS)</span></a></td>
-      <td
-      style="text-align:center;margin-left:auto;margin-right:auto;background-color:#c6c6c6"><a
-        href="descargas.html">Descargas</a></td>
-      <td
-      style="text-align:center;margin-left:auto;margin-right:auto;background-color:#c7c7c7"><a
-        href="manual.html">Manual</a></td>
-      <td style="text-align:center;background-color:#c6c6c6"><a
-        href="capturas.html">Capturas</a></td>
-      <td
-      style="text-align:center;margin-left:auto;margin-right:auto;background-color:#c6c6c6"><a
-        href="ayuda.html">Ayudando</a></td>
-      <td style="text-align:center;background-color:#c6c6c6"><a
-        href="bugs.html" name="Bugs" id="Bugs">Bugs en FísicaLab</a></td>
-    </tr>
-  </tbody>
-</table>
+<!-- end /server/initial-translations-list.html -->
 
-<p></p>
 
-<table border="0" style="width: 100%">
-  <col />
-  <col />
-  <tbody>
-    <tr>
-      <td style="text-align:justify;">FísicaLab es una aplicación educativa
-        para la resolución de problemas físicos. Su objetivo es que el usuario
-        se enfoque en los conceptos físicos dejando de lado la matemática
-        implicada, de la cual se ocupa FísicaLab. Esto le permitirá al usuario
-        familiarizarse con los conceptos físicos sin correr el riesgo de
-        perderse en los detalles matemáticos. Y de esta forma, cuando el
-        usuario gane confianza en la aplicación de los conceptos físico, estará
-        mejor preparado para resolver los problemas a mano (con lápiz y papel).
-        La última versión publicada de FísicaLab incluye módulos para los
-        siguientes tipos de problemas: 
-        <ul style="text-align:justify;">
-          <li>Cinemática de partículas 2D.</li>
-          <li>Cinemática circular de partículas 2D.</li>
-          <li>Estática de partículas 2D.</li>
-          <li>Estática de cuerpos rígidos 2D.</li>
-        </ul>
-        <ul style="text-align:justify;">
-          <li>Dinámica de partículas 2D.</li>
-          <li>Dinámica circular de partículas 2D.</li>
-          <li>Calor, calorimetría, gases ideales y dilatación.</li>
-        </ul>
+<!-- end of server/body-include-1.html -->
 
-        <p style="text-align:justify;">Los problemas relativos a estática o
-        dinámica, se plantean construyendo los diagramas de cuerpo libre a
-        partir de los elementos de la paleta. Aunque es fácil e intuitivo el
-        uso de FísicaLab, recomendamos leer la ayuda antes de plantear
-        cualquier problema. Esto con el fin de familiarizarse con las
-        convenciones adoptadas y poder asi aprovechar al maximo las facilidades
-        que ofrece FísicaLab. La ayuda se accede a través del menú, en <em>Info
-        -&gt; Ayuda</em> (ó <em>FisicaLab -&gt; Info -&gt; Ayuda</em>). El
-        manual del usuario puede también obtenerse en la sección <a
-        href="manual.html">Manual del usuario</a>.</p>
-      </td>
-      <td style="text-align:center;margin-left:auto;margin-right:auto;"><img
-        alt="imagen" src="imagenes/Espanol/fisicalabGnome1-small.png"
-        width="260" height="195" align="middle" hspace="10" /> 
 
-        <p style="text-align:center;margin-left:auto;margin-right:auto;"><a
-        href="tour.html">Un vistazo rápido</a></p>
-        <hr />
-        <a href="http://www.youtube.com/watch?v=9Xjon7zjx6Y"><img alt="Video"
-        src="imagenes/Espanol/fisicalab-video.png"
-        style="display: block; text-align: center; margin-left: auto; margin-right: auto"
-        width="256" height="205" /></a> 
+<div id="null-wrapper">
 
-        <p style="text-align:center;margin-left:auto;margin-right:auto;"><a
-        href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-es.tar.gz">Descargue
-        el vídeo en formato ogv.</a></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<!-- start of server/body-include-2 -->
 
-<h1 style="text-align:justify;">Licencia</h1>
+      <div id="header">
+        <div class="inner" style="position: relative;">
 
-<p style="text-align:justify;">FísicaLab es software libre, publicado bajo los
-términos de la licencia <a
-href="http://www.gnu.org/licenses/quick-guide-gplv3.html">GPLv3</a>. O (a su
-opción) cualquier versión posterior.</p>
+        <h1 id="logo"><a href="/">The GNU Operating System</a></h1>
 
-<h1>Desarrollador</h1>
 
-<p><a href="mailto:germanandre@gmx.es">Germán A. Arias
-&lt;germanandre@gmx.es&gt;</a></p>
 
-<h1 style="text-align:justify;">Donde obtener ayuda o reportar Bugs</h1>
+	<div id="fssbox">
 
-<p style="text-align:justify;">Puedes obtener ayuda, realizar comentarios, o
-reportar problemas en la lista de discusión general de FísicaLab. Para
-suscribirte a dicha lista pincha <a
-href="http://lists.nongnu.org/mailman/listinfo/fisicalab-discusion">aqui</a>, o
-puedes ver si tu pregunta ya ha sido contestada consultando el archivo <a
-href="http://lists.gnu.org/pipermail/fisicalab-discusion/">aqui</a>.</p>
+<p id="joinfsftab"><a href="https://www.fsf.org/associate/support_freedom?referrer=4052">Join&nbsp;the&nbsp;FSF!</a></p>
+<h4>Sign up for the <a href="http://www.fsf.org/fss">Free Software Supporter</a></h4>
+<p>A monthly email newsletter about GNU and Free Software</p>
+<form action="https://crm.fsf.org/civicrm/profile/create&amp;reset=1&amp;gid=31" method="post">
+<div><input name="postURL" type="hidden" value="" />
+<input type="hidden" name="group[25]" value="1" />
 
-<p style="text-align:justify;">Para reportar un bug, por favor incluye la mayor
-cantidad de informacion posible: información de tu maquina, tu sistema
-operativo, versión de tu sistema operativo, versión de GSL que usas, versión de
-GNUstep, y una descripción del problema.</p>
+<input name="cancelURL" type="hidden" value="https://crm.fsf.org/civicrm/profile?reset=1&amp;gid=31" />
+<input name="_qf_default" type="hidden" value="Edit:cancel" />
+</div>
 
-<table border="0" style="width: 100%;background-color:#ffffff">
-  <col />
-  <col />
-  <col />
-  <col />
-  <tbody>
-    <tr>
-      <td><a href="http://www.gnustep.org/"><img alt="Logo GNUstep"
-        src="imagenes/AlternateGNUstepLogo.png" width="128" height="166"
-      /></a></td>
-      <td style="text-align:center;background-color:#ffffff"><p></p>
+<p><label>Enter your email address (e.g. address@hidden)</label></p><p><input type="text" id="frmEmail" name="email-Primary" size="15" maxlength="80" /> &nbsp; <input type="submit" name="_qf_Edit_next" value="Ok" /></p>
+</form>
 
-        <p style="text-align:center;"><a
-        href="http://www.gnu.org/copyleft/gpl.html"><img alt="Logo GPLv3"
-        src="imagenes/gplv3.png" width="127" height="51" /></a></p>
-      </td>
-      <td><p></p>
+	</div>
+	</div>
+      </div>
 
-        <p style="text-align:center;margin-left:auto;margin-right:auto;"><a
-        href="http://www.w3.org/Amaya/"><img alt="Amaya"
-        src="imagenes/w3c-amaya.gif" width="88" height="31" /></a></p>
-      </td>
-      <td style="text-align:right;"><a
-        href="http://savannah.nongnu.org/projects/fisicalab"><img
-        alt="Logo Savannah" src="imagenes/meditate-tiny.png" width="173"
-        height="171" /></a></td>
-    </tr>
-  </tbody>
-</table>
+<!-- Begin fundraising banner -->
+<div id="fundraiserbanner2013-14">
+<a href="https://www.fsf.org/appeal/2013"><img class="right"
+src="/graphics/building.png" alt="building progress meter" /></a>
+
+<div class="text"> 
+<p><a href="https://www.fsf.org/appeal/2013"
+class="nounderline"><strong class="nounderline">Free software is a
+cornerstone of any modern free society. We build this
+foundation.</strong></a></p>
+         
+<p><a href="https://www.fsf.org/appeal/2013"
+class="nounderline">With your help, we will raise $450,000 this winter
+to make this foundation even stronger.</a></p>
+         
+<p><a href="https://www.fsf.org/appeal/2013">
+Donate today, and build us up for 2014.</a></p>
+</div>
+</div>
+<!-- End fundraising banner -->
+
+<div id="navigation">
+ <div class="inner">
+
+  <div id="searcher">
+   <form method="get" action="http://www.gnu.org/cgi-bin/estseek.cgi">
+    <div><label class="netscape4" for="phrase">Search:</label>
+    <input name="phrase" id="phrase" type="text" size="18" accesskey="s"
+           value="Why GNU/Linux?" onfocus="this.value=''" />
+    <input type="submit" value="Search" /></div><!-- unnamed label -->
+   </form>
+  </div><!-- /searcher -->
+
+  <ul>
+   <li id="tabAboutGNU"><a href="/gnu/gnu.html">About GNU</a></li>
+   <li id="tabPhilosophy"><a href=
+                           "/philosophy/philosophy.html">Philosophy</a></li>
+   <li id="tabLicenses"><a href="/licenses/licenses.html">Licenses</a></li>
+   <li id="tabEducation"><a href="/education/education.html">Education</a></li>
+   <li id="tabSoftware"><a href="/software/software.html">Software</a></li>
+   <li id="tabDoc"><a href="/doc/doc.html">Documentation</a></li>
+   <li id="tabHelp"><a href="/help/help.html">Help&nbsp;GNU</a></li>
+  </ul>
+
+ </div><!-- /inner -->
+</div><!--  /navigation -->
+<!-- end of server/body-include-2 -->
+
+
+<div id="content" class="inner">
+<!-- end of server/banner.html -->
+
+<h2>GNU FisicaLab</h2>
+
+<div class="announcement">
+<p><b>FisicaLab 0.3.3 has been released.</b>  This is a bugfix release.</p>
+</div>
+
+<p>FisicaLab (can be pronounced as PhysicsLab) is an educational application to solve physics problems. Its main objective is let the user to focus in physics concepts, leaving aside the mathematical details (FisicaLab take care of them). This allows the user to become familiar with the physical concepts without running the risk of getting lost in mathematical details. And so, when the user gain confidence in applying physical concepts, will be better prepared to solve the problems by hand (with pen and paper). The latest release of FisicaLab have the following modules:</p>
+
+<ul>
+<li>Kinematics of particles 2D.</li>
+<li>Circular kinematics of particles 2D.</li>
+<li>Static of particles 2D.</li>
+<li>Static of rigid bodies 2D.</li>
+<li>Dynamics of particles 2D.</li>
+<li>Circular dynamics of particles 2D.</li>
+<li>Heat, calorimetry, ideal gas and expansion.</li>
+</ul>
+
+The static and dynamic problems are entered constructing the free body diagrams of the objects. Although FisicaLab is easy and intuitive, we recommend you read the documentation first. You can access these files in the option menu <em>Info -> Help</em> (or <em>FisicaLab -> Info -> Help</em>). Also, you can get the documentation in PDF format (see below).
+
+
+<h3 id="download">Downloading
+  FisicaLab</h3>
+
+<p>The source tarball of
+FisicaLab
+can be found at Savannah: <a href="http://download.savannah.gnu.org/releases/fisicalab/">http://download.savannah.gnu.org/releases/fisicalab/</a></p>
+
+<!--
+<p>The source tarball of
+FisicaLab
+can be found on the main GNU ftp server:
+<a href="http://ftp.gnu.org/gnu/fisicalab/">http://ftp.gnu.org/gnu/fisicalab/</a>
+(via HTTP) and
+<a href="ftp://ftp.gnu.org/gnu/fisicalab/">ftp://ftp.gnu.org/gnu/fisicalab/</a>
+(via FTP).  It can also be found
+on the <a href="/prep/ftp.html">GNU mirrors</a>;
+please
+<a href="http://ftpmirror.gnu.org/fisicalab/">use
+a mirror</a> if possible.</p>
+-->
+
+There are some binaries and additional ways you can <a href="get.html">download or obtain</a> FisicaLab.
+
+
+<h3 id="documentation">Documentation</h3>
+
+<p>Documentation for FisicaLab is available as <a href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-doc-en.tar.gz">PDF</a>.
+
+<!--
+<p><a href="manual/">Documentation for
+FisicaLab</a>
+is available online, as
+is <a href="/manual/">documentation for most GNU software</a>.  You may
+also find more information about
+FisicaLab
+by running
+<em>info&nbsp;fisicalab</em>
+or
+<em>man&nbsp;fisicalab</em>,
+or by looking at
+<em>/usr/share/doc/fisicalab/</em>,
+<em>/usr/local/doc/fisicalab/</em>,
+or similar directories on your system.  A brief summary is available by
+running <em>fisicalab&nbsp;--help</em>.</p>
+-->
+
+
+<h3 id="mail">Mailing lists</h3>
+
+<p>FisicaLab
+has the following mailing lists:</p>
+
+<ul>
+<!--
+<li><a href="https://lists.gnu.org/mailman/listinfo/bug-fisicalab">bug-fisicalab</a>
+is used to discuss most aspects of
+FisicaLab,
+including development and enhancement requests, as well as bug reports.</li>-->
+<li><a
+href="https://lists.gnu.org/mailman/listinfo/fisicalab-discuss">fisicalab-discuss</a> is
+for general user help and discussion.</li>
+</ul>
+
+<p>Announcements about
+FisicaLab
+and most other GNU software are made on
+<a href="http://lists.gnu.org/mailman/listinfo/info-gnu">info-gnu</a>
+(<a href="http://lists.gnu.org/archive/html/info-gnu/">archive</a>).</p>
+
+
+<h3 id="contribute">Getting involved</h3>
+
+<p>Development of
+FisicaLab,
+and GNU in general, is a volunteer effort, and you can contribute.  For
+information, please read <a href="/help/">How to help GNU</a>.  If you'd
+like to get involved, it's a good idea to join the discussion mailing
+list (see above).</p>
+
+
+<dl>
+<!--
+<dt>Test releases</dt>
+
+<dd>Trying the latest test release (when available) is always
+appreciated.  Test releases of
+FisicaLab
+can be found at
+<a href="http://alpha.gnu.org/gnu/fisicalab/">http://alpha.gnu.org/gnu/fisicalab/</a>
+(via HTTP) and
+<a href="ftp://alpha.gnu.org/gnu/fisicalab/">ftp://alpha.gnu.org/gnu/fisicalab/</a>
+(via FTP).</dd>
+-->
+
+<dt>Development</dt>
+
+<dd>For development sources, issue trackers, and other
+information, please see the
+<a href="http://savannah.gnu.org/projects/fisicalab/">FisicaLab
+project page</a>
+at <a href="http://savannah.gnu.org">savannah.gnu.org</a>.</dd>
+
+<!--
+<dt>Translating
+  FisicaLab</dt>
+
+<dd>To translate
+FisicaLab's
+messages into other languages, please see the <a
+href="http://translationproject.org/domain/fisicalab.html">Translation Project
+page for
+FisicaLab</a>.
+If you have a new translation of the message strings,
+or updates to the existing strings, please have the changes made in this
+repository.  Only translations from this site will be incorporated into
+FisicaLab.
+For more information, see the <a
+href="http://translationproject.org/html/welcome.html">Translation
+Project</a>.</dd>
+-->
+
+<dt>Maintainer</dt>
+
+<dd>FisicaLab
+is currently being maintained by
+Germ&aacute;n Arias.
+Please use the mailing lists for contact.</dd>
+
+
+</dl>
+
+
+<h3 id="license">Licensing</h3>
+
+<p>FisicaLab
+is free software; you can redistribute it and/or modify it under the
+terms of the <a href="http://www.gnu.org/licenses/gpl.html"
+rel="license">GNU General Public License</a> as published by the Free
+Software Foundation; either version&nbsp;3 of the License, or (at your
+option) any later version.</p>
+
+</div><!-- for id="content", starts in the include above -->
+
+              <!-- begin server/footer-text.html -->
+<div class="inner">
+    
+<div class="yui-g" id="fsf-links">
+	<ul>
+		<li><a href="/">GNU&nbsp;home&nbsp;page</a></li>
+		<li><a href="http://www.fsf.org/">FSF&nbsp;home&nbsp;page</a></li>
+		<li><a href="/graphics/graphics.html">GNU&nbsp;Art</a></li>
+		<li><a href="/fun/fun.html">GNU&nbsp;Fun</a></li>
+		<li><a href="/people/people.html">GNU's&nbsp;Who?</a></li>
+		<li><a href="http://directory.fsf.org">Free&nbsp;Software&nbsp;Directory</a></li>
+		<li><a href="/server/sitemap.html">Site&nbsp;map</a></li>
+	</ul>
+</div>
+
+<div class="yui-g" id="mission-statement">
+
+<p><small>The <a href="http://www.fsf.org">Free Software
+Foundation</a> is the principal organizational sponsor of the <a
+href="http://www.gnu.org/">GNU Operating System</a>. <strong>Our
+mission is to preserve, protect and promote the freedom to use, study,
+copy, modify, and redistribute computer software, and to defend the
+rights of Free Software users.</strong> Support GNU and the FSF by <a
+href="http://shop.fsf.org/">buying manuals and gear</a>, <a
+href="http://www.fsf.org/join">joining the FSF as an associate
+member</a> or by making a
+donation, either <a href="http://donate.fsf.org/">directly to the FSF</a> 
+or <a href="http://flattr.com/thing/313733/gnuproject-on-Flattr">via Flattr</a>.</small></p>
+
+<p id="backtotop"><a href="#header">back to top</a></p>
+
+
+
+
+</div>
+
+
+</div>
+<!-- end server/footer-text.html -->
+
+
+<div id="footer">
+
+<p>Please send general FSF &amp; GNU inquiries to
+<a href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.
+There are also <a href="/contact/">other ways to contact</a>
+the FSF.  Broken links and other corrections or suggestions can be sent
+to <a href="mailto:bug-fisicalab@gnu.org">&lt;bug-fisicalab@gnu.org&gt;</a>.</p>
+
+<p><!-- TRANSLATORS: Ignore the original text in this paragraph,
+        replace it with the translation of these two:
+
+        We work hard and do our best to provide accurate, good quality
+        translations.  However, we are not exempt from imperfection.
+        Please send your comments and general suggestions in this regard
+        to <a href="mailto:web-translators@gnu.org">
+        &lt;web-translators@gnu.org&gt;</a>.</p>
+
+        <p>For information on coordinating and submitting translations of
+        our web pages, see <a
+        href="/server/standards/README.translations.html">Translations
+        README</a>. -->
+Please see the <a
+href="/server/standards/README.translations.html">Translations
+README</a> for information on coordinating and submitting translations
+of this article.</p>
+
+<!-- Regarding copyright, in general, standalone pages (as opposed to
+     files generated as part of manuals) on the GNU web server should
+     be under CC BY-ND 3.0 US.  Please do NOT change or remove this
+     without talking with the webmasters or licensing team first.
+     Please make sure the copyright date is consistent with the
+     document.  For web pages, it is ok to list just the latest year the
+     document was modified, or published.
+     
+     If you wish to list earlier years, that is ok too.
+     Either "2001, 2002, 2003" or "2001-2003" are ok for specifying
+     years, as long as each year in the range is in fact a copyrightable
+     year, i.e., a year in which the document was published (including
+     being publicly visible on the web or in a revision control system).
+     
+     There is more detail about copyright years in the GNU Maintainers
+     Information document, www.gnu.org/prep/maintain. -->
+
+<p>Copyright &copy; 2014 Free Software Foundation, Inc.</p>
+
+<p>This page is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-nd/3.0/us/">Creative
+Commons Attribution-NoDerivs 3.0 United States License</a>.</p>
+
+<!-- start of server/bottom-notes.html -->
+<p><a href="http://www.fsf.org/about/dmca-notice">Copyright Infringement Notification</a></p>
+
+
+<!-- end of server/bottom-notes.html -->
+
+
+<p>Updated:
+<!-- timestamp start -->
+$Date: 2014/01/20 05:18:22 $
+<!-- timestamp end -->
+</p>
+</div>
+</div>
 </body>
 </html>
