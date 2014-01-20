@@ -182,33 +182,11 @@ Donate today, and build us up for 2014.</a></p>
 <div id="content" class="inner">
 <!-- end of server/banner.html -->
 
-<div class="announcement">
-<p><b>FisicaLab 0.3.3 has been released.</b>  This is a bugfix release.</p>
-</div>
-
-<h2>GNU FiscaLab</h2>
-
-<p>FisicaLab (can be pronounced as PhysicsLab) is an educational application to solve physics problems. Its main objective is let the user to focus in physics concepts, leaving aside the mathematical details (FisicaLab take care of them). This allows the user to become familiar with the physical concepts without running the risk of getting lost in mathematical details. And so, when the user gain confidence in applying physical concepts, will be better prepared to solve the problems by hand (with pen and paper). The latest release of FisicaLab have the following modules:</p>
-
-<ul>
-<li>Kinematics of particles 2D.</li>
-<li>Circular kinematics of particles 2D.</li>
-<li>Static of particles 2D.</li>
-<li>Static of rigid bodies 2D.</li>
-<li>Dynamics of particles 2D.</li>
-<li>Circular dynamics of particles 2D.</li>
-<li>Heat, calorimetry, ideal gas and expansion.</li>
-</ul>
-
-The static and dynamic problems are entered constructing the free body diagrams of the objects. Although FisicaLab is easy and intuitive, we recommend you read the help files first before set any problem. You can access these files in the option menu Info -> Help (or FisicaLab -> Info -> Help). Also you can get the manual at User manual section.
-
-
-<h3 id="download">Downloading
-  FisicaLab</h3>
+<h2>Obtaining GNU FisicaLab</h2>
 
 <p>The source tarball of
 FisicaLab
-can be found at Savannah: <a href="http://download.savannah.gnu.org/releases/fisicalab/">http://download.savannah.gnu.org/releases/fisicalab/</a></p>
+can be found at Savannah: href="http://download.savannah.gnu.org/releases/fisicalab/">http://download.savannah.gnu.org/releases/fisicalab/</a></p>
 
 <!--
 <p>The source tarball of
@@ -224,115 +202,53 @@ please
 a mirror</a> if possible.</p>
 -->
 
-There are some binaries and additional ways you can <a href="get.html">download or obtain</a> FisicaLab.
 
-
-<h3 id="documentation">Documentation</h3>
-
-<p>Documentation for FisicaLab is available as <a href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-doc-en.tar.gz">PDF</a>.
-
-<!--
-<p><a href="manual/">Documentation for
-FisicaLab</a>
-is available online, as
-is <a href="/manual/">documentation for most GNU software</a>.  You may
-also find more information about
-FisicaLab
-by running
-<em>info&nbsp;fisicalab</em>
-or
-<em>man&nbsp;fisicalab</em>,
-or by looking at
-<em>/usr/share/doc/fisicalab/</em>,
-<em>/usr/local/doc/fisicalab/</em>,
-or similar directories on your system.  A brief summary is available by
-running <em>fisicalab&nbsp;--help</em>.</p>
--->
-
-
-<h3 id="mail">Mailing lists</h3>
-
-<p>FisicaLab
-has the following mailing lists:</p>
+<h3 id="download">Binaries</h3>
 
 <ul>
-<!--
-<li><a href="https://lists.gnu.org/mailman/listinfo/bug-fisicalab">bug-fisicalab</a>
-is used to discuss most aspects of
-FisicaLab,
-including development and enhancement requests, as well as bug reports.</li>-->
-<li><a
-href="https://lists.gnu.org/mailman/listinfo/fisicalab-discuss">fisicalab-discuss</a> is
-for general user help and discussion.</li>
+  <li>Universal binary for GNU/Linux distributions 32 bits.
+    <ul>
+      <li><a
+        href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.3-gnu-linux-32.tar.gz">fisicalab-0.3.3-gnu-linux-32.tar.gz</a>
+        </li>
+    </ul>
+  </li>
+  <li>Gentoo
+    <ul>
+      <li>Official <a href="https://packages.gentoo.org/package/gnustep-apps/fisicalab?arches=prefix">Package</a></li>
+    </ul>
+  </li>
+  <li>OpenBSD
+    <ul>
+      <li><a
+        href="http://openports.se/x11/gnustep/fisicalab">OpenBSD Ports Package</a> </li>
+    </ul>
+  </li>
+  <li>FreeBSD
+    <ul>
+      <li><a
+        href="http://packages.ubuntu.com/search?searchon=names&amp;keywords=pspp">FreshPorts Package</a></li>
+    </ul>
+  </li>
+  <li>Debian and Ubuntu
+    <ul>
+      <li>Add the corresponding <a href="http://coyote.octets.fr/pub/gnustep/packages/">Unofficial Repository</a> (the available version of fisicalab isn't up to date)</li>
+    </ul>
+  </li>
+  <li>MS Windows 
+    <ul>
+      <li>
+	<a href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.3-setup.exe">Windows installer</a>. This package is not standalone, so you should first install the following prerequisites packages. Install these in the order that are listed.
+	<ul>
+	  <li><a href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-msys-system-0.30.0-setup.exe">GNUstep MSYS System</li>
+	  <li><a href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.33.0-setup.exe">GNUstep Core</li>
+<li><a href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-cairo-0.33.0-setup.exe">GNUstep Cairo</a></li>
+	</ul>
+Be sure to active the theme <strong>WinUXTheme</strong> when install the Core package. If you miss activate the theme at installation, run the Shell at <em>Start -> Applications -> GNUstep -> Shell</em> and write: <code>defaults write NSGlobalDomain GSTheme WinUXTheme</code> and hit <code>RETURN</code>. Keep in mind that in Windows systems you can't write the character @, needed to use conversion factors, with the combination Alt-64. You need write this character with the key Alt or Shift in combination with another alfanumeric key.
+      </li>
+    </ul>
+  </li>
 </ul>
-
-<p>Announcements about
-FisicaLab
-and most other GNU software are made on
-<a href="http://lists.gnu.org/mailman/listinfo/info-gnu">info-gnu</a>
-(<a href="http://lists.gnu.org/archive/html/info-gnu/">archive</a>).</p>
-
-
-<h3 id="contribute">Getting involved</h3>
-
-<p>Development of
-FisicaLab,
-and GNU in general, is a volunteer effort, and you can contribute.  For
-information, please read <a href="/help/">How to help GNU</a>.  If you'd
-like to get involved, it's a good idea to join the discussion mailing
-list (see above).</p>
-
-
-<dl>
-<!--
-<dt>Test releases</dt>
-
-<dd>Trying the latest test release (when available) is always
-appreciated.  Test releases of
-FisicaLab
-can be found at
-<a href="http://alpha.gnu.org/gnu/fisicalab/">http://alpha.gnu.org/gnu/fisicalab/</a>
-(via HTTP) and
-<a href="ftp://alpha.gnu.org/gnu/fisicalab/">ftp://alpha.gnu.org/gnu/fisicalab/</a>
-(via FTP).</dd>
--->
-
-<dt>Development</dt>
-
-<dd>For development sources, issue trackers, and other
-information, please see the
-<a href="http://savannah.gnu.org/projects/fisicalab/">FisicaLab
-project page</a>
-at <a href="http://savannah.gnu.org">savannah.gnu.org</a>.</dd>
-
-<!--
-<dt>Translating
-  FisicaLab</dt>
-
-<dd>To translate
-FisicaLab's
-messages into other languages, please see the <a
-href="http://translationproject.org/domain/fisicalab.html">Translation Project
-page for
-FisicaLab</a>.
-If you have a new translation of the message strings,
-or updates to the existing strings, please have the changes made in this
-repository.  Only translations from this site will be incorporated into
-FisicaLab.
-For more information, see the <a
-href="http://translationproject.org/html/welcome.html">Translation
-Project</a>.</dd>
--->
-
-<dt>Maintainer</dt>
-
-<dd>FisicaLab
-is currently being maintained by
-Germ&aacute;n Arias.
-Please use the mailing lists for contact.</dd>
-
-
-</dl>
 
 
 <h3 id="license">Licensing</h3>
