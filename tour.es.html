@@ -163,7 +163,7 @@
 <div id="content" class="inner">
 <!-- end of server/banner.html -->
 
-<h2>Obteniendo GNU FísicaLab</h2>
+<h2>Un vistazo rápido</h2>
 
 <div class="yui-g" id="fisicalab-nav-links">
   <ul>
@@ -176,73 +176,65 @@
   </ul>
 </div>
 
-<h3 id="source">Descargar el Código Fuente</h3>
+<h3 id="problem">Dado un problema</h3>
 
-<p>El código fuente de
-FísicaLab
-se puede encontrar en Savannah: <a href="http://download.savannah.gnu.org/releases/fisicalab/">http://download.savannah.gnu.org/releases/fisicalab/</a></p>
+<p class="even-para">
+<a href="images/es/problem.png"> <img src="images/es/problem.png" 
+     alt="[ A physics problem ]" width="200"
+/></a>
 
-<!--
-<p>The source tarball of
-FisicaLab
-can be found on the main GNU ftp server:
-<a href="http://ftp.gnu.org/gnu/fisicalab/">http://ftp.gnu.org/gnu/fisicalab/</a>
-(via HTTP) and
-<a href="ftp://ftp.gnu.org/gnu/fisicalab/">ftp://ftp.gnu.org/gnu/fisicalab/</a>
-(via FTP).  It can also be found
-on the <a href="/prep/ftp.html">GNU mirrors</a>;
-please
-<a href="http://ftpmirror.gnu.org/fisicalab/">use
-a mirror</a> if possible.</p>
--->
+</p>
 
+<p class="odd-para">
+Dado un problema, se debe construir un diagrama en la pizarra de FísicaLab.
+Agregando los elementos apropiados a esta.
+<a href="images/es/chalkboard.png"> <img src="images/es/chalkboard.png" 
+     alt="[ Set the diagram ]" width="150"
+/></a>
+</p>
 
-<h3 id="binaries">Binarios</h3>
+<p>
+Los elementos en cada módulo permiten construir una gran variedad de problemas.
+La documentación provee una gran cantidad de ejemplos sobre como hacer esto, 
+incluyendo una descripción completa de cada elemento.
 
-<ul>
-  <li>Binario universal para sistemas GNU/Linux de 32 bits
-    <ul>
-      <li><a
-        href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.3-gnu-linux-32.tar.gz">fisicalab-0.3.3-gnu-linux-32.tar.gz</a>
-        </li>
-    </ul>
-  </li>
-  <li>Gentoo
-    <ul>
-      <li><a href="https://packages.gentoo.org/package/gnustep-apps/fisicalab?arches=prefix">Paquete</a> Oficial</li>
-    </ul>
-  </li>
-  <li>OpenBSD
-    <ul>
-      <li><a
-        href="http://openports.se/x11/gnustep/fisicalab">Paquete OpenBSD Ports</a> </li>
-    </ul>
-  </li>
-  <li>FreeBSD
-    <ul>
-      <li><a
-        href="http://packages.ubuntu.com/search?searchon=names&amp;keywords=pspp">Paquete FreshPorts</a></li>
-    </ul>
-  </li>
-  <li>Debian y Ubuntu
-    <ul>
-      <li>Agregue el correspondiente <a href="http://coyote.octets.fr/pub/gnustep/packages/">Repositorio No Oficial</a> (los paquetes de fisicalab pueden no estar actualizados a la última versión)</li>
-    </ul>
-  </li>
-  <li>MS Windows 
-    <ul>
-      <li>
-	<a href="http://download.savannah.gnu.org/releases/fisicalab/fisicalab-0.3.3-setup.exe">Instalador de FísicaLab para Windows</a>. Este paquete no es independiente, por lo que primero debe instalar los siguientes requisitos. Instale estos en el orden en que están listados.
-	<ul>
-	  <li><a href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-msys-system-0.30.0-setup.exe">GNUstep MSYS System</li>
-	  <li><a href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-core-0.33.0-setup.exe">GNUstep Core</li>
-<li><a href="http://ftpmain.gnustep.org/pub/gnustep/binaries/windows/gnustep-cairo-0.33.0-setup.exe">GNUstep Cairo</a></li>
-	</ul>
-Asegúrese de activar el tema <strong>WinUXTheme</strong> cuando instale el paquete Core. Si olvida hacerlo, arranque el <strong>Shell</strong> en <em>Inicio -> Aplicaciones -> GNUstep -> Shell</em> y escriba: <code>defaults write NSGlobalDomain GSTheme WinUXTheme</code> y presione <code>RETURN</code>. Tenga presente que en los sistemas Windows no puede escribir el carácter @, utilizado en las conversiones, mediante la combinación Alt-64. En su lugar, debe utilizar la tecla Alt o Shift en combinación con una tecla alfanumérica.
-      </li>
-    </ul>
-  </li>
-</ul>
+<br/>
+<br/>
+</p>
+
+<h3 id="data">Añadiendo los datos</h3>
+
+<p class="odd-para">A continuación agregue la información para cada elemento en 
+la pizarra.
+<a href="images/es/data.png"> <img src="images/es/data.png" 
+     alt="[ An element data ]" width="200"
+/></a>
+</p>
+
+<p>
+Hay una gran cantidad de factores de conversión disponibles en cada módulo.
+Puede agregar estos utilizando el carácter <strong>@</strong> o mediante 
+el menú contextual. También puede utilizarse la notación científica.
+
+<br/>
+</p>
+
+<h3 id="solve">Resuelva el problema</h3>
+
+<p>Una vez agregados los elementos y la información, de un clic en el botón resolver.
+<a href="images/es/button.png"> <img src="images/es/button.png" 
+     alt="[ Solve button ]" width="70"
+/></a>
+</p>
+
+<h3 id="solution">Obteniendo la solución</h3>
+
+<p class="odd-para">Obtenga la solución en el visor de texto, cada dato se muestra 
+con sus correspondientes dimensionales. Y, de ser necesario, otros mensajes útiles.
+<a href="images/es/solution.png"> <img src="images/es/solution.png" 
+     alt="[ A FisicaLab solution ]" width="350"
+/></a>
+</p>
 
 
 <h3 id="license">Licensing</h3>
