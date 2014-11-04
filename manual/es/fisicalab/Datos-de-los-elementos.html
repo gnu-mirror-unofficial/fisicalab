@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Datos de los elementos</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Datos de los elementos">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Datos de los elementos">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Bienvenida.html#Bienvenida" rel="up" title="Bienvenida">
+<link href="Funcionamiento-de-FisicaLab.html#Funcionamiento-de-FisicaLab" rel="next" title="Funcionamiento de FisicaLab">
+<link href="Manejando-los-elementos.html#Manejando-los-elementos" rel="prev" title="Manejando los elementos">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Datos-de-los-elementos"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Funcionamiento-de-FisicaLab.html#Funcionamiento-de-FisicaLab" accesskey="n" rel="next">Funcionamiento de FisicaLab</a>, Previous: <a href="Manejando-los-elementos.html#Manejando-los-elementos" accesskey="p" rel="prev">Manejando los elementos</a>, Subir: <a href="Bienvenida.html#Bienvenida" accesskey="u" rel="up">Bienvenida</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Datos-de-los-elementos-1"></a>
+<h3 class="section">1.2 Datos de los elementos</h3>
+
+<a name="index-Datos-de-los-elementos"></a>
+
+<p>Al seleccionar un elemento de la pizarra, o agregar un nuevo elemento, aparecer&aacute; en la parte inferior de la ventana <em>M&oacute;dulos y elementos</em> una tabla con los datos de dicho elemento. Dando un doble clic en cualquier campo de la segunda columna, se pueden ingresar los datos correspondientes al elemento. F&iacute;sicaLab soporta notaci&oacute;n cient&iacute;fica, para ello se debe utilizar la letra E para indicar el exponente de la base diez. Por ejemplo, para ingresar el n&uacute;mero &lsquo;<samp>3.45 x10-5</samp>&rsquo;, se debe escribir:
+</p>
+<div class="example">
+<pre class="example">
+3.45E-5
+
+</pre></div>
+
+<p>Todos los datos num&eacute;ricos deben ser ingresados sin espacios. Por ejemplo, los siguientes datos, no son aceptados:
+</p>
+<div class="example">
+<pre class="example">
+- 5.3
+7.8E - 8
+
+</pre></div>
+
+<p>F&iacute;sicaLab tambi&eacute;n incorpora una gran cantidad de factores de conversi&oacute;n. Dichos factores pueden utilizarse colocando el car&aacute;cter <kbd>@</kbd> antes de la conversi&oacute;n deseada. Si tenemos seleccionado el sistema de unidades SI, F&iacute;sicaLab asumir&aacute; que los datos ingresados est&aacute;n en metros, kilogramos, segundos, etc. Si tenemos seleccionado el sistema Ingl&eacute;s, F&iacute;sicaLab asumir&aacute; que los datos ingresados est&aacute;n en pies, libras, slugs, segundos, etc. (en el sistema Ingl&eacute;s la masa debe estar en slugs). Pero si, por ejemplo, queremos ingresar una velocidad de &lsquo;<samp>75 km/h</samp>&rsquo;, puede hacerse de la siguiente forma:
+</p>
+<div class="example">
+<pre class="example">
+75 @ km/h
+
+</pre></div>
+
+<p>En este caso los espacios delante y detr&aacute;s del car&aacute;cter <kbd>@</kbd> son aceptados por claridad. Aunque no son indispensables. Cada m&oacute;dulo tiene su conjunto de factores de conversi&oacute;n aceptados, como se puede ver en las secciones que tratan sobre cada uno de dichos m&oacute;dulos.
+</p>
+<p>Las inc&oacute;gnitas del problema se representan con letras o conjuntos de letras. Si, por ejemplo, en un problema de cinem&aacute;tica la velocidad final es una inc&oacute;gnita, esta puede representarse como:
+</p>
+<div class="example">
+<pre class="example">
+vf
+vfinal
+velfinal
+
+</pre></div>
+
+<p>o cualquier otra combinaci&oacute;n que se desee utilizar. Aunque es recomendable que el nombre de la inc&oacute;gnita se relacione con el dato buscado (es decir, no son recomendables nombres como &lsquo;<samp>perro</samp>&rsquo;, &lsquo;<samp>gato</samp>&rsquo; o &lsquo;<samp>fkrg</samp>&rsquo; que no tienen relaci&oacute;n con el dato buscado). Los factores de conversi&oacute;n tambi&eacute;n pueden utilizarse para las inc&oacute;gnitas, indic&aacute;ndole a F&iacute;sicaLab las unidades en las que queremos el resultado. Por ejemplo, para un dato de tiempo:
+</p>
+<div class="example">
+<pre class="example">
+t @ min
+
+</pre></div>
+
+<p>lo que nos dar&aacute; el resultado del tiempo en minutos. Tambi&eacute;n es posible utilizar la notaci&oacute;n cient&iacute;fica en las inc&oacute;gnitas, para el caso cuando el resultado es muy peque&ntilde;o o muy grande, agregando los caracteres <kbd>#E</kbd> al final del nombre de la inc&oacute;gnita. Por ejemplo, para un coeficiente de expansi&oacute;n t&eacute;rmica, que es un dato muy peque&ntilde;o:
+</p>
+<div class="example">
+<pre class="example">
+coeficiente#E
+
+</pre></div>
+
+<p>Tambi&eacute;n es posible la combinaci&oacute;n con un factor de conversi&oacute;n. Por ejemplo, para una distancia muy grande que deseamos en kil&oacute;metros:
+</p>
+<div class="example">
+<pre class="example">
+distancia#E @ km
+
+</pre></div>
+
+<p>Todos los factores de conversi&oacute;n est&aacute;n tambi&eacute;n disponibles desde un men&uacute; contextual. Una vez seleccionado el rengl&oacute;n del dato al que se desea agregar el factor, un clic derecho desplegara el men&uacute; contextual con los factores disponibles.
+</p>
+<div align="center"><img src="MenuContextual.jpg" alt="MenuContextual">
+</div>
+<p>F&iacute;sicaLab permite realizar operaciones matem&aacute;ticas directamente en los campos donde se ingresan los datos. Pueden llevarse a cabo operaciones de suma (<kbd>+</kbd>), resta (<kbd>-</kbd>), multiplicaci&oacute;n (<kbd>*</kbd>) y divisi&oacute;n (<kbd>/</kbd>). Aunque no esta permitido agrupar operaciones mediante par&eacute;ntesis. Tambi&eacute;n se proveen algunas funciones &uacute;tiles para ciertos c&aacute;lculos. Estas se listan a continuaci&oacute;n con su respectiva descripci&oacute;n:
+</p>
+<table>
+<tr><td width="30%">cos(ang)</td><td width="60%">Calcula el coseno del &aacute;ngulo sexagesimal &quot;ang&quot;.</td></tr>
+<tr><td width="30%">sin(ang)</td><td width="60%">Calcula el seno del &aacute;ngulo sexagesimal &quot;ang&quot;.</td></tr>
+<tr><td width="30%">tan(ang)</td><td width="60%">Calcula la tangente del &aacute;ngulo sexagesimal &quot;ang&quot;.</td></tr>
+<tr><td width="30%">sqrt(x)</td><td width="60%">Calcula la ra&iacute;z cuadrada del n&uacute;mero &quot;x&quot;.</td></tr>
+<tr><td width="30%">hypot(a,b)</td><td width="60%">Calcula la hipotenusa del triangulo rect&aacute;ngulo cuyos catetos son &quot;a&quot; y &quot;b&quot;.</td></tr>
+<tr><td width="30%">leg(c,a)</td><td width="60%">Calcula el cateto del triangulo rect&aacute;ngulo cuya hipotenusa es &quot;c&quot; y el otro cateto es &quot;a&quot;.</td></tr>
+<tr><td width="30%">rd(m1,m2,d)</td><td width="60%">Calcula la distancia de la masa &quot;m1&quot; al centro de masa del sistema	conformado por las masas &quot;m1&quot; y &quot;m2&quot;, que est&aacute;n separadas la distancia &quot;d&quot;.</td></tr>
+</table>
+
+<p>Los n&uacute;meros que se pasen como par&aacute;metros de estas funciones deben tener unidades consistentes. Por ejemplo, en la funci&oacute;n &lsquo;<samp>hypot()</samp>&rsquo; ambos catetos deben estar en las mismas unidades, ya sean cent&iacute;metros, metros, pulgadas, etc. Estas funciones pueden utilizarse en operaciones de suma, resta, multiplicaci&oacute;n y divisi&oacute;n. En las operaciones matem&aacute;ticas los espacios en blanco no est&aacute;n permitidos. Aqu&iacute; algunos ejemplos:
+</p>
+<div class="example">
+<pre class="example">
+8*cos(34)
+hypot(4,3)-2
+rd(3,6,40)*sin(30) @ cm
+15*8/hypot(13,8)
+
+</pre></div>
+
+<p>Una vez ingresada la operaci&oacute;n, F&iacute;sicaLab llevara a cabo el c&aacute;lculo y escribir&aacute; el resultado en la entrada. Obs&eacute;rvese que es posible aplicar factores de conversi&oacute;n. Aunque estos tambi&eacute;n pueden aplicarse una vez efectuado el c&aacute;lculo.
+</p>
+<p>Los campos donde se ingresan &aacute;ngulos no permiten las operaciones y funciones descritas anteriormente. Esto es porque estos campos tienen sus propias operaciones y funciones disponibles. Por ejemplo, F&iacute;sicaLab permite ingresar los &aacute;ngulos como pendientes (a/b), convirti&eacute;ndolos autom&aacute;ticamente a &aacute;ngulos sexagesimales. Lo que es muy &uacute;til para los problemas de armaduras.
+</p>
+<div align="center"><img src="angulos.jpg" alt="angulos">
+</div>
+<p>Para estos campos est&aacute;n disponibles dos funciones que permiten calcular un &aacute;ngulo a partir de otras relaciones. Estas funciones son:
+</p>
+<table>
+<tr><td width="30%">acos(a/c)</td><td width="60%">Calcula el &aacute;ngulo sexagesimal cuyo coseno es la relaci&oacute;n &quot;a/c&quot;.</td></tr>
+<tr><td width="30%">asin(b/c)</td><td width="60%">Calcula el &aacute;ngulo sexagesimal cuyo seno es la relaci&oacute;n &quot;b/c&quot;.</td></tr>
+</table>
+
+<p>Si una operaci&oacute;n se ingresa de forma incorrecta, si por ejemplo contiene espacios o contiene una funci&oacute;n con un n&uacute;mero incorrecto de par&aacute;metros, F&iacute;sicaLab no har&aacute; nada y tomara esa cadena de caracteres como una inc&oacute;gnita.
+</p>
+<p><strong>Precauci&oacute;n:</strong> <em>F&iacute;sicaLab no emitir&aacute; ning&uacute;n mensaje de advertencia si se utiliza un factor de conversi&oacute;n inadecuado. Si, por ejemplo, para un dato de longitud se utiliza una conversi&oacute;n de masa, F&iacute;sicaLab utilizara dicha conversi&oacute;n provocando con ello un error en el resultado.</em>
+</p>
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Funcionamiento-de-FisicaLab.html#Funcionamiento-de-FisicaLab" accesskey="n" rel="next">Funcionamiento de FisicaLab</a>, Previous: <a href="Manejando-los-elementos.html#Manejando-los-elementos" accesskey="p" rel="prev">Manejando los elementos</a>, Subir: <a href="Bienvenida.html#Bienvenida" accesskey="u" rel="up">Bienvenida</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

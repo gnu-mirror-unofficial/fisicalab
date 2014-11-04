@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 4 (dc)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 4 (dc)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 4 (dc)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" rel="up" title="Ejemplos dinamica circular">
+<link href="Ejemplo-5-_0028dc_0029.html#Ejemplo-5-_0028dc_0029" rel="next" title="Ejemplo 5 (dc)">
+<link href="Ejemplo-3-_0028dc_0029.html#Ejemplo-3-_0028dc_0029" rel="prev" title="Ejemplo 3 (dc)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-4-_0028dc_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-5-_0028dc_0029.html#Ejemplo-5-_0028dc_0029" accesskey="n" rel="next">Ejemplo 5 (dc)</a>, Previous: <a href="Ejemplo-3-_0028dc_0029.html#Ejemplo-3-_0028dc_0029" accesskey="p" rel="prev">Ejemplo 3 (dc)</a>, Subir: <a href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" accesskey="u" rel="up">Ejemplos dinamica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-4-5"></a>
+<h3 class="section">13.4 Ejemplo 4</h3>
+
+<a name="index-Ejemplo-4-_0028dc_0029"></a>
+
+<p>Un collar&iacute;n de 1.5 kg puede resbalar sin rozamiento a lo largo de una barra horizontal y est&aacute; unido a dos resortes de constante 380 N/m, cuya longitud no deformada es de 2 cm. Si el collar&iacute;n se suelta desde el reposo en la posici&oacute;n A, encuentre la velocidad de este cuando pasa por el punto B.
+</p>
+<div align="center"><img src="dc-e4-1.jpg" alt="dc-e4-1">
+</div>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el grupo Din&aacute;mica y, dentro de este, el m&oacute;dulo Circular. Seleccionamos tambi&eacute;n el sistema de unidades SI, y borramos todo lo que contenga la Pizarra. Agregamos ahora un elemento Sistema de referencia fijo, un elemento Masa en reposo, un elemento M&oacute;vil con movimiento rectil&iacute;neo, cuatro elementos Resorte, siete elementos Fuerza, un elemento Sistema inicial, un elemento Sistema final y un elemento Energ&iacute;a. Tal y como se muestra en la siguiente imagen:
+</p>
+<div align="center"><img src="dc-e4-2.jpg" alt="dc-e4-2">
+</div>
+<p>El elemento Sistema de referencia fijo, agrega autom&aacute;ticamente el valor de la gravedad. Y para este problema, el dato del tiempo es irrelevante. Para el elemento Masa en reposo que representa el collar&iacute;n en el punto A, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>collarinInicial
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1.5
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento resorte, en la posici&oacute;n vertical, tenemos (este resorte no esta ni estirado ni comprimido):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>resorteUno
+</p>
+</dd>
+<dt><strong>k</strong></dt>
+<dd><p>380
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para la fuerza aplicada a este resorte:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>fuerzaUno
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para el segundo resorte del estado inicial, calculando previamente la distancia que esta estirado, tenemos (puede ingresarse directamente en el campo <code>hypot(6,2)-2 @ cm</code>):
+</p>
+<div align="center"><img src="dc-e4-3.jpg" alt="dc-e4-3">
+</div>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>resorteDos
+</p>
+</dd>
+<dt><strong>k</strong></dt>
+<dd><p>380
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>4.325 @ cm
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para la fuerza aplicada (aqu&iacute; el dato del &aacute;ngulo es irrelevante):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>fuerzaDos
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Tanto el elemento Masa en reposo como los dos resortes, constituyen el estado inicial. Por lo que los agregamos al elemento Sistema inicial, al que llamaremos <em>inicial</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>Objeto 1</strong></dt>
+<dd><p>collarinInicial
+</p>
+</dd>
+<dt><strong>Objeto 2</strong></dt>
+<dd><p>resorteUno
+</p>
+</dd>
+<dt><strong>Objeto 3</strong></dt>
+<dd><p>resorteDos
+</p>
+</dd>
+<dt><strong>Objeto 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento M&oacute;vil con movimiento rectil&iacute;neo, que representa el collar&iacute;n en el punto B, y siendo el movimiento horizontal (&aacute;ngulo = 0) y la aceleraci&oacute;n desconocida, tenemos (las coordenadas x,y son irrelevantes para este problema):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>collarinFinal
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1.5
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>v
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>aceleracion
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para la fuerza vertical, que representa la normal aplicada por la barra horizontal, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>normal
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para la fuerza oblicua aplicada a la izquierda, la fuerza aplicada por el resorte a la izquierda, e ingresando el &aacute;ngulo como la pendiente 2/2, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>fuerzaTres
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>45.000
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para la fuerza oblicua aplicada a la derecha, la fuerza aplicada por el resorte a la derecha, e ingresando el &aacute;ngulo como la pendiente 2/4:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>fuerzaCuatro
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>26.565
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el elemento resorte ubicado a la izquierda, obteniendo primero la distancia que esta deformado, tenemos (puede ingresarse directamente en el campo <code>hypot(2,2)-2 @ cm</code>):
+</p>
+<div align="center"><img src="dc-e4-4.jpg" alt="dc-e4-4">
+</div>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>resorteTres
+</p>
+</dd>
+<dt><strong>k</strong></dt>
+<dd><p>380
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>0.828 @ cm
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para la fuerza aplicada a este resorte (aqu&iacute; el dato del &aacute;ngulo tambi&eacute;n es irrelevante):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>fuerzaTres
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el resorte ubicado a la derecha, obteniendo primero la distancia que esta deformado (puede ingresarse directamente en el campo <code>hypot(4,2)-2 @ cm</code>):
+</p>
+<div align="center"><img src="dc-e4-5.jpg" alt="dc-e4-5">
+</div>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>resorteCuatro
+</p>
+</dd>
+<dt><strong>k</strong></dt>
+<dd><p>380
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>2.472 @ cm
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para la fuerza aplicada (aqu&iacute; el dato del &aacute;ngulo tambi&eacute;n es irrelevante):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>fuerzaCuatro
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Tanto el elemento M&oacute;vil con movimiento rectil&iacute;neo como estos dos resortes, constituyen el estado final. Por lo que los agregamos al elemento Sistema final, al que llamaremos <em>final</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>Objeto 1</strong></dt>
+<dd><p>collarinFinal
+</p>
+</dd>
+<dt><strong>Objeto 2</strong></dt>
+<dd><p>resorteTres
+</p>
+</dd>
+<dt><strong>Objeto 3</strong></dt>
+<dd><p>resorteCuatro
+</p>
+</dd>
+<dt><strong>Objeto 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Por &uacute;ltimo agregamos los elementos Sistema inicial y final al elemento Energ&iacute;a, recordando que no hay trabajo de fuerzas externas:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Sistema i</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>Sistema f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>W</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ingresados los datos, damos clic en el icono Resolver para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+normal = 21.141 N ;  fuerzaTres = 3.146 N ;
+fuerzaCuatro = 9.394 N ;  fuerzaDos = 16.435 N ;
+fuerzaUno = -0.000 N ;  v = 0.549 m/s ;
+aceleracion = 4.118 m/s2 ;
+Estado = success.
+
+</pre></div>
+
+<p>La velocidad del collar&iacute;n es de 0.549 m/s.
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-5-_0028dc_0029.html#Ejemplo-5-_0028dc_0029" accesskey="n" rel="next">Ejemplo 5 (dc)</a>, Previous: <a href="Ejemplo-3-_0028dc_0029.html#Ejemplo-3-_0028dc_0029" accesskey="p" rel="prev">Ejemplo 3 (dc)</a>, Subir: <a href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" accesskey="u" rel="up">Ejemplos dinamica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

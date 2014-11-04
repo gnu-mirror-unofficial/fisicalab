@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Dynamics</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Dynamics">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Dynamics">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html#Top" rel="up" title="Top">
+<link href="Stationary-reference-system-_0028d_0029.html#Stationary-reference-system-_0028d_0029" rel="next" title="Stationary reference system (d)">
+<link href="Example-13-_0028rs_0029.html#Example-13-_0028rs_0029" rel="prev" title="Example 13 (rs)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Dynamics"></a>
+<div class="header">
+<p>
+Next: <a href="Examples-dynamics-of-particles.html#Examples-dynamics-of-particles" accesskey="n" rel="next">Examples dynamics of particles</a>, Previous: <a href="Examples-statics-rigid-bodies.html#Examples-statics-rigid-bodies" accesskey="p" rel="prev">Examples statics rigid bodies</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Module-dynamics-of-particles"></a>
+<h2 class="chapter">10 Module dynamics of particles</h2>
+
+<a name="index-Module-dynamics-of-particles"></a>
+
+<p>The conversion factors for SI system are:
+</p>
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>h</strong></dt>
+<dd><p>hour
+</p>
+</dd>
+<dt><strong>min</strong></dt>
+<dd><p>minute
+</p>
+</dd>
+<dt><strong>hp</strong></dt>
+<dd><p>horse power
+</p>
+</dd>
+<dt><strong>cv</strong></dt>
+<dd><p>steam horses
+</p>
+</dd>
+<dt><strong>T</strong></dt>
+<dd><p>metric ton
+</p>
+</dd>
+<dt><strong>g</strong></dt>
+<dd><p>gram
+</p>
+</dd>
+<dt><strong>slug</strong></dt>
+<dd><p>slug
+</p>
+</dd>
+<dt><strong>km</strong></dt>
+<dd><p>kilometer
+</p>
+</dd>
+<dt><strong>cm</strong></dt>
+<dd><p>centimeter
+</p>
+</dd>
+<dt><strong>mm</strong></dt>
+<dd><p>millimeter
+</p>
+</dd>
+<dt><strong>mi</strong></dt>
+<dd><p>mile
+</p>
+</dd>
+<dt><strong>ft</strong></dt>
+<dd><p>feet
+</p>
+</dd>
+<dt><strong>in</strong></dt>
+<dd><p>inch
+</p>
+</dd>
+<dt><strong>km/h</strong></dt>
+<dd><p>kilometers per hour
+</p>
+</dd>
+<dt><strong>cm/s</strong></dt>
+<dd><p>centimeters per second
+</p>
+</dd>
+<dt><strong>mm/s</strong></dt>
+<dd><p>millimeters per second
+</p>
+</dd>
+<dt><strong>mph</strong></dt>
+<dd><p>miles per hour
+</p>
+</dd>
+<dt><strong>ft/s</strong></dt>
+<dd><p>feet per second
+</p>
+</dd>
+<dt><strong>in/s</strong></dt>
+<dd><p>inch per second
+</p>
+</dd>
+<dt><strong>kt</strong></dt>
+<dd><p>knot
+</p>
+</dd>
+<dt><strong>cm/s2</strong></dt>
+<dd><p>centimeters per squared second
+</p>
+</dd>
+<dt><strong>mm/s2</strong></dt>
+<dd><p>millimeters per squared second
+</p>
+</dd>
+<dt><strong>ft/s2</strong></dt>
+<dd><p>feet per squared second
+</p>
+</dd>
+<dt><strong>in/s2</strong></dt>
+<dd><p>inch per squared second
+</p>
+</dd>
+</dl>
+
+
+<p>And for the English system are:
+</p>
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>h</strong></dt>
+<dd><p>hour
+</p>
+</dd>
+<dt><strong>min</strong></dt>
+<dd><p>minute
+</p>
+</dd>
+<dt><strong>hp</strong></dt>
+<dd><p>horsepower
+</p>
+</dd>
+<dt><strong>cv</strong></dt>
+<dd><p>steam horses
+</p>
+</dd>
+<dt><strong>kg</strong></dt>
+<dd><p>kilogram
+</p>
+</dd>
+<dt><strong>g</strong></dt>
+<dd><p>gram
+</p>
+</dd>
+<dt><strong>km</strong></dt>
+<dd><p>kilometer
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>meter
+</p>
+</dd>
+<dt><strong>cm</strong></dt>
+<dd><p>centimeter
+</p>
+</dd>
+<dt><strong>mm</strong></dt>
+<dd><p>millimeter
+</p>
+</dd>
+<dt><strong>mi</strong></dt>
+<dd><p>mile
+</p>
+</dd>
+<dt><strong>in</strong></dt>
+<dd><p>feet
+</p>
+</dd>
+<dt><strong>km/h</strong></dt>
+<dd><p>kilometers per hour
+</p>
+</dd>
+<dt><strong>m/s</strong></dt>
+<dd><p>meters per second
+</p>
+</dd>
+<dt><strong>cm/s</strong></dt>
+<dd><p>centimeters per second
+</p>
+</dd>
+<dt><strong>mm/s</strong></dt>
+<dd><p>millimeters per second
+</p>
+</dd>
+<dt><strong>mph</strong></dt>
+<dd><p>miles per hour
+</p>
+</dd>
+<dt><strong>in/s</strong></dt>
+<dd><p>inch per second
+</p>
+</dd>
+<dt><strong>kt</strong></dt>
+<dd><p>knot
+</p>
+</dd>
+<dt><strong>m/s2</strong></dt>
+<dd><p>meters per squared second
+</p>
+</dd>
+<dt><strong>cm/s2</strong></dt>
+<dd><p>centimeters per squared second
+</p>
+</dd>
+<dt><strong>mm/s2</strong></dt>
+<dd><p>millimeters per squared second
+</p>
+</dd>
+<dt><strong>in/s2</strong></dt>
+<dd><p>inch per squared second
+</p>
+</dd>
+<dt><strong>lb/in</strong></dt>
+<dd><p>pound per inch
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<p>In this module, the forces (elements Force, Friction or Contact) are added to the objects (elements Block, Pulley or Spring) placing the force in one of the cells around the object. Each object (if there isn&rsquo;t in the chalkboard&rsquo;s border) have 8 cells around it. This module have 44 elements, presented below. With a description of each one, its data and its number of equations. Note that some elements have one or two equations, depending of the applied forces, or of the objects that interact with it.
+</p>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="Stationary-reference-system-_0028d_0029.html#Stationary-reference-system-_0028d_0029" accesskey="1">Stationary reference system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-_0028d_0029.html#Mobile-_0028d_0029" accesskey="2">Mobile</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-in-X_002fY-_0028d_0029.html#Mobile-in-X_002fY-_0028d_0029" accesskey="3">Mobile in X/Y</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-vertical-_0028d_0029.html#Block-vertical-_0028d_0029" accesskey="4">Block with vertical movement</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-horizontal-_0028d_0029.html#Block-horizontal-_0028d_0029" accesskey="5">Block with horizontal movement</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-plane-to-the-left-_0028d_0029.html#Block-plane-to-the-left-_0028d_0029" accesskey="6">Block with movement along an inclined plane to the left</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-plane-to-the-right-_0028d_0029.html#Block-plane-to-the-right-_0028d_0029" accesskey="7">Block with movement along an inclined plane to the right</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Pulley-_0028d_0029.html#Pulley-_0028d_0029" accesskey="8">Pulley</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Springs-_0028d_0029.html#Springs-_0028d_0029" accesskey="9">Springs</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Forces-_0028d_0029.html#Forces-_0028d_0029">Forces</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Frictions-_0028d_0029.html#Frictions-_0028d_0029">Frictions</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Frictions-between-blocks-_0028d_0029.html#Frictions-between-blocks-_0028d_0029">Frictions between blocks (contacts)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Relation-between-accelerations-_0028d_0029.html#Relation-between-accelerations-_0028d_0029">Relation between accelerations</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Relative-motion-_0028d_0029.html#Relative-motion-_0028d_0029">Relative motion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Collision-_0028d_0029.html#Collision-_0028d_0029">Collision</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Energy-_0028d_0029.html#Energy-_0028d_0029">Energy</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Momentum-_0028d_0029.html#Momentum-_0028d_0029">Momentum</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Power-_0028d_0029.html#Power-_0028d_0029">Power</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Examples-dynamics-of-particles.html#Examples-dynamics-of-particles" accesskey="n" rel="next">Examples dynamics of particles</a>, Previous: <a href="Examples-statics-rigid-bodies.html#Examples-statics-rigid-bodies" accesskey="p" rel="prev">Examples statics rigid bodies</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

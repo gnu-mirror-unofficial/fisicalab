@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 11 (er)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 11 (er)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 11 (er)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" rel="up" title="Ejemplos estatica rigida">
+<link href="Ejemplo-12-_0028er_0029.html#Ejemplo-12-_0028er_0029" rel="next" title="Ejemplo 12 (er)">
+<link href="Ejemplo-10-_0028er_0029.html#Ejemplo-10-_0028er_0029" rel="prev" title="Ejemplo 10 (er)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-11-_0028er_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-12-_0028er_0029.html#Ejemplo-12-_0028er_0029" accesskey="n" rel="next">Ejemplo 12 (er)</a>, Previous: <a href="Ejemplo-10-_0028er_0029.html#Ejemplo-10-_0028er_0029" accesskey="p" rel="prev">Ejemplo 10 (er)</a>, Subir: <a href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" accesskey="u" rel="up">Ejemplos estatica rigida</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-11"></a>
+<h3 class="section">9.11 Ejemplo 11</h3>
+
+<a name="index-Ejemplo-11-_0028er_0029"></a>
+
+<p>Un bloque uniforme de 25 kg y 50 cm de arista, como el de la imagen, se encuentra en un plano inclinado 20 grados. Si se desea subir el bloque por la rampa a la mayor velocidad posible (velocidad constante) mediante la fuerza horizontal F &iquest;Cual es el m&aacute;ximo coeficiente de fricci&oacute;n permitido? &iquest;Cual es la fuerza a la que corresponde la mayor velocidad?
+</p>
+<div align="center"><img src="sr-e11-1.jpg" alt="sr-e11-1">
+</div>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el grupo Est&aacute;tica y, dentro de este, el m&oacute;dulo Est&aacute;tica S&oacute;lida. Si la Pizarra contiene elementos, los borramos dando un clic en el icono Borrar todo, y seleccionamos el sistema de unidades SI. Ahora agregamos un elemento Sistema de referencia fijo, un elemento S&oacute;lido, dos elementos de s&oacute;lido y los elementos fuerza y fricci&oacute;n necesarios, tal y como muestra la siguiente imagen:
+</p>
+<div align="center"><img src="sr-e11-2.jpg" alt="sr-e11-2">
+</div>
+<p>El elemento Sistema de referencia fijo establece el valor de la gravedad por defecto. Para el elemento S&oacute;lido, que representa el bloque y que llamamos <em>Bloque</em>, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Bloque
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>25
+</p>
+</dd>
+<dt><strong>xc</strong></dt>
+<dd><p>25 @ cm
+</p>
+</dd>
+<dt><strong>yc</strong></dt>
+<dd><p>25 @ cm
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>20
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento que representa la esquina superior donde esta aplicada la fuerza F, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Bloque
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>50 @ cm
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para la fuerza horizontal:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>F
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora en el elemento que representa la esquina inferior derecha, esta aplicada tanto la normal como la fuerza de fricci&oacute;n. La normal debe estar aplicada aqu&iacute;, puesto que la mayor velocidad posible corresponde con el volteo inminente (una fuerza un poco mayor y el bloque voltea). Tenemos entonces:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Bloque
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>50 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para la fuerza que representa la normal:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>N
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>70
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para la fricci&oacute;n:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Normal</strong></dt>
+<dd><p>N
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>20
+</p>
+</dd>
+<dt><strong>u</strong></dt>
+<dd><p>u
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Una vez ingresados los datos, damos un clic en el icono de Resolver para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+F = 262.970 N ;  N = 320.401 N ;  u = 0.509 ad ;
+Estado = success.
+
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-12-_0028er_0029.html#Ejemplo-12-_0028er_0029" accesskey="n" rel="next">Ejemplo 12 (er)</a>, Previous: <a href="Ejemplo-10-_0028er_0029.html#Ejemplo-10-_0028er_0029" accesskey="p" rel="prev">Ejemplo 10 (er)</a>, Subir: <a href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" accesskey="u" rel="up">Ejemplos estatica rigida</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

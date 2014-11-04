@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 2 (d)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 2 (d)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 2 (d)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-dinamica.html#Ejemplos-dinamica" rel="up" title="Ejemplos dinamica">
+<link href="Ejemplo-3-_0028d_0029.html#Ejemplo-3-_0028d_0029" rel="next" title="Ejemplo 3 (d)">
+<link href="Ejemplo-1-_0028d_0029.html#Ejemplo-1-_0028d_0029" rel="prev" title="Ejemplo 1 (d)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-2-_0028d_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-3-_0028d_0029.html#Ejemplo-3-_0028d_0029" accesskey="n" rel="next">Ejemplo 3 (d)</a>, Previous: <a href="Ejemplo-1-_0028d_0029.html#Ejemplo-1-_0028d_0029" accesskey="p" rel="prev">Ejemplo 1 (d)</a>, Subir: <a href="Ejemplos-dinamica.html#Ejemplos-dinamica" accesskey="u" rel="up">Ejemplos dinamica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-2-4"></a>
+<h3 class="section">11.2 Ejemplo 2</h3>
+
+<a name="index-Ejemplo-2-_0028d_0029"></a>
+
+<p>Un bloque de 4 kilogramos, se encuentra sobre una balanza dentro de un ascensor que se mueve hacia arriba con una aceleraci&oacute;n de 1.6 m/s2. &iquest;Que peso, en Newtons, indica la balanza?
+</p>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el sistema de unidades SI, y borramos todo lo que contenga la Pizarra. Agregamos entonces un elemento Sistema de referencia fijo, un elemento Bloque con movimiento vertical, y a este &uacute;ltimo elemento, le agregamos un elemento Fuerza, correspondiente a la normal aplicada por el plato de la balanza. Tal y como se muestra en la siguiente imagen:
+</p>
+<div align="center"><img src="d-e2.jpg" alt="d-e2">
+</div>
+<p>Antes que nada, obs&eacute;rvese que no se nos proporcionan datos de velocidad inicial o final. Por lo tanto, podemos asumir, por simplicidad, que la velocidad inicial del ascensor es 0, Y, puesto que no se nos preguntan datos de velocidad final o distancia recorrida, asumiremos, otra vez por simplicidad, que el tiempo transcurrido es de 1 segundo. Por lo tanto, para el elemento Sistema de referencia fijo, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>g</strong></dt>
+<dd><p>9.81
+</p>
+</dd>
+<dt><strong>t</strong></dt>
+<dd><p>1
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Advi&eacute;rtase que la fuerza buscada (el peso), es el mismo independientemente de los datos de tiempo o velocidad inicial que asumamos. Para el elemento Bloque con movimiento vertical, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Bloque
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>4
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>1.6
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vf
+</p>
+</dd>
+<dt><strong>d</strong></dt>
+<dd><p>d
+</p>
+</dd>
+<dt><strong>Relativo a</strong></dt>
+<dd><p>sf
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Donde tanto la velocidad final y la distancia recorrida son inc&oacute;gnitas (para este caso, el nombre es irrelevante). Por &uacute;ltimo, para la fuerza aplicada, que es una inc&oacute;gnita (el peso buscado), tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>n
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ingresados los datos, damos clic en el icono Resolver, para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+n = 45.640 N ;  vf = 1.600 m/s ;  d = 0.800 m ;
+Estado = success.
+
+</pre></div>
+
+<p>Donde el &uacute;nico dato que nos interesa es n = 45.640 N.
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-3-_0028d_0029.html#Ejemplo-3-_0028d_0029" accesskey="n" rel="next">Ejemplo 3 (d)</a>, Previous: <a href="Ejemplo-1-_0028d_0029.html#Ejemplo-1-_0028d_0029" accesskey="p" rel="prev">Ejemplo 1 (d)</a>, Subir: <a href="Ejemplos-dinamica.html#Ejemplos-dinamica" accesskey="u" rel="up">Ejemplos dinamica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

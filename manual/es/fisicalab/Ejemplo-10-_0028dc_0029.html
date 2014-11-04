@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 10 (dc)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 10 (dc)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 10 (dc)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" rel="up" title="Ejemplos dinamica circular">
+<link href="Ejemplo-11-_0028dc_0029.html#Ejemplo-11-_0028dc_0029" rel="next" title="Ejemplo 11 (dc)">
+<link href="Ejemplo-9-_0028dc_0029.html#Ejemplo-9-_0028dc_0029" rel="prev" title="Ejemplo 9 (dc)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-10-_0028dc_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-11-_0028dc_0029.html#Ejemplo-11-_0028dc_0029" accesskey="n" rel="next">Ejemplo 11 (dc)</a>, Previous: <a href="Ejemplo-9-_0028dc_0029.html#Ejemplo-9-_0028dc_0029" accesskey="p" rel="prev">Ejemplo 9 (dc)</a>, Subir: <a href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" accesskey="u" rel="up">Ejemplos dinamica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-10-2"></a>
+<h3 class="section">13.10 Ejemplo 10</h3>
+
+<a name="index-Ejemplo-10-_0028dc_0029"></a>
+
+<p>Tres masas se encuentran sobre una superficie horizontal sin fricci&oacute;n. Dos de ellas, de 3 y 6 kg, se encuentran en reposo y est&aacute;n unidas por una varilla ligera. La tercera, de 1 kg, se mueve con una velocidad de 4 m/s como se muestra en la imagen. Si esta impacta con la masa de 3 kg y rebota a 90 grados con una velocidad de 2 m/s &iquest;cual sera el movimiento subsecuente de las otras dos masas? Obt&eacute;ngase la velocidad absoluta de las masas de 3 y 6 kg justo despu&eacute;s del impacto.
+</p>
+<div align="center"><img src="dc-e10-1.jpg" alt="dc-e10-1">
+</div>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el grupo Din&aacute;mica y, dentro de este, el m&oacute;dulo Circular. Seleccionamos tambi&eacute;n el sistema de unidades SI, y borramos todo lo que contenga la Pizarra. Agregamos ahora dos elementos M&oacute;vil con movimiento rectil&iacute;neo, dos elementos M&oacute;vil con movimiento circular, un elemento Centro de rotaci&oacute;n, un elemento Sistema final, un elemento Momento angular, un elemento Momento lineal, dos elementos Velocidad angular y dos elementos Velocidad absoluta. Tal y como se muestra en la siguiente imagen:
+</p>
+<div align="center"><img src="dc-e10-2.jpg" alt="dc-e10-2">
+</div>
+<p>El elemento M&oacute;vil con movimiento rectil&iacute;neo a la izquierda, representa la masa de 1 kg en el estado inicial. Asumiendo que la masa de 6 kg se encuentra en el origen del sistema coordenado, tenemos para este elemento, llam&aacute;ndolo <em>inicial</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>4
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>20 @ cm
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el otro elemento M&oacute;vil con movimiento rectil&iacute;neo, que representa la misma masa de 1 kg pero en el estado final, tenemos, llam&aacute;ndolo <em>A</em> (La coordenada X es <code>40 cm*cos(30) = 34.641 cm</code>. Esta operaci&oacute;n puede llevarse a cabo directamente en la entrada, y aplicando el factor de conversi&oacute;n.):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>2
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>34.641 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>90
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento Centro de rotaci&oacute;n, alrededor del cual giran las masas de 3 y 6 kg en el estado final, notamos que este est&aacute; a 13.333 m de la masa de 6 kg. Por lo tanto sus coordenadas son (estas operaciones pueden llevarse a cabo directamente en las entradas de la tabla):
+</p>
+<div class="example">
+<pre class="example">
+x = 13.333*cos(30) = 11.547
+y = 13.333*sin(30) = 6.666
+
+</pre></div>
+
+<p>As&iacute;, tenemos para este elemento:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>centro
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>vCentro
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>angCentro
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>11.547 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>6.666 @ cm
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el elemento M&oacute;vil con movimiento circular de la derecha, que representa la masa de 3 kg en el estado final, tenemos, llam&aacute;ndolo <em>B</em> (la distancia al centro de rotaci&oacute;n puede obtenerse usando la funci&oacute;n <code>rd()</code>, y aplicando el factor de conversi&oacute;n):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>3
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>vtB
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>26.666 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para el otro elemento M&oacute;vil con movimiento circular, que representa la masa de 6 kg en el estado final, tenemos, llam&aacute;ndolo <em>C</em> (la distancia al centro de rotaci&oacute;n puede obtenerse usando la funci&oacute;n <code>rd()</code>, y aplicando el factor de conversi&oacute;n):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>C
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>6
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>vtC
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>13.333 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Estos dos elementos giran con la misma velocidad angular. Por lo tanto, para los elementos Velocidad angular, tenemos, respectivamente:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Objeto</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>vang</strong></dt>
+<dd><p>vang
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>Objeto</strong></dt>
+<dd><p>C
+</p>
+</dd>
+<dt><strong>vang</strong></dt>
+<dd><p>vang
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Estos tres m&oacute;viles y el centro de rotaci&oacute;n constituyen el estado final, por lo que los agregamos al elemento Sistema final, al que llamaremos <em>final</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>Objeto 1</strong></dt>
+<dd><p>centro
+</p>
+</dd>
+<dt><strong>Objeto 2</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>Objeto 3</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>Objeto 4</strong></dt>
+<dd><p>C
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ya que se piden las velocidades absolutas de las masas de 3 y 6 kg (B y C), tenemos para los elementos Velocidad absoluta, respectivamente:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Objeto</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>angR</strong></dt>
+<dd><p>30
+</p>
+</dd>
+<dt><strong>Centro</strong></dt>
+<dd><p>centro
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>vB
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>angB
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>Objeto</strong></dt>
+<dd><p>C
+</p>
+</dd>
+<dt><strong>angR</strong></dt>
+<dd><p>210
+</p>
+</dd>
+<dt><strong>Center</strong></dt>
+<dd><p>centro
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>vC
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>angC
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el elemento Momento angular, y ya que no existe un momento externo, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Sistema i</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>Sistema f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>M</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para el elemento Momento lineal, y puesto que tampoco hay fuerzas externas aplicadas:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Sistema i</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>Sistema f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>Fx</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>Fy</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ingresados los datos, damos clic en el icono Resolver para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+vang = -3.110 rad/s ;  vtC = -0.415 m/s ;
+vB = 1.274 m/s ;  angB = 312.412 grados ;
+vtB = -0.829 m/s ;  vC = 0.274 m/s ;
+angC = 30.004 grados ;  vCentro = 0.497 m/s ;
+angCentro = 333.435 grados ;
+Estado = success.
+
+</pre></div>
+
+<p><strong>Nota:</strong> <em>Advierta que en este problema las masas de 3 y 6 kg no aparecen en el estado inicial. Esto es porque para este tipo de problemas F&iacute;sicaLab &uacute;nicamente permite un objeto en el estado inicial. El objeto que esta inicialmente en movimiento. V&eacute;ase tambi&eacute;n el ejemplo anterior.</em>
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-11-_0028dc_0029.html#Ejemplo-11-_0028dc_0029" accesskey="n" rel="next">Ejemplo 11 (dc)</a>, Previous: <a href="Ejemplo-9-_0028dc_0029.html#Ejemplo-9-_0028dc_0029" accesskey="p" rel="prev">Ejemplo 9 (dc)</a>, Subir: <a href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" accesskey="u" rel="up">Ejemplos dinamica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

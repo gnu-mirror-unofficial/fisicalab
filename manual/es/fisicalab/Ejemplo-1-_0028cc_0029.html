@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 1 (cc)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 1 (cc)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 1 (cc)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-cinematica-circular.html#Ejemplos-cinematica-circular" rel="up" title="Ejemplos cinematica circular">
+<link href="Ejemplo-2-_0028cc_0029.html#Ejemplo-2-_0028cc_0029" rel="next" title="Ejemplo 2 (cc)">
+<link href="Ejemplos-cinematica-circular.html#Ejemplos-cinematica-circular" rel="prev" title="Ejemplos cinematica circular">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-1-_0028cc_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-2-_0028cc_0029.html#Ejemplo-2-_0028cc_0029" accesskey="n" rel="next">Ejemplo 2 (cc)</a>, Previous: <a href="Ejemplos-cinematica-circular.html#Ejemplos-cinematica-circular" accesskey="p" rel="prev">Ejemplos cinematica circular</a>, Subir: <a href="Ejemplos-cinematica-circular.html#Ejemplos-cinematica-circular" accesskey="u" rel="up">Ejemplos cinematica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-1-1"></a>
+<h3 class="section">5.1 Ejemplo 1</h3>
+
+<a name="index-Ejemplo-1-_0028cc_0029"></a>
+
+<p>Un m&oacute;vil con movimiento circular uniforme recorre una circunferencia de radio 3 m con una velocidad tangencial constante de 27 m/s, &iquest;Cual es la aceleraci&oacute;n centr&iacute;peta del m&oacute;vil? &iquest;Que distancia en metros ha recorrido despu&eacute;s de 6.3 segundos?
+</p>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el grupo Cinem&aacute;tica y, dentro de este, el m&oacute;dulo Circular. Si la Pizarra contiene elementos, los borramos dando un clic en el icono Borrar todo. Seleccionamos entonces el sistema de unidades SI (el sistema de unidades por defecto). Y ahora agregamos a la Pizarra un elemento M&oacute;vil con movimiento circular, un elemento Longitud de arco y un Sistema de referencia fijo, como muestra la siguiente imagen:
+</p>
+<div align="center"><img src="kc-e1.jpg" alt="kc-e1">
+</div>
+<p>Para el elemento Sistema de referencia fijo tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>tf</strong></dt>
+<dd><p>6.3
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora al elemento M&oacute;vil con movimiento circular lo llamaremos <em>Movil</em>. Y suponemos que su posici&oacute;n inicial es la que corresponde al &aacute;ngulo 0. Asimismo, dejamos el centro como 0 (para este problema no es necesario establecer un centro de rotaci&oacute;n). Los datos de velocidad final y aceleraci&oacute;n centr&iacute;peta los ponemos como inc&oacute;gnitas, puesto que el elemento tiene un dato de aceleraci&oacute;n tangencial y se asume que la velocidad final puede ser diferente a la inicial:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Movil
+</p>
+</dd>
+<dt><strong>C</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>3
+</p>
+</dd>
+<dt><strong>aci</strong></dt>
+<dd><p>aci
+</p>
+</dd>
+<dt><strong>at</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>angi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>27
+</p>
+</dd>
+<dt><strong>ti</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>angf</strong></dt>
+<dd><p>angf
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vf
+</p>
+</dd>
+<dt><strong>acf</strong></dt>
+<dd><p>acf
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para el elemento Longitud de arco el objeto a medir sera nuestro <em>Movil</em>, y la longitud del arco es por supuesto una inc&oacute;gnita:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Objeto</strong></dt>
+<dd><p>Movil
+</p>
+</dd>
+<dt><strong>s</strong></dt>
+<dd><p>s
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ingresados los datos, damos un clic en el icono de Resolver para obtener las respuestas:
+</p>
+<div class="example">
+<pre class="example">
+aci = 243.000 m/s2 ;  angf = 8.671 grados ;
+vf = 27.000 m/s ;  acf = 243.000 m/s2 ;
+s = 170.100 m ;
+Estado = success.
+
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-2-_0028cc_0029.html#Ejemplo-2-_0028cc_0029" accesskey="n" rel="next">Ejemplo 2 (cc)</a>, Previous: <a href="Ejemplos-cinematica-circular.html#Ejemplos-cinematica-circular" accesskey="p" rel="prev">Ejemplos cinematica circular</a>, Subir: <a href="Ejemplos-cinematica-circular.html#Ejemplos-cinematica-circular" accesskey="u" rel="up">Ejemplos cinematica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 10 (er)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 10 (er)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 10 (er)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" rel="up" title="Ejemplos estatica rigida">
+<link href="Ejemplo-11-_0028er_0029.html#Ejemplo-11-_0028er_0029" rel="next" title="Ejemplo 11 (er)">
+<link href="Ejemplo-9-_0028er_0029.html#Ejemplo-9-_0028er_0029" rel="prev" title="Ejemplo 9 (er)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-10-_0028er_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-11-_0028er_0029.html#Ejemplo-11-_0028er_0029" accesskey="n" rel="next">Ejemplo 11 (er)</a>, Previous: <a href="Ejemplo-9-_0028er_0029.html#Ejemplo-9-_0028er_0029" accesskey="p" rel="prev">Ejemplo 9 (er)</a>, Subir: <a href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" accesskey="u" rel="up">Ejemplos estatica rigida</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-10"></a>
+<h3 class="section">9.10 Ejemplo 10</h3>
+
+<a name="index-Ejemplo-10-_0028er_0029"></a>
+
+<p>Considere la estructura en la imagen de abajo. Calcule las reacciones en O y las reacciones entre las vigas en los puntos A, B y C. Desprecie el peso de las vigas.
+</p>
+<div align="center"><img src="sr-e10-1.jpg" alt="sr-e10-1">
+</div>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el grupo Est&aacute;tica y, dentro de este, el m&oacute;dulo Est&aacute;tica S&oacute;lida. Si la Pizarra contiene elementos, los borramos dando un clic en el icono Borrar todo, y seleccionamos el sistema de unidades SI. Ahora agregamos un elemento Sistema de referencia fijo, tres elementos Viga, siete elementos de viga y los elementos fuerza y momento necesarios, tal y como muestra la siguiente imagen (las lineas amarillas separan las &aacute;reas donde se definen las vigas de la estructura):
+</p>
+<div align="center"><img src="sr-e10-2.jpg" alt="sr-e10-2">
+</div>
+<p>En la imagen puede observarse como, de acuerdo a la tercera ley de Newton, las reacciones entre las vigas tienen diferente sentido. Y deberemos asignarles la misma magnitud o inc&oacute;gnita. El sistema de referencia fijo agrega el valor de la gravedad por defecto. Para el elemento Viga que representa la viga vertical de apoyo y que llamaremos <em>OAB</em>, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>OAB
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>lc</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>90
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Esta viga se compone de tres elemento, los cuales representan los puntos O, A y B. Para el elemento en O, y sus respectivas reacciones, llamadas Rx, Ry, M, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>OAB
+</p>
+</dd>
+<dt><strong>l</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>Rx
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>Ry
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>M</strong></dt>
+<dd><p>M
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento en A y sus respectivas reacciones, RAx y RAy, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>OAB
+</p>
+</dd>
+<dt><strong>l</strong></dt>
+<dd><p>1.8
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RAx
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RAy
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento en B y sus respectivas reacciones, RBx y RBy, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>OAB
+</p>
+</dd>
+<dt><strong>l</strong></dt>
+<dd><p>2.5
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RBx
+</p>
+</dd>
+</dl>
+
+<dl compact="compact">
+<dd>
+<br>
+<br>
+
+</dd>
+<dt><strong>f</strong></dt>
+<dd><p>RBy
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el elemento Viga que representa la viga horizontal, y que llamaremos <em>AC</em>, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>AC
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>lc</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento de viga que representa el extremo en A de esta viga, y para sus respectivas reacciones, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>AC
+</p>
+</dd>
+<dt><strong>l</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RAx
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RAy
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento del extremo en C, para las reacciones RCx, RCy y para el peso de la masa de 50 kg (<code>50 kg*9.81 m/s2 = 490.500 N</code>), tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>AC
+</p>
+</dd>
+<dt><strong>l</strong></dt>
+<dd><p>1.3
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RCx
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RCy
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>490.500
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el elemento Viga que representa la viga inclinada de B a C, llam&aacute;ndola <em>BC</em>, tenemos (aqu&iacute; el &aacute;ngulo se ingresa como una pendiente -0.7/1.3):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>BC
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>lc</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>-28.301
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento en B y para las reacciones aplicadas, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>BC
+</p>
+</dd>
+<dt><strong>l</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RBx
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RBy
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento en C debemos calcular la distancia entre B y C, la cual se puede obtener con <code>hypot(0.7,1.3)</code>. As&iacute;, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>BC
+</p>
+</dd>
+<dt><strong>l</strong></dt>
+<dd><p>1.476
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para las reacciones aplicadas, RCx y RCy (no agregamos el peso de la caja de 50 kg, porque ya fue agregada en la viga AC):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RCx
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RCy
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Una vez ingresados los datos, damos un clic en el icono de Resolver para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+RAx = 910.919 N ;  RAy = -0.000 N ;  RCy = 490.500 N ;
+RCx = 910.919 N ;  RBx = 910.919 N ;  RBy = 490.500 N ;
+M = 637.643 N*m ;  Ry = 490.500 N ;  Rx = 0.000 N ;
+Estado = success.
+
+</pre></div>
+
+<p><strong>Nota:</strong> <em>Otra forma m&aacute;s f&aacute;cil de plantear este mismo problema es notar que la viga BC es un elemento sometido a dos fuerzas. Por lo tanto podemos aplicar directamente dos elementos Viga de 2 fuerzas como se muestra en la imagen de abajo. Esto nos evita tener que calcular la longitud de la viga BC. Obs&eacute;rvese que la viga AC tambi&eacute;n es un elemento sometido a dos fuerzas, aunque no hubiera sido posible remplazar las dos vigas por elementos Viga de 2 fuerzas. Como se ve, todo es cuesti&oacute;n de decidir que es m&aacute;s conveniente para el problema a resolver.</em>
+</p>
+<div align="center"><img src="sr-e10-3.jpg" alt="sr-e10-3">
+</div>
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-11-_0028er_0029.html#Ejemplo-11-_0028er_0029" accesskey="n" rel="next">Ejemplo 11 (er)</a>, Previous: <a href="Ejemplo-9-_0028er_0029.html#Ejemplo-9-_0028er_0029" accesskey="p" rel="prev">Ejemplo 9 (er)</a>, Subir: <a href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" accesskey="u" rel="up">Ejemplos estatica rigida</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

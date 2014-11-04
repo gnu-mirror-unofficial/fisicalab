@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Combinations (cd)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Combinations (cd)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Combinations (cd)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Circular-dynamics.html#Circular-dynamics" rel="up" title="Circular dynamics">
+<link href="Examples-circular-dynamics.html#Examples-circular-dynamics" rel="next" title="Examples circular dynamics">
+<link href="Sine-of-angle-_0028cd_0029.html#Sine-of-angle-_0028cd_0029" rel="prev" title="Sine of angle (cd)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Combinations-_0028cd_0029"></a>
+<div class="header">
+<p>
+Previous: <a href="Sine-of-angle-_0028cd_0029.html#Sine-of-angle-_0028cd_0029" accesskey="p" rel="prev">Sine of angle (cd)</a>, Up: <a href="Circular-dynamics.html#Circular-dynamics" accesskey="u" rel="up">Circular dynamics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Supported-combinations-of-elements-Energy_002c-Angular-Momentum_002c-Linear-Momentum-and-Power"></a>
+<h3 class="section">12.27 Supported combinations of elements Energy, Angular Momentum, Linear Momentum and Power</h3>
+
+<a name="index-Supported-combinations-of-elements-Energy_002c-Angular-Momentum_002c-Linear-Momentum-and-Power-_0028cd_0029"></a>
+
+<p>The following abbreviations are used:
+</p>
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>OR</strong></dt>
+<dd><p>Object in rest.
+</p>
+</dd>
+<dt><strong>ML</strong></dt>
+<dd><p>Mobile with linear movement.
+</p>
+</dd>
+<dt><strong>MC</strong></dt>
+<dd><p>Mobile with circular movement.
+</p>
+</dd>
+<dt><strong>MP</strong></dt>
+<dd><p>Mobile with polar circular movement.
+</p>
+</dd>
+<dt><strong>C</strong></dt>
+<dd><p>Center of rotation.
+</p>
+</dd>
+<dt><strong>S</strong></dt>
+<dd><p>Spring.
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<p>Energy and Power elements support the following combinations:
+</p>
+<table>
+<thead><tr><th width="48%">System i</th><th width="48%">System f</th></tr></thead>
+<tr><td width="48%">OR</td><td width="48%">OR</td></tr>
+<tr><td width="48%">OR</td><td width="48%">ML</td></tr>
+<tr><td width="48%">OR</td><td width="48%">MC</td></tr>
+<tr><td width="48%">ML</td><td width="48%">OR</td></tr>
+<tr><td width="48%">ML</td><td width="48%">ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">MC</td></tr>
+<tr><td width="48%">MC</td><td width="48%">OR</td></tr>
+<tr><td width="48%">MC</td><td width="48%">ML</td></tr>
+<tr><td width="48%">MC</td><td width="48%">MC</td></tr>
+<tr><td width="48%">MC</td><td width="48%">MP</td></tr>
+<tr><td width="48%">MP</td><td width="48%">MC</td></tr>
+<tr><td width="48%">MP</td><td width="48%">MP</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 2 ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 3 ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 4 ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 2 MC and 1 C</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 2 MC, 1 ML and 1 C</td></tr>
+<tr><td width="48%">Initial system with 2 MC</td><td width="48%">Final system with 2 MC</td></tr>
+<tr><td width="48%">Initial system with 3 MC</td><td width="48%">Final system with 3 MC</td></tr>
+<tr><td width="48%">Initial system with 1 MC and 1 S</td><td width="48%">Final system with 1 MC and 1 S</td></tr>
+<tr><td width="48%">Initial system with 1 ML and 1 S</td><td width="48%">Final system with 1 ML and 1 S</td></tr>
+<tr><td width="48%">Initial system with 1 ML and 2 S</td><td width="48%">Final system with 1 ML and 2 S</td></tr>
+<tr><td width="48%">Initial system with 1 ML and 3 S</td><td width="48%">Final system with 1 ML and 3 S</td></tr>
+<tr><td width="48%">Initial system with 2 MC and 1 C</td><td width="48%">Final system with 2 ML</td></tr>
+<tr><td width="48%">Initial system with 3 MC and 1 C</td><td width="48%">Final system with 3 ML</td></tr>
+<tr><td width="48%">Initial system with 3 MC and 1 C</td><td width="48%">Final system with 2 MC, 1 ML and 1 C</td></tr>
+<tr><td width="48%">Initial system with 1 MC and 1 S</td><td width="48%">Final system with 1 OR and 1 S</td></tr>
+<tr><td width="48%">Initial system with 1 OR and 1 S</td><td width="48%">Final system with 1 MC and 1 S</td></tr>
+<tr><td width="48%">Initial system with 1 ML and 1 S</td><td width="48%">Final system with 1 OR and 1 S</td></tr>
+<tr><td width="48%">Initial system with 1 OR and 1 S</td><td width="48%">Final system with 1 ML and 1 S</td></tr>
+<tr><td width="48%">Initial system with 1 ML and 2 S</td><td width="48%">Final system with 1 OR and 2 S</td></tr>
+<tr><td width="48%">Initial system with 1 OR and 2 S</td><td width="48%">Final system with 1 ML and 2 S</td></tr>
+<tr><td width="48%">Initial system with 1 ML and 3 S</td><td width="48%">Final system with 1 OR and 3 S</td></tr>
+<tr><td width="48%">Initial system with 1 OR and 3 S</td><td width="48%">Final system with 1 ML and 3 S</td></tr>
+<tr><td width="48%">Initial system with 1 MC and 1 S</td><td width="48%">Final system with 1 MP and 1 S</td></tr>
+<tr><td width="48%">Initial system with 1 MP and 1 S</td><td width="48%">Final system with 1 MC and 1 S</td></tr>
+<tr><td width="48%">Initial system with 1 MP and 1 S</td><td width="48%">Final system with 1 MP and 1 S</td></tr>
+</table>
+
+
+<p>The element Angular Momentum supports the following combinations:
+</p>
+<table>
+<thead><tr><th width="48%">System i</th><th width="48%">System f</th></tr></thead>
+<tr><td width="48%">MC</td><td width="48%">MC</td></tr>
+<tr><td width="48%">MC</td><td width="48%">MP</td></tr>
+<tr><td width="48%">MP</td><td width="48%">MC</td></tr>
+<tr><td width="48%">MP</td><td width="48%">MP</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 2 ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 3 ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 4 ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 2 MC and 1 C</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 2 MC, 1 ML and 1 C</td></tr>
+<tr><td width="48%">Initial system with 2 MC</td><td width="48%">Final system with 2 MC</td></tr>
+<tr><td width="48%">Initial system with 3 MC</td><td width="48%">Final system with 3 MC</td></tr>
+<tr><td width="48%">Initial system with 2 MC and 1 C</td><td width="48%">Final system with 2 ML</td></tr>
+<tr><td width="48%">Initial system with 3 MC and 1 C</td><td width="48%">Final system with 3 ML</td></tr>
+<tr><td width="48%">Initial system with 3 MC and 1 C</td><td width="48%">Final system with 2 MC, 1 ML and 1 C</td></tr>
+</table>
+
+
+<p>The element Linear Momentum supports the following combinations:
+</p>
+<table>
+<thead><tr><th width="48%">System i</th><th width="48%">System f</th></tr></thead>
+<tr><td width="48%">ML</td><td width="48%">ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 2 ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 3 ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 4 ML</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 2 MC and 1 C</td></tr>
+<tr><td width="48%">ML</td><td width="48%">Final system with 2 MC, 1 ML and 1 C</td></tr>
+<tr><td width="48%">Initial system with 2 MC and 1 C</td><td width="48%">Final system with 2 ML</td></tr>
+<tr><td width="48%">Initial system with 3 MC and 1 C</td><td width="48%">Final system with 3 ML</td></tr>
+<tr><td width="48%">Initial system with 3 MC and 1 C</td><td width="48%">Final system with 2 MC, 1 ML and 1 C</td></tr>
+</table>
+
+<hr>
+<div class="header">
+<p>
+Previous: <a href="Sine-of-angle-_0028cd_0029.html#Sine-of-angle-_0028cd_0029" accesskey="p" rel="prev">Sine of angle (cd)</a>, Up: <a href="Circular-dynamics.html#Circular-dynamics" accesskey="u" rel="up">Circular dynamics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 5 (e)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 5 (e)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 5 (e)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-estatica.html#Ejemplos-estatica" rel="up" title="Ejemplos estatica">
+<link href="Ejemplo-6-_0028e_0029.html#Ejemplo-6-_0028e_0029" rel="next" title="Ejemplo 6 (e)">
+<link href="Ejemplo-4-_0028e_0029.html#Ejemplo-4-_0028e_0029" rel="prev" title="Ejemplo 4 (e)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-5-_0028e_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-6-_0028e_0029.html#Ejemplo-6-_0028e_0029" accesskey="n" rel="next">Ejemplo 6 (e)</a>, Previous: <a href="Ejemplo-4-_0028e_0029.html#Ejemplo-4-_0028e_0029" accesskey="p" rel="prev">Ejemplo 4 (e)</a>, Subir: <a href="Ejemplos-estatica.html#Ejemplos-estatica" accesskey="u" rel="up">Ejemplos estatica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-5-2"></a>
+<h3 class="section">7.5 Ejemplo 5</h3>
+
+<a name="index-Ejemplo-5-_0028e_0029"></a>
+
+<p>Un bloque de masa m esta sostenido por una combinaci&oacute;n de cuerdas como muestra la figura. Si la tensi&oacute;n en la cuerda A es de 2 Newtons, &iquest;Cual es la tensi&oacute;n en la cuerda B? &iquest;Y cual la masa del bloque?
+</p>
+<br>
+
+<div align="center"><img src="s-e5-1.jpg" alt="s-e5-1">
+</div>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Borramos el contenido de la Pizarra, seleccionamos el sistema de unidades SI, y agregamos un elemento Sistema de referencia fijo, un elemento Punto, y un elemento Bloque. Al elemento Punto le agregamos tres elementos Fuerza, y al elemento Bloque solamente uno, para formar dos diagramas de cuerpo libre, tal y como se muestra en la siguiente imagen:
+</p>
+<div align="center"><img src="s-e5-2.jpg" alt="s-e5-2">
+</div>
+<p>El elemento Sistema de referencia fijo agrega por defecto el valor de la gravedad. El elemento Punto solamente tiene como dato el Nombre, el cual es irrelevante para cualquier caso. Para el elemento Fuerza oblicua que corresponde a la cuerda A, ponemos los datos proporcionados:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>2
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>35
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento Fuerza oblicua que corresponde a la cuerda B, colocamos el dato del &aacute;ngulo, y dejamos como inc&oacute;gnita el valor de la fuerza:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>22
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento Fuerza vertical, aplicada al elemento Punto, que corresponde a la tensi&oacute;n en la cuerda que sostiene al bloque, dejamos como inc&oacute;gnita el valor de dicha tensi&oacute;n:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>t
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento Bloque, dejamos como inc&oacute;gnita el dato de la masa:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>m</strong></dt>
+<dd><p>m
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para el elemento Fuerza aplicado al bloque, colocamos la misma inc&oacute;gnita que para la fuerza vertical aplicada al punto (es la misma cuerda y por lo tanto la misma tensi&oacute;n):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>t
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ingresados los datos, damos clic en el icono Resolver, para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+t = 1.809 N ;  B = 1.767 N ;  m = 0.184 kg ;
+Estado = success.
+
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-6-_0028e_0029.html#Ejemplo-6-_0028e_0029" accesskey="n" rel="next">Ejemplo 6 (e)</a>, Previous: <a href="Ejemplo-4-_0028e_0029.html#Ejemplo-4-_0028e_0029" accesskey="p" rel="prev">Ejemplo 4 (e)</a>, Subir: <a href="Ejemplos-estatica.html#Ejemplos-estatica" accesskey="u" rel="up">Ejemplos estatica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 5 (c)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 5 (c)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 5 (c)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-cinematica.html#Ejemplos-cinematica" rel="up" title="Ejemplos cinematica">
+<link href="Ejemplo-6-_0028c_0029.html#Ejemplo-6-_0028c_0029" rel="next" title="Ejemplo 6 (c)">
+<link href="Ejemplo-4-_0028c_0029.html#Ejemplo-4-_0028c_0029" rel="prev" title="Ejemplo 4 (c)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-5-_0028c_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-6-_0028c_0029.html#Ejemplo-6-_0028c_0029" accesskey="n" rel="next">Ejemplo 6 (c)</a>, Previous: <a href="Ejemplo-4-_0028c_0029.html#Ejemplo-4-_0028c_0029" accesskey="p" rel="prev">Ejemplo 4 (c)</a>, Subir: <a href="Ejemplos-cinematica.html#Ejemplos-cinematica" accesskey="u" rel="up">Ejemplos cinematica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-5"></a>
+<h3 class="section">3.5 Ejemplo 5</h3>
+
+<a name="index-Ejemplo-5-_0028c_0029"></a>
+
+<p>Un joven desea cruzar nadando un r&iacute;o que tiene un ancho de 25 metros, y cuya corriente tiene una velocidad de 7 m/s. Si el joven puede nadar a una velocidad de 2 m/s, y parte en direcci&oacute;n perpendicular a la orilla del r&iacute;o. &iquest;Que tiempo, en segundos, le toma cruzar el r&iacute;o? &iquest;Que distancia, en metros, lo arrastra el r&iacute;o durante ese tiempo?
+</p>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Primero que nada, debemos notar que el r&iacute;o constituye un sistema de referencia m&oacute;vil, y que la velocidad del nadador es en relaci&oacute;n a este sistema de referencia. Teniendo esto claro, suponemos que el r&iacute;o se mueve en la direcci&oacute;n del eje X positivo, y que el nadador avanza en la direcci&oacute;n del eje Y positivo, dentro del sistema de referencia m&oacute;vil. Con esto establecido, borramos la Pizarra, seleccionamos el sistema SI, y agregamos un elemento M&oacute;vil en Y con velocidad constante, un elemento Sistema de referencia m&oacute;vil en X, y un Sistema de referencia fijo, como muestra la siguiente imagen:
+</p>
+<div align="center"><img src="k-e5.jpg" alt="k-e5">
+</div>
+<p>Como el tiempo final es una inc&oacute;gnita, lo colocamos como tal en el Sistema de referencia fijo:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>tf</strong></dt>
+<dd><p>t
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el M&oacute;vil en Y con velocidad constante, que representa al nadador, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Nadador
+</p>
+</dd>
+<dt><strong>yi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>yf</strong></dt>
+<dd><p>25
+</p>
+</dd>
+<dt><strong>ti</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vy</strong></dt>
+<dd><p>2
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Donde la coordenada final en Y, yf, es el ancho del r&iacute;o. Y su velocidad es de 2 m/s. Por &uacute;ltimo, para el Sistema de referencia m&oacute;vil en X, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Sistema movil
+</p>
+</dd>
+<dt><strong>Objecto</strong></dt>
+<dd><p>Nadador
+</p>
+</dd>
+<dt><strong>xsi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vsx</strong></dt>
+<dd><p>7
+</p>
+</dd>
+<dt><strong>xof</strong></dt>
+<dd><p>xf
+</p>
+</dd>
+<dt><strong>vxof</strong></dt>
+<dd><p>vf
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Donde el nombre, <em>Sistema m&oacute;vil</em>, es irrelevante para este ejemplo. En Objeto, colocamos Nadador, el nombre del m&oacute;vil cuyos datos est&aacute;n medidos en relaci&oacute;n a este sistema m&oacute;vil. La coordenada inicial para este sistema m&oacute;vil, xsi, la colocamos por simplicidad en 0. Su velocidad en X, vsx, en relaci&oacute;n al sistema fijo (la orilla) es de 7 m/s. La coordenada final en X del objeto, xof, en este caso el nadador, es una inc&oacute;gnita, por lo que colocamos xf. La velocidad final en X del objeto, vxof, la colocamos como una inc&oacute;gnita, aunque sabemos que es de 7 m/s, por no tener la velocidad del nadador una componente en X. Pero la colocamos como inc&oacute;gnita para satisfacer n&uacute;mero de inc&oacute;gnitas = n&uacute;mero de ecuaciones. Dando un clic en el icono de Resolver, obtenemos la soluci&oacute;n:
+</p>
+<div class="example">
+<pre class="example">
+t = 12.500 s ;  xf = 87.500 m ;  vf = 7.000 m/s ;
+Estado = success.
+
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-6-_0028c_0029.html#Ejemplo-6-_0028c_0029" accesskey="n" rel="next">Ejemplo 6 (c)</a>, Previous: <a href="Ejemplo-4-_0028c_0029.html#Ejemplo-4-_0028c_0029" accesskey="p" rel="prev">Ejemplo 4 (c)</a>, Subir: <a href="Ejemplos-cinematica.html#Ejemplos-cinematica" accesskey="u" rel="up">Ejemplos cinematica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Dinamica</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Dinamica">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Dinamica">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="index.html#Top" rel="up" title="Top">
+<link href="Sistema-de-referencia-_0028d_0029.html#Sistema-de-referencia-_0028d_0029" rel="next" title="Sistema de referencia (d)">
+<link href="Ejemplo-13-_0028er_0029.html#Ejemplo-13-_0028er_0029" rel="prev" title="Ejemplo 13 (er)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Dinamica"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplos-dinamica.html#Ejemplos-dinamica" accesskey="n" rel="next">Ejemplos dinamica</a>, Previous: <a href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" accesskey="p" rel="prev">Ejemplos estatica rigida</a>, Subir: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Modulo-de-dinamica-de-particulas"></a>
+<h2 class="chapter">10 M&oacute;dulo de din&aacute;mica de part&iacute;culas</h2>
+
+<a name="index-Modulo-de-dinamica-de-particulas"></a>
+
+<p>Los factores de conversi&oacute;n disponibles en este m&oacute;dulo para el sistema SI son:
+</p>
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>h</strong></dt>
+<dd><p>hora
+</p>
+</dd>
+<dt><strong>min</strong></dt>
+<dd><p>minuto
+</p>
+</dd>
+<dt><strong>hp</strong></dt>
+<dd><p>caballo de potencia
+</p>
+</dd>
+<dt><strong>cv</strong></dt>
+<dd><p>caballo de vapor
+</p>
+</dd>
+<dt><strong>T</strong></dt>
+<dd><p>tonelada m&eacute;trica
+</p>
+</dd>
+<dt><strong>g</strong></dt>
+<dd><p>gramo
+</p>
+</dd>
+<dt><strong>slug</strong></dt>
+<dd><p>slug
+</p>
+</dd>
+<dt><strong>km</strong></dt>
+<dd><p>kil&oacute;metro
+</p>
+</dd>
+<dt><strong>cm</strong></dt>
+<dd><p>cent&iacute;metro
+</p>
+</dd>
+<dt><strong>mm</strong></dt>
+<dd><p>mil&iacute;metro
+</p>
+</dd>
+<dt><strong>mi</strong></dt>
+<dd><p>milla
+</p>
+</dd>
+<dt><strong>ft</strong></dt>
+<dd><p>pie
+</p>
+</dd>
+<dt><strong>in</strong></dt>
+<dd><p>pulgada
+</p>
+</dd>
+<dt><strong>km/h</strong></dt>
+<dd><p>kil&oacute;metros por hora
+</p>
+</dd>
+<dt><strong>cm/s</strong></dt>
+<dd><p>cent&iacute;metros por segundo
+</p>
+</dd>
+<dt><strong>mm/s</strong></dt>
+<dd><p>mil&iacute;metros por segundo
+</p>
+</dd>
+<dt><strong>mph</strong></dt>
+<dd><p>millas por hora
+</p>
+</dd>
+<dt><strong>ft/s</strong></dt>
+<dd><p>pies por segundo
+</p>
+</dd>
+<dt><strong>in/s</strong></dt>
+<dd><p>pulgadas por segundo
+</p>
+</dd>
+<dt><strong>kt</strong></dt>
+<dd><p>nudo
+</p>
+</dd>
+<dt><strong>cm/s2</strong></dt>
+<dd><p>cent&iacute;metros por segundo al cuadrado
+</p>
+</dd>
+<dt><strong>mm/s2</strong></dt>
+<dd><p>mil&iacute;metros por segundo al cuadrado
+</p>
+</dd>
+<dt><strong>ft/s2</strong></dt>
+<dd><p>pies por segundo al cuadrado
+</p>
+</dd>
+<dt><strong>in/s2</strong></dt>
+<dd><p>pulgadas por segundo al cuadrado
+</p>
+</dd>
+</dl>
+
+
+<p>Y los disponibles para el sistema Ingl&eacute;s son:
+</p>
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>h</strong></dt>
+<dd><p>hora
+</p>
+</dd>
+<dt><strong>min</strong></dt>
+<dd><p>minuto
+</p>
+</dd>
+<dt><strong>hp</strong></dt>
+<dd><p>caballo de potencia
+</p>
+</dd>
+<dt><strong>cv</strong></dt>
+<dd><p>caballo de vapor
+</p>
+</dd>
+<dt><strong>kg</strong></dt>
+<dd><p>kilogramo
+</p>
+</dd>
+<dt><strong>g</strong></dt>
+<dd><p>gramo
+</p>
+</dd>
+<dt><strong>km</strong></dt>
+<dd><p>kil&oacute;metro
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>metro
+</p>
+</dd>
+<dt><strong>cm</strong></dt>
+<dd><p>cent&iacute;metro
+</p>
+</dd>
+<dt><strong>mm</strong></dt>
+<dd><p>mil&iacute;metro
+</p>
+</dd>
+<dt><strong>mi</strong></dt>
+<dd><p>milla
+</p>
+</dd>
+<dt><strong>in</strong></dt>
+<dd><p>pulgada
+</p>
+</dd>
+<dt><strong>km/h</strong></dt>
+<dd><p>kil&oacute;metros por hora
+</p>
+</dd>
+<dt><strong>m/s</strong></dt>
+<dd><p>metros por segundo
+</p>
+</dd>
+<dt><strong>cm/s</strong></dt>
+<dd><p>cent&iacute;metros por segundo
+</p>
+</dd>
+<dt><strong>mm/s</strong></dt>
+<dd><p>mil&iacute;metros por segundo
+</p>
+</dd>
+<dt><strong>mph</strong></dt>
+<dd><p>millas por hora
+</p>
+</dd>
+<dt><strong>in/s</strong></dt>
+<dd><p>pulgadas por segundo
+</p>
+</dd>
+<dt><strong>kt</strong></dt>
+<dd><p>nudo
+</p>
+</dd>
+<dt><strong>m/s2</strong></dt>
+<dd><p>metros por segundo al cuadrado
+</p>
+</dd>
+<dt><strong>cm/s2</strong></dt>
+<dd><p>cent&iacute;metros por segundo al cuadrado
+</p>
+</dd>
+<dt><strong>mm/s2</strong></dt>
+<dd><p>mil&iacute;metros por segundo al cuadrado
+</p>
+</dd>
+<dt><strong>in/s2</strong></dt>
+<dd><p>pulgadas por segundo al cuadrado
+</p>
+</dd>
+<dt><strong>lb/in</strong></dt>
+<dd><p>libras por pulgada
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<p>En este m&oacute;dulo, las fuerzas (elementos Fuerza, Fricci&oacute;n o Contacto) se aplican a los objetos (elementos Bloque, Polea o Resorte), coloc&aacute;ndolas en las celdas adyacentes a estos. Cada uno de estos objetos, si no se encuentra en los bordes de la Pizarra, tiene 8 celdas adyacentes. Este m&oacute;dulo esta constituido por 44 elementos, los cuales se presentan a continuaci&oacute;n con una descripci&oacute;n de cada uno de ellos, de los datos que requieren, las fuerzas u objetos que admiten y el n&uacute;mero de ecuaciones que establece cada uno. Obs&eacute;rvese que algunos elementos establecen un n&uacute;mero variable de ecuaciones, dependiendo de las fuerzas aplicadas a el o de los objetos que interact&uacute;an con el.
+</p>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="Sistema-de-referencia-_0028d_0029.html#Sistema-de-referencia-_0028d_0029" accesskey="1">Sistema de referencia fijo</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Movil-_0028d_0029.html#Movil-_0028d_0029" accesskey="2">M&oacute;vil</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Movil-X_002fY-_0028d_0029.html#Movil-X_002fY-_0028d_0029" accesskey="3">M&oacute;vil en X/Y</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Bloque-vertical-_0028d_0029.html#Bloque-vertical-_0028d_0029" accesskey="4">Bloque con movimiento vertical</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Bloque-horizontal-_0028d_0029.html#Bloque-horizontal-_0028d_0029" accesskey="5">Bloque con movimiento horizontal</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Bloque-inclinado-a-la-izquierda-_0028d_0029.html#Bloque-inclinado-a-la-izquierda-_0028d_0029" accesskey="6">Bloque en un plano inclinado a la izquierda</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Bloque-inclinado-a-la-derecha-_0028d_0029.html#Bloque-inclinado-a-la-derecha-_0028d_0029" accesskey="7">Bloque en un plano inclinado a la derecha</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Polea-_0028d_0029.html#Polea-_0028d_0029" accesskey="8">Polea</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Resortes-_0028d_0029.html#Resortes-_0028d_0029" accesskey="9">Resortes</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Fuerzas-_0028d_0029.html#Fuerzas-_0028d_0029">Fuerzas</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Fricciones-_0028d_0029.html#Fricciones-_0028d_0029">Fricciones</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Fricciones-bloques-_0028d_0029.html#Fricciones-bloques-_0028d_0029">Fricciones entre bloques (contactos)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Relacion-de-aceleraciones-_0028d_0029.html#Relacion-de-aceleraciones-_0028d_0029">Relaci&oacute;n de aceleraciones</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Movimiento-relativo-_0028d_0029.html#Movimiento-relativo-_0028d_0029">Movimiento relativo</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Colision-_0028d_0029.html#Colision-_0028d_0029">Colisi&oacute;n</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Energia-_0028d_0029.html#Energia-_0028d_0029">Energ&iacute;a</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Momento-_0028d_0029.html#Momento-_0028d_0029">Momento</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Potencia-_0028d_0029.html#Potencia-_0028d_0029">Potencia</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplos-dinamica.html#Ejemplos-dinamica" accesskey="n" rel="next">Ejemplos dinamica</a>, Previous: <a href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" accesskey="p" rel="prev">Ejemplos estatica rigida</a>, Subir: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

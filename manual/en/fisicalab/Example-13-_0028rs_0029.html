@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Example 13 (rs)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Example 13 (rs)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Example 13 (rs)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Examples-statics-rigid-bodies.html#Examples-statics-rigid-bodies" rel="up" title="Examples statics rigid bodies">
+<link href="Dynamics.html#Dynamics" rel="next" title="Dynamics">
+<link href="Example-12-_0028rs_0029.html#Example-12-_0028rs_0029" rel="prev" title="Example 12 (rs)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Example-13-_0028rs_0029"></a>
+<div class="header">
+<p>
+Previous: <a href="Example-12-_0028rs_0029.html#Example-12-_0028rs_0029" accesskey="p" rel="prev">Example 12 (rs)</a>, Up: <a href="Examples-statics-rigid-bodies.html#Examples-statics-rigid-bodies" accesskey="u" rel="up">Examples statics rigid bodies</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Example-13"></a>
+<h3 class="section">9.13 Example 13</h3>
+
+<a name="index-Example-13-_0028rs_0029"></a>
+
+<p>In the truss of the image, find the support reactions and internal forces in all beams under the load conditions shown.
+</p>
+<div align="center"><img src="sr-e13-1.jpg" alt="sr-e13-1">
+</div>
+<br>
+<br>
+
+<p><strong>Solution with FisicaLab</strong>
+</p>
+<p>Select the group Static and, inside this, the module Static of solids. Erase the content of the chalkboard and select the English system. Then add one element Truss, eight elements Joint of truss, eight elements Force, five forces for the load forces and three for the support reactions (notice that in support A there is only one vertical force), and 26 elements Beam of truss to build the problem as show below:
+</p>
+<div align="center"><img src="sr-e13-2.jpg" alt="sr-e13-2">
+</div>
+<p>To the element Truss, we use the name AH:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>AH
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>All the elements Joint of truss, will owned by this truss. So, we add each joint to this truss:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Truss</strong></dt>
+<dd><p>AH
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>For the two elements Beam of truss that represent the beam from joint A to C, and calling AC the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>AC
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now for the two elements Beam of truss that represent the beam from joint A to B, and calling AB the internal force and entering the angle as the slope 6/8, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>AB
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>36.870
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>For the two elements Beam of truss that represent the beam from joint B to C, and calling BC the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>BC
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>For the two elements Beam of truss that represent the beam from joint B to E, and calling BE the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>BD
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>16.260
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Here the angle is entered as slope 28/96. The numerator and denominator should be at the same units: 2 ft 4 in = 28 in and 6 ft = 96 in. Also can be used 2.333/6 using the feet unit. Now for the two elements Beam of truss that represent the beam from joint B to E, and calling BE the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>BE
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>36.870
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Here the angle is also the slope 6/8. For the two elements Beam of truss that represent the beam from joint C to E, and calling CE the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>CE
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>For the two elements Beam of truss that represent the beam from joint D to E, and calling DE the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>DE
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now for the two elements Beam of truss that represent the beam from joint D to F, and calling DF the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>DF
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>16.260
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Here the angle is entered as slope 28/96. For the two elements Beam of truss that represent the beam from joint E to F, and calling EF the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>EF
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>36.870
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Here the angle is entered as slope 6/8. Now for the two elements Beam of truss that represent the beam from joint E to G, and calling EG the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>EG
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>For the two elements Beam of truss that represent the beam from joint F to G, and calling FG the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>FG
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>For the two elements Beam of truss that represent the beam from joint F to H, and calling FH the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>FH
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>36.870
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Here the angle is entered as slope 6/8. Now for the two elements Beam of truss that represent the beam from joint G to H, and calling GH the internal force, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>GH
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now to the element Force that represent the reaction in A:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RAy
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And to the two elements Force that represent the reactions in H:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RHy
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RHx
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now to the elements Force that represent the load forces, three of 600 lb and two of 300 lb:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>300
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>600
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now click in the icon Solve to get the answer:
+</p>
+<div class="example">
+<pre class="example">
+FG = 0.000 lb [tension] ;  EF = -59.993 lb [compression] ;
+DF = -1200.000 lb [compression] ;  RAy = 1200.000 lb ;
+FH = -1499.996 lb [compression] ;
+AC = 1199.996 lb [tension] ;
+AB = -1499.996 lb [compression] ;
+GH = 1199.996 lb [tension] ;
+RHy = 1200.000 lb ;  RHx = 0.000 lb ;
+BC = -0.000 lb [compression] ;
+CE = 1199.996 lb [tension] ;
+BD = -1200.000 lb [compression] ;
+DE = 71.992 lb [tension] ;  BE = -59.993 lb [compression] ;
+EG = 1199.996 lb [tension] ;
+Status = success.
+
+</pre></div>
+
+
+<hr>
+<div class="header">
+<p>
+Previous: <a href="Example-12-_0028rs_0029.html#Example-12-_0028rs_0029" accesskey="p" rel="prev">Example 12 (rs)</a>, Up: <a href="Examples-statics-rigid-bodies.html#Examples-statics-rigid-bodies" accesskey="u" rel="up">Examples statics rigid bodies</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

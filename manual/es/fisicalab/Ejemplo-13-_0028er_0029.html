@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 13 (er)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 13 (er)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 13 (er)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" rel="up" title="Ejemplos estatica rigida">
+<link href="Dinamica.html#Dinamica" rel="next" title="Dinamica">
+<link href="Ejemplo-12-_0028er_0029.html#Ejemplo-12-_0028er_0029" rel="prev" title="Ejemplo 12 (er)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-13-_0028er_0029"></a>
+<div class="header">
+<p>
+Previous: <a href="Ejemplo-12-_0028er_0029.html#Ejemplo-12-_0028er_0029" accesskey="p" rel="prev">Ejemplo 12 (er)</a>, Subir: <a href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" accesskey="u" rel="up">Ejemplos estatica rigida</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-13"></a>
+<h3 class="section">9.13 Ejemplo 13</h3>
+
+<a name="index-Ejemplo-13-_0028er_0029"></a>
+
+<p>En la armadura de la imagen, encontrar las reacciones en los apoyos y las fuerzas internas en todas las vigas bajo las condiciones de carga mostradas.
+</p>
+<div align="center"><img src="sr-e13-1.jpg" alt="sr-e13-1">
+</div>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Si la Pizarra contiene elementos, los borramos dando un clic en el icono Borrar todo, y seleccionamos el sistema de unidades Ingl&eacute;s. Agregamos un elemento Armadura, ocho elementos Nudo de armadura, cinco elementos Fuerza que corresponder&aacute;n con las fuerzas de carga, otro tres elementos Fuerza que representaran las reacciones en los apoyos (observe que en el apoyo A los rodos solamente aplican una fuerza vertical), y 26 elementos Viga de armadura para construir el esquema del problema tal y como se muestra la siguiente imagen:
+</p>
+<div align="center"><img src="sr-e13-2.jpg" alt="sr-e13-2">
+</div>
+<p>Al elemento Armadura debemos asignarle un nombre. Para este ejemplo utilizamos AH:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>AH
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Todos los elementos Nudo de armadura pertenecer&aacute;n a esta armadura. Por lo tanto, es el nombre de esta armadura el que deberemos asignarle a cada uno de ellos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Armadura</strong></dt>
+<dd><p>AH
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para los dos elementos Viga de armadura que representan los extremos de la viga que va del nudo A al C, y llamando AC a la fuerza interna de esta, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>AC
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para los dos elementos que representan los extremos de la viga que va del nudo A al B, y llamando AB a la fuerza interna de esta, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>AB
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>36.870
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Aqu&iacute; el &aacute;ngulo se ha introducido como la pendiente 6/8. Dato que se obtiene de las dimensiones de la armadura. Para los dos elementos que representan los extremos de la viga que va del nudo B al C, y llamando BC a la fuerza interna de esta, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>BC
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para los dos elementos que representan los extremos de la viga que va del nudo B al D, y llamando BD a la fuerza interna de esta:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>BD
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>16.260
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Aqu&iacute; el &aacute;ngulo se ha introducido como la pendiente 28/96. Los 2 ft 4 in = 28 in y los 8 ft = 96 in, esto porque hay que utilizar las mismas unidades para el numerador y el denominador. Tambi&eacute;n podr&iacute;a haberse ingresado la pendiente como 2.333/8, utilizando la unidad de pies. Para los dos elementos que representan los extremos de la viga que va del nudo B al E, y llamando BE a la fuerza interna de esta:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>BE
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>36.870
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Aqu&iacute; el &aacute;ngulo tambi&eacute;n se ha introducido como la pendiente 6/8. Ahora para los dos elementos que representan los extremos de la viga que va del nudo C al E, y llamando CE a la fuerza interna de esta:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>CE
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para los dos elementos que representan los extremos de la viga que va del nudo D al E, y llamando DE a la fuerza interna de esta:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>DE
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para los dos elementos que representan los extremos de la viga que va del nudo D al F, y llamando DF a la fuerza interna de esta:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>DF
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>16.260
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Aqu&iacute; el &aacute;ngulo tambi&eacute;n se ha introducido como la pendiente 28/96. Para los dos elementos que representan los extremos de la viga que va del nudo E al F, y llamando EF a la fuerza interna de esta:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>EF
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>36.870
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Aqu&iacute; el &aacute;ngulo tambi&eacute;n se ha introducido como la pendiente 6/8. Para los dos elementos que representan los extremos de la viga que va del nudo E al G, y llamando EG a la fuerza interna de esta:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>EG
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para los dos elementos que representan los extremos de la viga que va del nudo F al G, y llamando FG a la fuerza interna de esta:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>FG
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para los dos elementos que representan los extremos de la viga que va del nudo F al H, y llamando FH a la fuerza interna de esta:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>FH
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>36.870
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Aqu&iacute; el &aacute;ngulo tambi&eacute;n se ha introducido como la pendiente 6/8. Para los dos elementos que representan los extremos de la viga que va del nudo G al H, y llamando GH a la fuerza interna de esta:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>t</strong></dt>
+<dd><p>GH
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para la fuerza de reacci&oacute;n en A:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RAy
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para las reacciones en H:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RHy
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>RHx
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para cada uno de los elementos Fuerza que representan las cargas, dos de 300 libras y tres de 600 libras, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>300
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>600
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Una vez ingresados los datos, damos un clic en el icono de Resolver para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+FG = 0.000 lb [tensi&oacute;n] ;  EF = -59.993 lb [compresi&oacute;n] ;
+DF = -1200.000 lb [compresi&oacute;n] ;  RAy = 1200.000 lb ;
+FH = -1499.996 lb [compresi&oacute;n] ;
+AC = 1199.996 lb [tensi&oacute;n] ;
+AB = -1499.996 lb [compresi&oacute;n] ;
+GH = 1199.996 lb [tensi&oacute;n] ;
+RHy = 1200.000 lb ;  RHx = 0.000 lb ;
+BC = -0.000 lb [compresi&oacute;n] ;
+CE = 1199.996 lb [tensi&oacute;n] ;
+BD = -1200.000 lb [compresi&oacute;n] ;
+DE = 71.992 lb [tensi&oacute;n] ;  BE = -59.993 lb [compresi&oacute;n] ;
+EG = 1199.996 lb [tensi&oacute;n] ;
+Estado = success.
+
+</pre></div>
+
+
+<hr>
+<div class="header">
+<p>
+Previous: <a href="Ejemplo-12-_0028er_0029.html#Ejemplo-12-_0028er_0029" accesskey="p" rel="prev">Ejemplo 12 (er)</a>, Subir: <a href="Ejemplos-estatica-rigida.html#Ejemplos-estatica-rigida" accesskey="u" rel="up">Ejemplos estatica rigida</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

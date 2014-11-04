@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 2 (dc)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 2 (dc)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 2 (dc)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" rel="up" title="Ejemplos dinamica circular">
+<link href="Ejemplo-3-_0028dc_0029.html#Ejemplo-3-_0028dc_0029" rel="next" title="Ejemplo 3 (dc)">
+<link href="Ejemplo-1-_0028dc_0029.html#Ejemplo-1-_0028dc_0029" rel="prev" title="Ejemplo 1 (dc)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-2-_0028dc_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-3-_0028dc_0029.html#Ejemplo-3-_0028dc_0029" accesskey="n" rel="next">Ejemplo 3 (dc)</a>, Previous: <a href="Ejemplo-1-_0028dc_0029.html#Ejemplo-1-_0028dc_0029" accesskey="p" rel="prev">Ejemplo 1 (dc)</a>, Subir: <a href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" accesskey="u" rel="up">Ejemplos dinamica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-2-5"></a>
+<h3 class="section">13.2 Ejemplo 2</h3>
+
+<a name="index-Ejemplo-2-_0028dc_0029"></a>
+
+<p>Un peque&ntilde;o bloque A est&aacute; sobre una mesa que partiendo del reposo gira con una aceleraci&oacute;n tangencial constante. Si el coeficiente de rozamiento est&aacute;tico entre el bloque y la mesa giratoria es 0.57, determ&iacute;nese el m&iacute;nimo intervalo de tiempo para que el bloque alcance una rapidez de 1.2 m/s sin resbalar.
+</p>
+<div align="center"><img src="dc-e2-1.jpg" alt="dc-e2-1">
+</div>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el grupo Din&aacute;mica y, dentro de este, el m&oacute;dulo Circular. Seleccionamos tambi&eacute;n el sistema de unidades SI, y borramos todo lo que contenga la Pizarra. Agregamos ahora un elemento Sistema de referencia fijo, dos elementos M&oacute;vil con movimiento circular, un elemento M&oacute;vil con movimiento circular perpendicular, dos elementos Fuerza, un elemento Momento angular, un elemento Momento de una fuerza y un elemento Aceleraci&oacute;n m&aacute;xima. Tal y como se muestra en la siguiente imagen:
+</p>
+<div align="center"><img src="dc-e2-2.jpg" alt="dc-e2-2">
+</div>
+<p>El elemento Sistema de referencia fijo, agrega autom&aacute;ticamente el valor de la gravedad. Y el dato del tiempo es una inc&oacute;gnita:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>g</strong></dt>
+<dd><p>9.81
+</p>
+</dd>
+<dt><strong>t</strong></dt>
+<dd><p>tiempo
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>El enunciado no da un dato para la masa del bloque, ya que es un dato irrelevante para lo que se pide. Pero como necesitamos especificar una masa, colocaremos 1 kg. As&iacute;, para el elemento M&oacute;vil con movimiento circular de la izquierda, que representa el estado inicial, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>40 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el otro elemento M&oacute;vil con movimiento circular, el de la derecha, que representa el estado final, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>1.2
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>40 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora agregamos ambos objetos al elemento Momento angular, siendo M el momento que causa la aceleraci&oacute;n del bloque:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Sistema i</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>Sistema f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>M</strong></dt>
+<dd><p>M
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>El elemento M&oacute;vil con movimiento circular perpendicular lo utilizamos para establecer condiciones adicionales en el estado final. Dejando el centro de rotaci&oacute;n a la derecha y llam&aacute;ndolo A, tenemos (tanto la aceleraci&oacute;n tangencial como la fuerza tangencial son desconocidas):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>1.2
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>40 @ cm
+</p>
+</dd>
+<dt><strong>at</strong></dt>
+<dd><p>at
+</p>
+</dd>
+<dt><strong>Ft</strong></dt>
+<dd><p>Ft
+</p>
+</dd>
+<dt><strong>C</strong></dt>
+<dd><p>&gt;
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y en el elemento Aceleraci&oacute;n m&aacute;xima establecemos el coeficiente de fricci&oacute;n, lo que asegura que tanto la fuerza tangencial (Ft) como la centr&iacute;peta se deban a la m&aacute;xima fuerza de fricci&oacute;n:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Objeto</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>u</strong></dt>
+<dd><p>0.57
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora en el elemento Momento de una fuerza relacionamos la fuerza tangencial m&aacute;xima (Ft) con el momento aplicado:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>M</strong></dt>
+<dd><p>M
+</p>
+</dd>
+<dt><strong>f</strong></dt>
+<dd><p>Ft
+</p>
+</dd>
+<dt><strong>d</strong></dt>
+<dd><p>40 @ cm
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Por &uacute;ltimo, para las fuerzas Normal y Centr&iacute;peta tenemos, respectivamente:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>normal
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>centripeta
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ingresados los datos, damos clic en el icono Resolver para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+centripeta = 3.600 N ;  tiempo = 0.280 s ;  M = 1.711 N*m ;
+at = 4.279 m/s2 ;  Ft = 4.279 N ;  normal = 9.810 N ;
+Estado = success.
+
+</pre></div>
+
+<p>El tiempo m&iacute;nimo es de 0.28 segundos.
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-3-_0028dc_0029.html#Ejemplo-3-_0028dc_0029" accesskey="n" rel="next">Ejemplo 3 (dc)</a>, Previous: <a href="Ejemplo-1-_0028dc_0029.html#Ejemplo-1-_0028dc_0029" accesskey="p" rel="prev">Ejemplo 1 (dc)</a>, Subir: <a href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" accesskey="u" rel="up">Ejemplos dinamica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

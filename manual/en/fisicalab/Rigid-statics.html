@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Rigid statics</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Rigid statics">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Rigid statics">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html#Top" rel="up" title="Top">
+<link href="Stationary-reference-system-_0028rs_0029.html#Stationary-reference-system-_0028rs_0029" rel="next" title="Stationary reference system (rs)">
+<link href="Example-9-_0028s_0029.html#Example-9-_0028s_0029" rel="prev" title="Example 9 (s)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Rigid-statics"></a>
+<div class="header">
+<p>
+Next: <a href="Examples-statics-rigid-bodies.html#Examples-statics-rigid-bodies" accesskey="n" rel="next">Examples statics rigid bodies</a>, Previous: <a href="Examples-statics.html#Examples-statics" accesskey="p" rel="prev">Examples statics</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Module-rigid-statics"></a>
+<h2 class="chapter">8 Module rigid statics</h2>
+
+<a name="index-Module-rigid-statics"></a>
+
+<p>The conversion factors for SI system are:
+</p>
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>cm</strong></dt>
+<dd><p>centimeter
+</p>
+</dd>
+<dt><strong>mm</strong></dt>
+<dd><p>millimeter
+</p>
+</dd>
+<dt><strong>ft</strong></dt>
+<dd><p>feet
+</p>
+</dd>
+<dt><strong>in</strong></dt>
+<dd><p>inch
+</p>
+</dd>
+<dt><strong>g</strong></dt>
+<dd><p>gram
+</p>
+</dd>
+<dt><strong>slug</strong></dt>
+<dd><p>slug
+</p>
+</dd>
+<dt><strong>T</strong></dt>
+<dd><p>metric ton
+</p>
+</dd>
+<dt><strong>N*cm</strong></dt>
+<dd><p>Newton centimeter
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<p>And for the English system are:
+</p>
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>kg</strong></dt>
+<dd><p>kilogram
+</p>
+</dd>
+<dt><strong>g</strong></dt>
+<dd><p>gram
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>meter
+</p>
+</dd>
+<dt><strong>cm</strong></dt>
+<dd><p>centimeter
+</p>
+</dd>
+<dt><strong>mm</strong></dt>
+<dd><p>millimeter
+</p>
+</dd>
+<dt><strong>in</strong></dt>
+<dd><p>inch
+</p>
+</dd>
+<dt><strong>lb*in</strong></dt>
+<dd><p>pounds inch
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<p>In this module, the forces (elements Force, Friction and Resultant) are applied to elements object (elements Point, elements of beam or elements of solid), placing these at adjacent cells to the objects. Each element object, if isn&rsquo;t placed at the chalkboard&rsquo;s border, has 8 adjacent cells. This module have 27 elements, presented below. With a description of each one, its data and its number of equations. Notice that some elements add two or three equations, depending on the forces applied to it. If all forces are horizontals, or verticals, two equations are added, otherwise three equations are added.
+</p>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="Stationary-reference-system-_0028rs_0029.html#Stationary-reference-system-_0028rs_0029" accesskey="1">Stationary reference system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Points-_0028rs_0029.html#Points-_0028rs_0029" accesskey="2">Points</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Beam-_0028rs_0029.html#Beam-_0028rs_0029" accesskey="3">Beam</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Solid-_0028rs_0029.html#Solid-_0028rs_0029" accesskey="4">Solid</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Point-_0028rs_0029.html#Point-_0028rs_0029" accesskey="5">Point</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Angles-_0028rs_0029.html#Angles-_0028rs_0029" accesskey="6">Angles</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Elements-of-beam-_0028rs_0029.html#Elements-of-beam-_0028rs_0029" accesskey="7">Elements of beam</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Elements-of-solid-_0028rs_0029.html#Elements-of-solid-_0028rs_0029" accesskey="8">Elements of solid</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Forces-_0028rs_0029.html#Forces-_0028rs_0029" accesskey="9">Forces</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Frictions-_0028rs_0029.html#Frictions-_0028rs_0029">Frictions</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Couple-_0028rs_0029.html#Couple-_0028rs_0029">Couple</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Beams-of-2-forces-_0028rs_0029.html#Beams-of-2-forces-_0028rs_0029">Beams of 2 forces</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Truss-_0028rs_0029.html#Truss-_0028rs_0029">Truss</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Joint-_0028rs_0029.html#Joint-_0028rs_0029">Joint</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Beams-of-truss-_0028rs_0029.html#Beams-of-truss-_0028rs_0029">Beams of truss</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Resultant-_0028rs_0029.html#Resultant-_0028rs_0029">Resultant</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Resultant-horizontal-_0028rs_0029.html#Resultant-horizontal-_0028rs_0029">Resultant with horizontal force</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Resultant-vertical-_0028rs_0029.html#Resultant-vertical-_0028rs_0029">Resultant with vertical force</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Examples-statics-rigid-bodies.html#Examples-statics-rigid-bodies" accesskey="n" rel="next">Examples statics rigid bodies</a>, Previous: <a href="Examples-statics.html#Examples-statics" accesskey="p" rel="prev">Examples statics</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

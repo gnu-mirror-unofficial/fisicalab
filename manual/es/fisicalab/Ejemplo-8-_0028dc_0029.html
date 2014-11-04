@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 8 (dc)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 8 (dc)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 8 (dc)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" rel="up" title="Ejemplos dinamica circular">
+<link href="Ejemplo-9-_0028dc_0029.html#Ejemplo-9-_0028dc_0029" rel="next" title="Ejemplo 9 (dc)">
+<link href="Ejemplo-7-_0028dc_0029.html#Ejemplo-7-_0028dc_0029" rel="prev" title="Ejemplo 7 (dc)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-8-_0028dc_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-9-_0028dc_0029.html#Ejemplo-9-_0028dc_0029" accesskey="n" rel="next">Ejemplo 9 (dc)</a>, Previous: <a href="Ejemplo-7-_0028dc_0029.html#Ejemplo-7-_0028dc_0029" accesskey="p" rel="prev">Ejemplo 7 (dc)</a>, Subir: <a href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" accesskey="u" rel="up">Ejemplos dinamica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-8-3"></a>
+<h3 class="section">13.8 Ejemplo 8</h3>
+
+<a name="index-Ejemplo-8-_0028dc_0029"></a>
+
+<p>Un peque&ntilde;o disco de 500 gramos y otro de 1.5 kg est&aacute;n atados por medio de una cuerda de 48  cm. Ambos discos giran, en el sentido de las manecillas del reloj, con una velocidad angular de 8 rad/s alrededor del centro de masa. En el momento mostrado en la imagen, el centro de masa interseca al eje X a 2 metros del origen, con una velocidad de 0.45 m/s a 55 grados de la horizontal. Momentos despu&eacute;s la cuerda se rompe, y se observa que el disco de 1.5 kg se mueve paralelamente al eje X y que el disco de 500 gramos interseca al eje Y a una distancia de 4.6 m del origen. Encuentre a) La velocidad de ambos discos despu&eacute;s de que se rompe la cuerda y b) la distancia d entre el eje X y la trayectoria del disco de 1.5 kg.
+</p>
+<div align="center"><img src="dc-e8-1.jpg" alt="dc-e8-1">
+</div>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el grupo Din&aacute;mica y, dentro de este, el m&oacute;dulo Circular. Seleccionamos tambi&eacute;n el sistema de unidades SI, y borramos todo lo que contenga la Pizarra. Agregamos ahora dos elementos M&oacute;vil con movimiento circular, dos elementos M&oacute;vil con movimiento rectil&iacute;neo, un elemento Centro de rotaci&oacute;n, un elemento Sistema inicial, un elemento Sistema final, dos elementos Velocidad angular, un elemento Energ&iacute;a, un elemento Momento angular y un elemento Momento lineal. Tal y como se muestra en la siguiente imagen:
+</p>
+<div align="center"><img src="dc-e8-2.jpg" alt="dc-e8-2">
+</div>
+<p>Los dos elementos M&oacute;vil con movimiento circular de la parte izquierda representan el estado inicial del sistema. Tomando el de la izquierda como el disco de 500 gramos, al que llamaremos <em>Ainicial</em>, y al de la derecha como el disco de 1.5 kg, al que llamaremos <em>Binicial</em>, tenemos respectivamente (la distancia de cada disco al centro de rotaci&oacute;n puede obtenerse usando la funci&oacute;n <code>rd()</code>, y aplicando el factor de conversi&oacute;n):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Ainicial
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>500 @ g
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>vtA
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>36 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Binicial
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1.5
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>vtB
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>12 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Las velocidades tangenciales son desconocidas. Pero conocemos la velocidad angular. Por lo tanto para los elementos velocidad angular tenemos, recordando que el giro es en el sentido en que se mueven las manecillas del reloj:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Objeto</strong></dt>
+<dd><p>Ainicial
+</p>
+</dd>
+<dt><strong>vang</strong></dt>
+<dd><p>-8
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>Objeto</strong></dt>
+<dd><p>Binicial
+</p>
+</dd>
+<dt><strong>vang</strong></dt>
+<dd><p>-8
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el elemento Centro de rotaci&oacute;n, que tambi&eacute;n forma parte del estado inicial:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>centro
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>0.45
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>55
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>2
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Como los dos elementos M&oacute;vil con movimiento circular y el elemento Centro de rotaci&oacute;n constituyen el estado inicial, los agregamos al elemento Sistema inicial, al cual llamaremos <em>inicial</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>Objeto 1</strong></dt>
+<dd><p>centro
+</p>
+</dd>
+<dt><strong>Objeto 2</strong></dt>
+<dd><p>Ainicial
+</p>
+</dd>
+<dt><strong>Objeto 3</strong></dt>
+<dd><p>Binicial
+</p>
+</dd>
+<dt><strong>Objeto 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el elemento M&oacute;vil con movimiento rectil&iacute;neo en la parte superior derecha, que representa al disco de 500 gramos que interseca al eje Y tenemos, llam&aacute;ndolo <em>Afinal</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Afinal
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>500 @ g
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>vAfinal
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>4.6
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>angA
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el otro elemento M&oacute;vil con movimiento rectil&iacute;neo en la parte inferior derecha, que representa al disco de 1.5 kg que viaja paralelo al eje X a una distancia d, tenemos, llam&aacute;ndolo <em>Bfinal</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Bfinal
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1.5
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>vBfinal
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>d
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Estos dos elementos constituyen el estado final, por lo que los agregamos al elemento Sistema final al que llamaremos <em>final</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>Objeto 1</strong></dt>
+<dd><p>Afinal
+</p>
+</dd>
+<dt><strong>Objeto 2</strong></dt>
+<dd><p>Bfinal
+</p>
+</dd>
+<dt><strong>Objeto 3</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>Objeto 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el elemento Energ&iacute;a, sabiendo que la energ&iacute;a se conserva, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Sistema i</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>Sistema f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>W</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento Momento angular, teniendo en cuenta que no hay momentos externos aplicados:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Sistema i</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>Sistema f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>M</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para el elemento Momento lineal, y puesto que tampoco hay fuerzas externas aplicadas:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Sistema i</strong></dt>
+<dd><p>inicial
+</p>
+</dd>
+<dt><strong>Sistema f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>Fx</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>Fy</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ingresados los datos, damos clic en el icono Resolver para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+vBfinal = 1.145 m/s ;  d = 2.761 m ;  vtA = -2.880 m/s ;
+vtB = -0.960 m/s ;  vAfinal = 2.818 m/s ;
+angA = 148.447 grados ;
+Estado = success.
+
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-9-_0028dc_0029.html#Ejemplo-9-_0028dc_0029" accesskey="n" rel="next">Ejemplo 9 (dc)</a>, Previous: <a href="Ejemplo-7-_0028dc_0029.html#Ejemplo-7-_0028dc_0029" accesskey="p" rel="prev">Ejemplo 7 (dc)</a>, Subir: <a href="Ejemplos-dinamica-circular.html#Ejemplos-dinamica-circular" accesskey="u" rel="up">Ejemplos dinamica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

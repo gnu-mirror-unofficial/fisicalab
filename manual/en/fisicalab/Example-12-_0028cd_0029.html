@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Example 12 (cd)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Example 12 (cd)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Example 12 (cd)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Examples-circular-dynamics.html#Examples-circular-dynamics" rel="up" title="Examples circular dynamics">
+<link href="Example-13-_0028cd_0029.html#Example-13-_0028cd_0029" rel="next" title="Example 13 (cd)">
+<link href="Example-11-_0028cd_0029.html#Example-11-_0028cd_0029" rel="prev" title="Example 11 (cd)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Example-12-_0028cd_0029"></a>
+<div class="header">
+<p>
+Next: <a href="Example-13-_0028cd_0029.html#Example-13-_0028cd_0029" accesskey="n" rel="next">Example 13 (cd)</a>, Previous: <a href="Example-11-_0028cd_0029.html#Example-11-_0028cd_0029" accesskey="p" rel="prev">Example 11 (cd)</a>, Up: <a href="Examples-circular-dynamics.html#Examples-circular-dynamics" accesskey="u" rel="up">Examples circular dynamics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Example-12-2"></a>
+<h3 class="section">13.12 Example 12</h3>
+
+<a name="index-Example-12-_0028cd_0029"></a>
+
+<p>A mass of 3 kg traveling at 32 m/s, as shown in the figure below, explodes separating into two fragments. If these pass through the coordinates shown and the 1.8 kg fragment has the shown direction, find the speed of both fragments, as well as the direction of the fragment of 1.2 kg.
+</p>
+<div align="center"><img src="dc-e12-1.jpg" alt="dc-e12-1">
+</div>
+<br>
+<br>
+
+<p><strong>Solution with FisicaLab</strong>
+</p>
+<p>Select the Dynamics group and, inside this, the Circular module. Erase the content of the chalkboard and select the SI system. And add three elements Mobile with linear movement, one element Final system, one element Angular momentum and one element Linear momentum. As show the image below:
+</p>
+<div align="center"><img src="dc-e12-2.jpg" alt="dc-e12-2">
+</div>
+<p>To the element Mobile with linear movement to the left, that represents the mass of 3 kg in the initial state, we have, calling it <em>A</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>3
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>32
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>4
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now for the element Mobile with linear movement at top, that represents the fragment of 1.8 kg, we have, calling it <em>B</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1.8
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>vB
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>8
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>6.5
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>38
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And to the element Mobile with linear movement at bottom, that represents the fragment of 1.2 kg, we have, calling it <em>C</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>C
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1.2
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>vC
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>7.5
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>angC
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>The fragments B and C are the final state, so we add them to the element Final system, which we call <em>final</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>Object 1</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>Object 2</strong></dt>
+<dd><p>C
+</p>
+</dd>
+<dt><strong>Object 3</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>Object 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now to the element Angular momentum, taking into account that no external moments applied:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>System i</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>System f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>M</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And to element Linear momentum, no external forces are applied, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>System i</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>System f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>Fx</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>Fy</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now click in the icon Solve to get the answer:
+</p>
+<div class="example">
+<pre class="example">
+vB = 44.313 m/s ;  vC = 49.372 m/s ;
+angC = 304.018 degrees ;
+Status = success.
+
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Example-13-_0028cd_0029.html#Example-13-_0028cd_0029" accesskey="n" rel="next">Example 13 (cd)</a>, Previous: <a href="Example-11-_0028cd_0029.html#Example-11-_0028cd_0029" accesskey="p" rel="prev">Example 11 (cd)</a>, Up: <a href="Examples-circular-dynamics.html#Examples-circular-dynamics" accesskey="u" rel="up">Examples circular dynamics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Example 8 (d)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Example 8 (d)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Example 8 (d)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Examples-dynamics-of-particles.html#Examples-dynamics-of-particles" rel="up" title="Examples dynamics of particles">
+<link href="Example-9-_0028d_0029.html#Example-9-_0028d_0029" rel="next" title="Example 9 (d)">
+<link href="Example-7-_0028d_0029.html#Example-7-_0028d_0029" rel="prev" title="Example 7 (d)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Example-8-_0028d_0029"></a>
+<div class="header">
+<p>
+Next: <a href="Example-9-_0028d_0029.html#Example-9-_0028d_0029" accesskey="n" rel="next">Example 9 (d)</a>, Previous: <a href="Example-7-_0028d_0029.html#Example-7-_0028d_0029" accesskey="p" rel="prev">Example 7 (d)</a>, Up: <a href="Examples-dynamics-of-particles.html#Examples-dynamics-of-particles" accesskey="u" rel="up">Examples dynamics of particles</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Example-8-2"></a>
+<h3 class="section">11.8 Example 8</h3>
+
+<a name="index-Example-8-_0028d_0029"></a>
+
+<p>A block A is above a block B, as show the image. Both blocks are in rest. If the block A have a mass of 1.7 kg, block B have 4 kg, and there isn&rsquo;t friction, Which are the accelerations of the blocks when these leaves the rest? Which are the velocities after 0.2 seconds?
+</p>
+<div align="center"><img src="d-e8-1.jpg" alt="d-e8-1">
+</div>
+<br>
+<br>
+
+<p><strong>Solution with FisicaLab</strong>
+</p>
+<p>Erase the content of the chalkboard and select the SI system. And add one element Stationary reference system, one element Block with horizontal movement, one element Block above an inclined plane to the left, and one element Relative motion. And add the necessary elements Force to make the free body diagram of each block. As show the image below:
+</p>
+<div align="center"><img src="d-e8-2.jpg" alt="d-e8-2">
+</div>
+<p>To the element Stationary reference system, write:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>g</strong></dt>
+<dd><p>9.81
+</p>
+</dd>
+<dt><strong>t</strong></dt>
+<dd><p>0.2
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>To the element Block above an inclined plane to the left, the block A, write:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1.7
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>36
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>aA
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vfA
+</p>
+</dd>
+<dt><strong>d</strong></dt>
+<dd><p>dA
+</p>
+</dd>
+<dt><strong>Relative to</strong></dt>
+<dd><p>B
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Note that the movement of this block is relative to the block B. To its normal force:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>nA
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>54
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>To the element Block with horizontal movement, the block B, write:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>4
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>aB
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vfB
+</p>
+</dd>
+<dt><strong>d</strong></dt>
+<dd><p>dB
+</p>
+</dd>
+<dt><strong>Relative to</strong></dt>
+<dd><p>sf
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>To its normal force:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>nB
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>To the force applied to the block A:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>nA
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>54
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>The element Relative motion is necessary to get the acceleration, velocity and travelled distance of the block A, in reference to the stationary system. All these are unknown data, then write:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Object</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>asf</strong></dt>
+<dd><p>asfA
+</p>
+</dd>
+<dt><strong>ang_asf</strong></dt>
+<dd><p>ang_asfA
+</p>
+</dd>
+<dt><strong>vfsf</strong></dt>
+<dd><p>vfsfA
+</p>
+</dd>
+<dt><strong>ang_vfsf</strong></dt>
+<dd><p>ang_vfsfA
+</p>
+</dd>
+<dt><strong>dsf</strong></dt>
+<dd><p>dsfA
+</p>
+</dd>
+<dt><strong>ang_dsf</strong></dt>
+<dd><p>ang_dsfA
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now click in the icon Solve to get the answer:
+</p>
+<div class="example">
+<pre class="example">
+nA = 11.765 N ;  nB = 48.758 N ;  aA = -7.165 m/s2 ;
+vfA = -1.433 m/s ;  dA = -0.143 m ;  aB = 1.729 m/s2 ;
+vfB = 0.346 m/s ;  dB = 0.035 m ;  asfA = 5.855 m/s2 ;
+ang_asfA = 225.994 degrees ;  vfsfA = 1.171 m/s ;
+ang_vfsfA = 225.994 degrees ; dsfA = 0.117 m ;
+ang_dsfA = 225.994 degrees ;
+Status = success.
+
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Example-9-_0028d_0029.html#Example-9-_0028d_0029" accesskey="n" rel="next">Example 9 (d)</a>, Previous: <a href="Example-7-_0028d_0029.html#Example-7-_0028d_0029" accesskey="p" rel="prev">Example 7 (d)</a>, Up: <a href="Examples-dynamics-of-particles.html#Examples-dynamics-of-particles" accesskey="u" rel="up">Examples dynamics of particles</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

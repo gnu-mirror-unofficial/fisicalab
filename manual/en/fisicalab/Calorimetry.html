@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Calorimetry</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Calorimetry">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Calorimetry">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html#Top" rel="up" title="Top">
+<link href="Laboratory-clock-_0028cal_0029.html#Laboratory-clock-_0028cal_0029" rel="next" title="Laboratory clock (cal)">
+<link href="Example-13-_0028cd_0029.html#Example-13-_0028cd_0029" rel="prev" title="Example 13 (cd)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Calorimetry"></a>
+<div class="header">
+<p>
+Next: <a href="Examples-calorimetry.html#Examples-calorimetry" accesskey="n" rel="next">Examples calorimetry</a>, Previous: <a href="Examples-circular-dynamics.html#Examples-circular-dynamics" accesskey="p" rel="prev">Examples circular dynamics</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Calorimetry-1"></a>
+<h2 class="chapter">14 Calorimetry</h2>
+
+<a name="index-Calorimetry"></a>
+
+<p>In this module only the SI system is available, with the following conversion factors:
+</p>
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>T</strong></dt>
+<dd><p>metric ton
+</p>
+</dd>
+<dt><strong>g</strong></dt>
+<dd><p>gram
+</p>
+</dd>
+<dt><strong>slug</strong></dt>
+<dd><p>slug
+</p>
+</dd>
+<dt><strong>C</strong></dt>
+<dd><p>degree Celsius
+</p>
+</dd>
+<dt><strong>R</strong></dt>
+<dd><p>Rankin
+</p>
+</dd>
+<dt><strong>F</strong></dt>
+<dd><p>degree Farenheit
+</p>
+</dd>
+<dt><strong>cm</strong></dt>
+<dd><p>centimeter
+</p>
+</dd>
+<dt><strong>mm</strong></dt>
+<dd><p>millimeter
+</p>
+</dd>
+<dt><strong>ft</strong></dt>
+<dd><p>feet
+</p>
+</dd>
+<dt><strong>in</strong></dt>
+<dd><p>inch
+</p>
+</dd>
+<dt><strong>h</strong></dt>
+<dd><p>hour
+</p>
+</dd>
+<dt><strong>min</strong></dt>
+<dd><p>minute
+</p>
+</dd>
+<dt><strong>cm2</strong></dt>
+<dd><p>squared centimeters
+</p>
+</dd>
+<dt><strong>mm2</strong></dt>
+<dd><p>squared millimeters
+</p>
+</dd>
+<dt><strong>ft2</strong></dt>
+<dd><p>squared feet
+</p>
+</dd>
+<dt><strong>in2</strong></dt>
+<dd><p>squared inch
+</p>
+</dd>
+<dt><strong>cm3</strong></dt>
+<dd><p>cubic centimeters
+</p>
+</dd>
+<dt><strong>mm3</strong></dt>
+<dd><p>cubic millimeters
+</p>
+</dd>
+<dt><strong>ft3</strong></dt>
+<dd><p>cubic feet
+</p>
+</dd>
+<dt><strong>in3</strong></dt>
+<dd><p>cubic inch
+</p>
+</dd>
+<dt><strong>L</strong></dt>
+<dd><p>liter
+</p>
+</dd>
+<dt><strong>psi</strong></dt>
+<dd><p>pound per squared inch
+</p>
+</dd>
+<dt><strong>atm</strong></dt>
+<dd><p>atmosphere
+</p>
+</dd>
+<dt><strong>bar</strong></dt>
+<dd><p>bar
+</p>
+</dd>
+<dt><strong>Torr</strong></dt>
+<dd><p>Torricelli
+</p>
+</dd>
+<dt><strong>mmHg</strong></dt>
+<dd><p>millimeters of mercury
+</p>
+</dd>
+<dt><strong>J/kg*C</strong></dt>
+<dd><p>Joules per kilogram Celsius
+</p>
+</dd>
+<dt><strong>cal/g*K</strong></dt>
+<dd><p>calorie per gram Kelvin
+</p>
+</dd>
+<dt><strong>kcal/kg*K</strong></dt>
+<dd><p>kilocalorie per kilogram Kelvin
+</p>
+</dd>
+<dt><strong>cal/g*C</strong></dt>
+<dd><p>calorie per gram Celsius
+</p>
+</dd>
+<dt><strong>kcal/kg*C</strong></dt>
+<dd><p>kilocalorie per kilogram Celsius
+</p>
+</dd>
+<dt><strong>cal/g</strong></dt>
+<dd><p>calorie per gram
+</p>
+</dd>
+<dt><strong>kcal/kg</strong></dt>
+<dd><p>kilocalorie per kilogram
+</p>
+</dd>
+<dt><strong>kWh</strong></dt>
+<dd><p>kilo Watts hour
+</p>
+</dd>
+<dt><strong>Btu</strong></dt>
+<dd><p>British thermal unit
+</p>
+</dd>
+<dt><strong>kcal</strong></dt>
+<dd><p>kilocalorie
+</p>
+</dd>
+<dt><strong>cal</strong></dt>
+<dd><p>calorie
+</p>
+</dd>
+<dt><strong>hp</strong></dt>
+<dd><p>horsepower
+</p>
+</dd>
+<dt><strong>Btu/h</strong></dt>
+<dd><p>British thermal unit per hour
+</p>
+</dd>
+<dt><strong>lb*ft/s</strong></dt>
+<dd><p>pound feet per second
+</p>
+</dd>
+<dt><strong>m3/min</strong></dt>
+<dd><p>cubic meters per minute
+</p>
+</dd>
+<dt><strong>ft3/s</strong></dt>
+<dd><p>cubic feet per second
+</p>
+</dd>
+<dt><strong>gal/min</strong></dt>
+<dd><p>gallons per minute
+</p>
+</dd>
+<dt><strong>L/min</strong></dt>
+<dd><p>liters per minute
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<p>This module have 20 elements, described below. With a description of each one, its data and its number of equations. In parentheses are shown the units used be FisicaLab (if no conversion factors are used) in cases where there may be doubt. The elements Block, Liquid, Gas, Change of state solid-liquid, Change of state liquid-gas and Process, support the application of heat elements (Heat applied, Applied heat flow, Heat extracted and Refrigeration). The heat elements are applied to other element placing these in one of the eight cells around.
+</p>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="Laboratory-clock-_0028cal_0029.html#Laboratory-clock-_0028cal_0029" accesskey="1">Laboratory clock</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Applied-heat-_0028cal_0029.html#Applied-heat-_0028cal_0029" accesskey="2">Applied heat</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Applied-heat-flow-_0028cal_0029.html#Applied-heat-flow-_0028cal_0029" accesskey="3">Applied heat flow</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Heat-extracted-_0028cal_0029.html#Heat-extracted-_0028cal_0029" accesskey="4">Heat extracted</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Refrigeration-_0028cal_0029.html#Refrigeration-_0028cal_0029" accesskey="5">Refrigeration</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-_0028cal_0029.html#Block-_0028cal_0029" accesskey="6">Block</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Liquid-_0028cal_0029.html#Liquid-_0028cal_0029" accesskey="7">Liquid</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Gas-_0028cal_0029.html#Gas-_0028cal_0029" accesskey="8">Gas</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Linear-expansion-_0028cal_0029.html#Linear-expansion-_0028cal_0029" accesskey="9">Linear expansion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Superficial-expansion-_0028cal_0029.html#Superficial-expansion-_0028cal_0029">Superficial expansion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Volumetric-expansion-_0028cal_0029.html#Volumetric-expansion-_0028cal_0029">Volumetric expansion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Change-solid_002dliquid-_0028cal_0029.html#Change-solid_002dliquid-_0028cal_0029">Change of state solid-liquid</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Change-liquid_002dgas-_0028cal_0029.html#Change-liquid_002dgas-_0028cal_0029">Change of state liquid-gas</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Process-_0028cal_0029.html#Process-_0028cal_0029">Process</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Calorimeter-_0028cal_0029.html#Calorimeter-_0028cal_0029">Calorimeter</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Gas-constant-pressure-_0028cal_0029.html#Gas-constant-pressure-_0028cal_0029">Gas at constant pressure</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Gas-constant-temperature-_0028cal_0029.html#Gas-constant-temperature-_0028cal_0029">Gas at constant temperature</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Gas-constant-volume-_0028cal_0029.html#Gas-constant-volume-_0028cal_0029">Gas at constant volume</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Gas-PV_002fT-_0028cal_0029.html#Gas-PV_002fT-_0028cal_0029">Gas PV/T</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Heat-exchanger-_0028cal_0029.html#Heat-exchanger-_0028cal_0029">Heat exchanger</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Examples-calorimetry.html#Examples-calorimetry" accesskey="n" rel="next">Examples calorimetry</a>, Previous: <a href="Examples-circular-dynamics.html#Examples-circular-dynamics" accesskey="p" rel="prev">Examples circular dynamics</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

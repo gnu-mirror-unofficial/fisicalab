@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Example 5 (cd)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Example 5 (cd)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Example 5 (cd)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Examples-circular-dynamics.html#Examples-circular-dynamics" rel="up" title="Examples circular dynamics">
+<link href="Example-6-_0028cd_0029.html#Example-6-_0028cd_0029" rel="next" title="Example 6 (cd)">
+<link href="Example-4-_0028cd_0029.html#Example-4-_0028cd_0029" rel="prev" title="Example 4 (cd)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Example-5-_0028cd_0029"></a>
+<div class="header">
+<p>
+Next: <a href="Example-6-_0028cd_0029.html#Example-6-_0028cd_0029" accesskey="n" rel="next">Example 6 (cd)</a>, Previous: <a href="Example-4-_0028cd_0029.html#Example-4-_0028cd_0029" accesskey="p" rel="prev">Example 4 (cd)</a>, Up: <a href="Examples-circular-dynamics.html#Examples-circular-dynamics" accesskey="u" rel="up">Examples circular dynamics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Example-5-5"></a>
+<h3 class="section">13.5 Example 5</h3>
+
+<a name="index-Example-5-_0028cd_0029"></a>
+
+<p>A collar of 430 grams can slide without friction along a horizontal rod, which in turn can rotate about a vertical axis. A spring of constant 4 N/m, whose undeformed length is 70 cm, holds the collar to the bar, as shown in the figure below. Initially the bar is turning with a constant angular velocity of 13 rad/s. While a rope holds the collar in the position A. Suddenly the rope breaks and the spring pushes the collar out. Neglecting the mass of the rod, find the tangential velocity of the collar to the position B and its radial acceleration.
+</p>
+<div align="center"><img src="dc-e5-1.jpg" alt="dc-e5-1">
+</div>
+<br>
+<br>
+
+<p><strong>Solution with FisicaLab</strong>
+</p>
+<p>Select the Dynamics group and, inside this, the Circular module. Erase the content of the chalkboard and select the SI system. And add one element Stationary reference system, one element Mobile with circular movement, one element Mobile with polar circular movement, two elements Spring, three elements Force, one element Initial system, one element Final system, one element Energy, one element Angular momentum and one element Angular velocity. As show the image below:
+</p>
+<div align="center"><img src="dc-e5-2.jpg" alt="dc-e5-2">
+</div>
+<p>The element Stationary reference system write to default the gravity value. And the time is irrelevant for this problem. Now to the element Mobile with circular movement, which represents the collar in A and taking in account that tangential velocity is unknown, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>initialCollar
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>430 @ g
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>vInitial
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>18 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And in the element Angular velocity we set the provided angular velocity for initial state:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Object</strong></dt>
+<dd><p>initialCollar
+</p>
+</dd>
+<dt><strong>vang</strong></dt>
+<dd><p>13
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>For the Spring element of the initial state:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>initialSpring
+</p>
+</dd>
+<dt><strong>k</strong></dt>
+<dd><p>4
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>-52 @ cm
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And to the applied force:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>initialForce
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now add this element Spring and the element Mobile with circular movement, which represents the initial state, to the element Initial system, that we call <em>initial</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>initial
+</p>
+</dd>
+<dt><strong>Object 1</strong></dt>
+<dd><p>initialCollar
+</p>
+</dd>
+<dt><strong>Object 2</strong></dt>
+<dd><p>initialSpring
+</p>
+</dd>
+<dt><strong>Object 3</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>Object 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now to the element Mobile with polar circular movement, which represents the collar in position B, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>finalCollar
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>430 @ g
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>vtFinal
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>60 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vr</strong></dt>
+<dd><p>vrFinal
+</p>
+</dd>
+<dt><strong>ar</strong></dt>
+<dd><p>arFinal
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And to the applied force to this element, the force applied by the spring, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>finalForce
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>This force is necessary to find the radial acceleration. Now to the element Spring of final state:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>finalSpring
+</p>
+</dd>
+<dt><strong>k</strong></dt>
+<dd><p>4
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>-10 @ cm
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And to the applied force:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>finalForce
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now add this element Spring and the element Mobile with polar circular movement, which represents the final state, to the element Final system, that we call <em>final</em>:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>Object 1</strong></dt>
+<dd><p>finalCollar
+</p>
+</dd>
+<dt><strong>Object 2</strong></dt>
+<dd><p>finalSpring
+</p>
+</dd>
+<dt><strong>Object 3</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>Object 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And add the elements initial and final system in the element Energy. And knowing that energy is conserved, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>System i</strong></dt>
+<dd><p>initial
+</p>
+</dd>
+<dt><strong>System f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>W</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And in the element Angular momentum, we add the elements that represents the initial and final collar:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>System i</strong></dt>
+<dd><p>initialCollar
+</p>
+</dd>
+<dt><strong>System f</strong></dt>
+<dd><p>finalCollar
+</p>
+</dd>
+<dt><strong>M</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now click in the icon Solve to get the answer:
+</p>
+<div class="example">
+<pre class="example">
+initialForce = 2.080 N ;  finalForce = 0.400 N ;
+vInitial = 2.340 m/s ;  vtFinal = 0.702 m/s ;
+vrFinal = 2.721 m/s ;  arFinal = 0.930 m/s2 ;
+Status = success.
+
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Example-6-_0028cd_0029.html#Example-6-_0028cd_0029" accesskey="n" rel="next">Example 6 (cd)</a>, Previous: <a href="Example-4-_0028cd_0029.html#Example-4-_0028cd_0029" accesskey="p" rel="prev">Example 4 (cd)</a>, Up: <a href="Examples-circular-dynamics.html#Examples-circular-dynamics" accesskey="u" rel="up">Examples circular dynamics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

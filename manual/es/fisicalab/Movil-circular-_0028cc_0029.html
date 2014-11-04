@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Movil circular (cc)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Movil circular (cc)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Movil circular (cc)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Cinematica-circular.html#Cinematica-circular" rel="up" title="Cinematica circular">
+<link href="Movil-polar-_0028cc_0029.html#Movil-polar-_0028cc_0029" rel="next" title="Movil polar (cc)">
+<link href="Sistema-de-referencia-_0028cc_0029.html#Sistema-de-referencia-_0028cc_0029" rel="prev" title="Sistema de referencia (cc)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Movil-circular-_0028cc_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Movil-polar-_0028cc_0029.html#Movil-polar-_0028cc_0029" accesskey="n" rel="next">Movil polar (cc)</a>, Previous: <a href="Sistema-de-referencia-_0028cc_0029.html#Sistema-de-referencia-_0028cc_0029" accesskey="p" rel="prev">Sistema de referencia (cc)</a>, Subir: <a href="Cinematica-circular.html#Cinematica-circular" accesskey="u" rel="up">Cinematica circular</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Movil-con-movimiento-circular"></a>
+<h3 class="section">4.2 M&oacute;vil con movimiento circular</h3>
+
+<a name="index-Movil-con-movimiento-circular-_0028cc_0029"></a>
+
+<img src="m_circular.png" alt="m_circular">
+
+<p>M&oacute;vil con un movimiento circular (radio constante). Los &aacute;ngulos se miden desde el eje X positivo, donde el sentido positivo es el contrario al movimiento de las manecillas del reloj. Asimismo, un valor positivo de la velocidad tangencial, indica que el m&oacute;vil gira en sentido contrario a las manecillas del reloj.
+</p>
+<table>
+<tr><td width="15%">Ecuaciones:</td><td width="60%">4</td></tr>
+<thead><tr><th width="15%">Datos:</th><th width="60%"></th></tr></thead>
+<tr><td width="15%">Nombre:</td><td width="60%">Nombre del m&oacute;vil.</td></tr>
+<tr><td width="15%">C:</td><td width="60%">Punto que hace de centro para el movimiento circular. Si no se especifica ninguno, se toma el origen como centro de rotaci&oacute;n.</td></tr>
+<tr><td width="15%">r:</td><td width="60%">Radio de la circunferencia descrita.</td></tr>
+<tr><td width="15%">aci:</td><td width="60%">Aceleraci&oacute;n centr&iacute;peta al tiempo inicial.</td></tr>
+<tr><td width="15%">at:</td><td width="60%">Aceleraci&oacute;n tangencial.</td></tr>
+<tr><td width="15%">angi:</td><td width="60%">&Aacute;ngulo de la posici&oacute;n inicial del m&oacute;vil.</td></tr>
+<tr><td width="15%">vi:</td><td width="60%">Velocidad tangencial inicial.</td></tr>
+<tr><td width="15%">ti:</td><td width="60%">Tiempo al que comienza a moverse el m&oacute;vil.</td></tr>
+<tr><td width="15%">angf:</td><td width="60%">&Aacute;ngulo de la posici&oacute;n final del m&oacute;vil.</td></tr>
+<tr><td width="15%">vf:</td><td width="60%">Velocidad tangencial final.</td></tr>
+<tr><td width="15%">acf:</td><td width="60%">Aceleraci&oacute;n centr&iacute;peta al tiempo final.</td></tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

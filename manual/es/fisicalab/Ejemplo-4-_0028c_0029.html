@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 4 (c)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 4 (c)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 4 (c)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-cinematica.html#Ejemplos-cinematica" rel="up" title="Ejemplos cinematica">
+<link href="Ejemplo-5-_0028c_0029.html#Ejemplo-5-_0028c_0029" rel="next" title="Ejemplo 5 (c)">
+<link href="Ejemplo-3-_0028c_0029.html#Ejemplo-3-_0028c_0029" rel="prev" title="Ejemplo 3 (c)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-4-_0028c_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-5-_0028c_0029.html#Ejemplo-5-_0028c_0029" accesskey="n" rel="next">Ejemplo 5 (c)</a>, Previous: <a href="Ejemplo-3-_0028c_0029.html#Ejemplo-3-_0028c_0029" accesskey="p" rel="prev">Ejemplo 3 (c)</a>, Subir: <a href="Ejemplos-cinematica.html#Ejemplos-cinematica" accesskey="u" rel="up">Ejemplos cinematica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-4"></a>
+<h3 class="section">3.4 Ejemplo 4</h3>
+
+<a name="index-Ejemplo-4-_0028c_0029"></a>
+
+<p>Un proyectil se dispara a un &aacute;ngulo de 35 grados con una velocidad inicial de 17 m/s. Se desea conocer su altura m&aacute;xima y el alcance del proyectil (suponiendo que cae al mismo nivel del que fue lanzado).
+</p>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Una vez seleccionado el m&oacute;dulo correspondiente y el sistema de unidades, borramos todo lo que contenga la Pizarra. Agregamos entonces un elemento Ca&ntilde;&oacute;n y un Sistema de referencia fijo.
+</p>
+<div align="center"><img src="k-e4.jpg" alt="k-e4">
+</div>
+<p>El tiempo final es una inc&oacute;gnita, tenemos entonces para el Sistema de referencia fijo:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>tf</strong></dt>
+<dd><p>t
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora bien, se nos pregunta la altura m&aacute;xima y el alcance horizontal, datos que corresponden a tiempos diferentes. Por lo que deberemos plantear primero el problema para encontrar la altura m&aacute;xima, y luego replantearlo para encontrar el alcance horizontal.
+</p>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n para la altura m&aacute;xima</strong>
+</p> 
+<p>Para este caso, el elemento Ca&ntilde;&oacute;n tiene los siguientes datos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Proyectil
+</p>
+</dd>
+<dt><strong>ax</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ay</strong></dt>
+<dd><p>-9.81
+</p>
+</dd>
+<dt><strong>xi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>yi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>17
+</p>
+</dd>
+<dt><strong>angi</strong></dt>
+<dd><p>35
+</p>
+</dd>
+<dt><strong>ti</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>xf</strong></dt>
+<dd><p>xf
+</p>
+</dd>
+<dt><strong>yf</strong></dt>
+<dd><p>yf
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vf
+</p>
+</dd>
+<dt><strong>angf</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>El nombre del m&oacute;vil es <em>Proyectil</em> (este dato es irrelevante para este ejemplo). La aceleraci&oacute;n en X es 0, pero la aceleraci&oacute;n en Y es la de la gravedad -9.81. Recordemos que el eje Y es positivo hacia arriba, por lo tanto la gravedad debe llevar signo negativo. Suponemos que el proyectil parte del origen del sistema coordenado, y por lo tanto xi y yi son ambos 0. La velocidad inicial es de 17. El &aacute;ngulo de lanzamiento es de 35 grados, el tiempo al cual ocurre el lanzamiento lo suponemos 0. Las coordenadas xf y yf son ambas inc&oacute;gnitas, as&iacute; como la velocidad final, vf. Pero sabemos que en el punto m&aacute;s alto de la trayectoria, el vector velocidad es horizontal (&aacute;ngulo de elevaci&oacute;n 0). Por lo que colocamos 0 para el dato angf (&aacute;ngulo final).
+</p>
+<p>Ingresados los datos. damos clic en el icono de Resolver para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+xf = 13.842 m ;  yf = 4.846 m ;  vf = 13.926 m/s ;
+t = 0.994 s ;
+Estado = success.
+
+</pre></div>
+
+<p>Donde el dato que nos interesa es yf = 4.846 m. Multiplicando el resultado xf por dos, podemos obtener el alcance horizontal. Sin embargo, veremos como replantear el problema para obtener este resultado directamente.
+</p>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n para el alcance horizontal</strong>
+</p>
+<p>Hay varias formas de proceder para encontrar el alcance horizontal. Aqu&iacute; procederemos de la siguiente forma. Sabemos que cuando el objeto caiga al suelo, su altura final, yf, sera 0. La velocidad al tocar el suelo la conocemos, pero la dejaremos como inc&oacute;gnita. El &aacute;ngulo tambi&eacute;n lo conocemos, pero lo dejaremos como inc&oacute;gnita. De esta forma, el elemento Ca&ntilde;&oacute;n queda de la siguiente forma:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Proyectil
+</p>
+</dd>
+<dt><strong>ax</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ay</strong></dt>
+<dd><p>-9.81
+</p>
+</dd>
+<dt><strong>xi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>yi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>17
+</p>
+</dd>
+<dt><strong>angi</strong></dt>
+<dd><p>35
+</p>
+</dd>
+<dt><strong>ti</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>xf</strong></dt>
+<dd><p>xf
+</p>
+</dd>
+<dt><strong>yf</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vf
+</p>
+</dd>
+<dt><strong>angf</strong></dt>
+<dd><p>angf
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Damos clic en el icono de Resolver y obtenemos la soluci&oacute;n:
+</p>
+<div class="example">
+<pre class="example">
+xf = 27.683 m ;  vf = 17.000 m/s ;  angf = -35.000 grados ;
+t = 1.988 s ;
+Estado = success.
+
+</pre></div>
+
+<p><strong>NOTA:</strong> <em>Si se deseara conocer en que momento el proyectil esta a una altura de, por ejemplo, 2 metros. Debemos primero decidir que parte de la trayectoria nos interesa. Ya que hay dos soluciones, una cuando el proyectil va ascendiendo y otra cuando va descendiendo. Si partimos del momento del lanzamiento, F&iacute;sicaLab nos dar&aacute; la respuesta para cuando el proyectil va ascendiendo. Pero, si se desea el dato para cuando va descendiendo, debe elegirse como punto de partida una posici&oacute;n igual o posterior, a la que tiene cuando alcanza los 2 metros de altura en el ascenso. Uno de estos puntos puede ser, por ejemplo, la posici&oacute;n que tiene cuando alcanza la altura m&aacute;xima.</em>
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-5-_0028c_0029.html#Ejemplo-5-_0028c_0029" accesskey="n" rel="next">Ejemplo 5 (c)</a>, Previous: <a href="Ejemplo-3-_0028c_0029.html#Ejemplo-3-_0028c_0029" accesskey="p" rel="prev">Ejemplo 3 (c)</a>, Subir: <a href="Ejemplos-cinematica.html#Ejemplos-cinematica" accesskey="u" rel="up">Ejemplos cinematica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

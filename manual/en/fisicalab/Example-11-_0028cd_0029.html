@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Example 11 (cd)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Example 11 (cd)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Example 11 (cd)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Examples-circular-dynamics.html#Examples-circular-dynamics" rel="up" title="Examples circular dynamics">
+<link href="Example-12-_0028cd_0029.html#Example-12-_0028cd_0029" rel="next" title="Example 12 (cd)">
+<link href="Example-10-_0028cd_0029.html#Example-10-_0028cd_0029" rel="prev" title="Example 10 (cd)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Example-11-_0028cd_0029"></a>
+<div class="header">
+<p>
+Next: <a href="Example-12-_0028cd_0029.html#Example-12-_0028cd_0029" accesskey="n" rel="next">Example 12 (cd)</a>, Previous: <a href="Example-10-_0028cd_0029.html#Example-10-_0028cd_0029" accesskey="p" rel="prev">Example 10 (cd)</a>, Up: <a href="Examples-circular-dynamics.html#Examples-circular-dynamics" accesskey="u" rel="up">Examples circular dynamics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Example-11-2"></a>
+<h3 class="section">13.11 Example 11</h3>
+
+<a name="index-Example-11-_0028cd_0029"></a>
+
+<p>A mass of 0.1 slugs is released from rest in A and slides without friction along the track shown. If the radius of curvature of the bottom is 3 ft, find the force applied by the track to the mass when it passes through the point B.
+</p>
+<div align="center"><img src="dc-e11-1.jpg" alt="dc-e11-1">
+</div>
+<br>
+<br>
+
+<p><strong>Solution with FisicaLab</strong>
+</p>
+<p>Select the Dynamics group and, inside this, the Circular module. Erase the content of the chalkboard and select the English system. And add one element Stationary reference system, one element Object in rest, one element Mobile with circular movement, one element Force and one element Energy. As show the image below:
+</p>
+<div align="center"><img src="dc-e11-2.jpg" alt="dc-e11-2">
+</div>
+<p>The element Stationary reference system write to default the gravity value. And the time is irrelevant for this problem. Now the element Object in rest represents the mass at point A. If we take as horizontal reference the position B, the Y coordinate of the mass shall be: <code>5 ft + 3*sin(30) ft = 6.5 ft</code> (this can be operated directly at text field). Then we have for this element:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>0.1
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>6.5
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now to the element Mobile with circular movement, which represents the mass at point B, we have (the tangential velocity is unknown):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>0.1
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>vt
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>3
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And to the element Force, which represents the normal force applied by the track:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>normal
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>30
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now add the elements initial and final system in the element Energy. And knowing that energy is conserved, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>System i</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>System f</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>W</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now click in the icon Solve to get the answer:
+</p>
+<div class="example">
+<pre class="example">
+normal = 15.563 lb ;  vt = 20.460 ft/s ;
+Status = success.
+
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Example-12-_0028cd_0029.html#Example-12-_0028cd_0029" accesskey="n" rel="next">Example 12 (cd)</a>, Previous: <a href="Example-10-_0028cd_0029.html#Example-10-_0028cd_0029" accesskey="p" rel="prev">Example 10 (cd)</a>, Up: <a href="Examples-circular-dynamics.html#Examples-circular-dynamics" accesskey="u" rel="up">Examples circular dynamics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

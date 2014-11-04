@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Top</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Top">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Top">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="../dir/index.html" rel="up" title="(dir)">
+<link href="Welcome.html#Welcome" rel="next" title="Welcome">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<h1 class="settitle" align="center">GNU F&iacute;sicaLab</h1>
+
+
+     
+<a name="SEC_Contents"></a>
+<h2 class="contents-heading">Table of Contents</h2>
+
+<div class="contents">
+
+<ul class="no-bullet">
+  <li><a name="toc-Introduction" href="Welcome.html#Welcome">1 Introduction</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Handling-the-elements-1" href="Handling-the-elements.html#Handling-the-elements">1.1 Handling the elements</a></li>
+    <li><a name="toc-Element-data-1" href="Element-data.html#Element-data">1.2 Element data</a></li>
+    <li><a name="toc-How-it-works-1" href="How-it-works.html#How-it-works">1.3 How it works</a></li>
+    <li><a name="toc-Messages-1" href="Messages.html#Messages">1.4 Messages</a></li>
+  </ul></li>
+  <li><a name="toc-Module-kinematics-of-particles" href="Kinematics.html#Kinematics">2 Module kinematics of particles</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Stationary-reference-system" href="Stationary-reference-system-_0028k_0029.html#Stationary-reference-system-_0028k_0029">2.1 Stationary reference system</a></li>
+    <li><a name="toc-Mobile-reference-system" href="Mobile-reference-system-_0028k_0029.html#Mobile-reference-system-_0028k_0029">2.2 Mobile reference system</a></li>
+    <li><a name="toc-Mobile-reference-system-in-X_002fY" href="Mobile-reference-system-in-X_002fY-_0028k_0029.html#Mobile-reference-system-in-X_002fY-_0028k_0029">2.3 Mobile reference system in X/Y</a></li>
+    <li><a name="toc-Mobile" href="Mobile-_0028k_0029.html#Mobile-_0028k_0029">2.4 Mobile</a></li>
+    <li><a name="toc-Mobile-in-X_002fY" href="Mobile-in-X_002fY-_0028k_0029.html#Mobile-in-X_002fY-_0028k_0029">2.5 Mobile in X/Y</a></li>
+    <li><a name="toc-Mobile-in-X_002fY-with-constant-velocity" href="Mobile-in-X_002fY-with-constant-velocity-_0028k_0029.html#Mobile-in-X_002fY-with-constant-velocity-_0028k_0029">2.6 Mobile in X/Y with constant velocity</a></li>
+    <li><a name="toc-Cannon" href="Cannon-_0028k_0029.html#Cannon-_0028k_0029">2.7 Cannon</a></li>
+    <li><a name="toc-Mobile-radial" href="Mobile-radial-_0028k_0029.html#Mobile-radial-_0028k_0029">2.8 Mobile radial</a></li>
+    <li><a name="toc-Distance" href="Distance-_0028k_0029.html#Distance-_0028k_0029">2.9 Distance</a></li>
+    <li><a name="toc-Distance-XY" href="Distance-XY-_0028k_0029.html#Distance-XY-_0028k_0029">2.10 Distance XY</a></li>
+    <li><a name="toc-Point" href="Point-_0028k_0029.html#Point-_0028k_0029">2.11 Point</a></li>
+    <li><a name="toc-Relative-velocity" href="Relative-velocity-_0028k_0029.html#Relative-velocity-_0028k_0029">2.12 Relative velocity</a></li>
+  </ul></li>
+  <li><a name="toc-Examples-kinematics-of-particles-1" href="Examples-kinematics-of-particles.html#Examples-kinematics-of-particles">3 Examples kinematics of particles</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Example-1" href="Example-1-_0028k_0029.html#Example-1-_0028k_0029">3.1 Example 1</a></li>
+    <li><a name="toc-Example-2" href="Example-2-_0028k_0029.html#Example-2-_0028k_0029">3.2 Example 2</a></li>
+    <li><a name="toc-Example-3" href="Example-3-_0028k_0029.html#Example-3-_0028k_0029">3.3 Example 3</a></li>
+    <li><a name="toc-Example-4" href="Example-4-_0028k_0029.html#Example-4-_0028k_0029">3.4 Example 4</a></li>
+    <li><a name="toc-Example-5" href="Example-5-_0028k_0029.html#Example-5-_0028k_0029">3.5 Example 5</a></li>
+    <li><a name="toc-Example-6" href="Example-6-_0028k_0029.html#Example-6-_0028k_0029">3.6 Example 6</a></li>
+    <li><a name="toc-Example-7" href="Example-7-_0028k_0029.html#Example-7-_0028k_0029">3.7 Example 7</a></li>
+  </ul></li>
+  <li><a name="toc-Module-circular-kinematics-of-particles" href="Circular-kinematics.html#Circular-kinematics">4 Module circular kinematics of particles</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Stationary-reference-system-1" href="Stationary-reference-system-_0028ck_0029.html#Stationary-reference-system-_0028ck_0029">4.1 Stationary reference system</a></li>
+    <li><a name="toc-Mobile-with-circular-motion" href="Mobile-circular-_0028ck_0029.html#Mobile-circular-_0028ck_0029">4.2 Mobile with circular motion</a></li>
+    <li><a name="toc-Mobile-with-polar-circular-motion" href="Mobile-polar-_0028ck_0029.html#Mobile-polar-_0028ck_0029">4.3 Mobile with polar circular motion</a></li>
+    <li><a name="toc-Angular-velocity" href="Angular-velocity-_0028ck_0029.html#Angular-velocity-_0028ck_0029">4.4 Angular velocity</a></li>
+    <li><a name="toc-Angular-acceleration" href="Angular-acceleration-_0028ck_0029.html#Angular-acceleration-_0028ck_0029">4.5 Angular acceleration</a></li>
+    <li><a name="toc-Total-acceleration" href="Total-acceleration-_0028ck_0029.html#Total-acceleration-_0028ck_0029">4.6 Total acceleration</a></li>
+    <li><a name="toc-Frequency" href="Frequency-_0028ck_0029.html#Frequency-_0028ck_0029">4.7 Frequency</a></li>
+    <li><a name="toc-Period" href="Period-_0028ck_0029.html#Period-_0028ck_0029">4.8 Period</a></li>
+    <li><a name="toc-Number-of-laps" href="Number-of-laps-_0028ck_0029.html#Number-of-laps-_0028ck_0029">4.9 Number of laps</a></li>
+    <li><a name="toc-Center-of-rotation" href="Center-of-rotation-_0028ck_0029.html#Center-of-rotation-_0028ck_0029">4.10 Center of rotation</a></li>
+    <li><a name="toc-Distance-1" href="Distance-_0028ck_0029.html#Distance-_0028ck_0029">4.11 Distance</a></li>
+    <li><a name="toc-Arc-length" href="Arc-length-_0028ck_0029.html#Arc-length-_0028ck_0029">4.12 Arc length</a></li>
+    <li><a name="toc-Coordinate" href="Coordinate-_0028ck_0029.html#Coordinate-_0028ck_0029">4.13 Coordinate</a></li>
+    <li><a name="toc-Relative-velocity-1" href="Relative-velocity-_0028ck_0029.html#Relative-velocity-_0028ck_0029">4.14 Relative velocity</a></li>
+  </ul></li>
+  <li><a name="toc-Examples-circular-kinematics-of-particles-1" href="Examples-circular-kinematics-of-particles.html#Examples-circular-kinematics-of-particles">5 Examples circular kinematics of particles</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Example-1-1" href="Example-1-_0028ck_0029.html#Example-1-_0028ck_0029">5.1 Example 1</a></li>
+    <li><a name="toc-Example-2-1" href="Example-2-_0028ck_0029.html#Example-2-_0028ck_0029">5.2 Example 2</a></li>
+    <li><a name="toc-Example-3-1" href="Example-3-_0028ck_0029.html#Example-3-_0028ck_0029">5.3 Example 3</a></li>
+    <li><a name="toc-Example-4-1" href="Example-4-_0028ck_0029.html#Example-4-_0028ck_0029">5.4 Example 4</a></li>
+    <li><a name="toc-Example-5-1" href="Example-5-_0028ck_0029.html#Example-5-_0028ck_0029">5.5 Example 5</a></li>
+  </ul></li>
+  <li><a name="toc-Module-statics-of-particles" href="Statics.html#Statics">6 Module statics of particles</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Stationary-reference-system-2" href="Stationary-reference-system-_0028s_0029.html#Stationary-reference-system-_0028s_0029">6.1 Stationary reference system</a></li>
+    <li><a name="toc-Block" href="Block-_0028s_0029.html#Block-_0028s_0029">6.2 Block</a></li>
+    <li><a name="toc-Block-above-an-inclined-plane-to-the-left" href="Block-left-_0028s_0029.html#Block-left-_0028s_0029">6.3 Block above an inclined plane to the left</a></li>
+    <li><a name="toc-Block-above-an-inclined-plane-to-the-right" href="Block-right-_0028s_0029.html#Block-right-_0028s_0029">6.4 Block above an inclined plane to the right</a></li>
+    <li><a name="toc-Springs" href="Springs-_0028s_0029.html#Springs-_0028s_0029">6.5 Springs</a></li>
+    <li><a name="toc-Pulley" href="Pulley-_0028s_0029.html#Pulley-_0028s_0029">6.6 Pulley</a></li>
+    <li><a name="toc-Static-point" href="Static-point-_0028s_0029.html#Static-point-_0028s_0029">6.7 Static point</a></li>
+    <li><a name="toc-Angles" href="Angles-_0028s_0029.html#Angles-_0028s_0029">6.8 Angles</a></li>
+    <li><a name="toc-Forces" href="Forces-_0028s_0029.html#Forces-_0028s_0029">6.9 Forces</a></li>
+    <li><a name="toc-Frictions" href="Frictions-_0028s_0029.html#Frictions-_0028s_0029">6.10 Frictions</a></li>
+    <li><a name="toc-Vertical_002fHorizontal-resultant" href="V_002fH-resultant-_0028s_0029.html#V_002fH-resultant-_0028s_0029">6.11 Vertical/Horizontal resultant</a></li>
+    <li><a name="toc-Resultant" href="Resultant-_0028s_0029.html#Resultant-_0028s_0029">6.12 Resultant</a></li>
+  </ul></li>
+  <li><a name="toc-Examples-statics-1" href="Examples-statics.html#Examples-statics">7 Examples statics</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Example-1-2" href="Example-1-_0028s_0029.html#Example-1-_0028s_0029">7.1 Example 1</a></li>
+    <li><a name="toc-Example-2-2" href="Example-2-_0028s_0029.html#Example-2-_0028s_0029">7.2 Example 2</a></li>
+    <li><a name="toc-Example-3-2" href="Example-3-_0028s_0029.html#Example-3-_0028s_0029">7.3 Example 3</a></li>
+    <li><a name="toc-Example-4-2" href="Example-4-_0028s_0029.html#Example-4-_0028s_0029">7.4 Example 4</a></li>
+    <li><a name="toc-Example-5-2" href="Example-5-_0028s_0029.html#Example-5-_0028s_0029">7.5 Example 5</a></li>
+    <li><a name="toc-Example-6-1" href="Example-6-_0028s_0029.html#Example-6-_0028s_0029">7.6 Example 6</a></li>
+    <li><a name="toc-Example-7-1" href="Example-7-_0028s_0029.html#Example-7-_0028s_0029">7.7 Example 7</a></li>
+    <li><a name="toc-Example-8" href="Example-8-_0028s_0029.html#Example-8-_0028s_0029">7.8 Example 8</a></li>
+    <li><a name="toc-Example-9" href="Example-9-_0028s_0029.html#Example-9-_0028s_0029">7.9 Example 9</a></li>
+  </ul></li>
+  <li><a name="toc-Module-rigid-statics" href="Rigid-statics.html#Rigid-statics">8 Module rigid statics</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Stationary-reference-system-3" href="Stationary-reference-system-_0028rs_0029.html#Stationary-reference-system-_0028rs_0029">8.1 Stationary reference system</a></li>
+    <li><a name="toc-Points" href="Points-_0028rs_0029.html#Points-_0028rs_0029">8.2 Points</a></li>
+    <li><a name="toc-Beam" href="Beam-_0028rs_0029.html#Beam-_0028rs_0029">8.3 Beam</a></li>
+    <li><a name="toc-Solid" href="Solid-_0028rs_0029.html#Solid-_0028rs_0029">8.4 Solid</a></li>
+    <li><a name="toc-Point-1" href="Point-_0028rs_0029.html#Point-_0028rs_0029">8.5 Point</a></li>
+    <li><a name="toc-Angles-1" href="Angles-_0028rs_0029.html#Angles-_0028rs_0029">8.6 Angles</a></li>
+    <li><a name="toc-Elements-of-beam" href="Elements-of-beam-_0028rs_0029.html#Elements-of-beam-_0028rs_0029">8.7 Elements of beam</a></li>
+    <li><a name="toc-Elements-of-solid" href="Elements-of-solid-_0028rs_0029.html#Elements-of-solid-_0028rs_0029">8.8 Elements of solid</a></li>
+    <li><a name="toc-Forces-1" href="Forces-_0028rs_0029.html#Forces-_0028rs_0029">8.9 Forces</a></li>
+    <li><a name="toc-Frictions-1" href="Frictions-_0028rs_0029.html#Frictions-_0028rs_0029">8.10 Frictions</a></li>
+    <li><a name="toc-Couple" href="Couple-_0028rs_0029.html#Couple-_0028rs_0029">8.11 Couple</a></li>
+    <li><a name="toc-Beams-of-2-forces" href="Beams-of-2-forces-_0028rs_0029.html#Beams-of-2-forces-_0028rs_0029">8.12 Beams of 2 forces</a></li>
+    <li><a name="toc-Truss" href="Truss-_0028rs_0029.html#Truss-_0028rs_0029">8.13 Truss</a></li>
+    <li><a name="toc-Joint" href="Joint-_0028rs_0029.html#Joint-_0028rs_0029">8.14 Joint</a></li>
+    <li><a name="toc-Beams-of-truss" href="Beams-of-truss-_0028rs_0029.html#Beams-of-truss-_0028rs_0029">8.15 Beams of truss</a></li>
+    <li><a name="toc-Resultant-1" href="Resultant-_0028rs_0029.html#Resultant-_0028rs_0029">8.16 Resultant</a></li>
+    <li><a name="toc-Resultant-with-horizontal-force" href="Resultant-horizontal-_0028rs_0029.html#Resultant-horizontal-_0028rs_0029">8.17 Resultant with horizontal force</a></li>
+    <li><a name="toc-Resultant-with-vertical-force" href="Resultant-vertical-_0028rs_0029.html#Resultant-vertical-_0028rs_0029">8.18 Resultant with vertical force</a></li>
+  </ul></li>
+  <li><a name="toc-Examples-statics-rigid-bodies-1" href="Examples-statics-rigid-bodies.html#Examples-statics-rigid-bodies">9 Examples statics rigid bodies</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Example-1-3" href="Example-1-_0028rs_0029.html#Example-1-_0028rs_0029">9.1 Example 1</a></li>
+    <li><a name="toc-Example-2-3" href="Example-2-_0028rs_0029.html#Example-2-_0028rs_0029">9.2 Example 2</a></li>
+    <li><a name="toc-Example-3-3" href="Example-3-_0028rs_0029.html#Example-3-_0028rs_0029">9.3 Example 3</a></li>
+    <li><a name="toc-Example-4-3" href="Example-4-_0028rs_0029.html#Example-4-_0028rs_0029">9.4 Example 4</a></li>
+    <li><a name="toc-Example-5-3" href="Example-5-_0028rs_0029.html#Example-5-_0028rs_0029">9.5 Example 5</a></li>
+    <li><a name="toc-Example-6-2" href="Example-6-_0028rs_0029.html#Example-6-_0028rs_0029">9.6 Example 6</a></li>
+    <li><a name="toc-Example-7-2" href="Example-7-_0028rs_0029.html#Example-7-_0028rs_0029">9.7 Example 7</a></li>
+    <li><a name="toc-Example-8-1" href="Example-8-_0028rs_0029.html#Example-8-_0028rs_0029">9.8 Example 8</a></li>
+    <li><a name="toc-Example-9-1" href="Example-9-_0028rs_0029.html#Example-9-_0028rs_0029">9.9 Example 9</a></li>
+    <li><a name="toc-Example-10" href="Example-10-_0028rs_0029.html#Example-10-_0028rs_0029">9.10 Example 10</a></li>
+    <li><a name="toc-Example-11" href="Example-11-_0028rs_0029.html#Example-11-_0028rs_0029">9.11 Example 11</a></li>
+    <li><a name="toc-Example-12" href="Example-12-_0028rs_0029.html#Example-12-_0028rs_0029">9.12 Example 12</a></li>
+    <li><a name="toc-Example-13" href="Example-13-_0028rs_0029.html#Example-13-_0028rs_0029">9.13 Example 13</a></li>
+  </ul></li>
+  <li><a name="toc-Module-dynamics-of-particles" href="Dynamics.html#Dynamics">10 Module dynamics of particles</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Stationary-reference-system-4" href="Stationary-reference-system-_0028d_0029.html#Stationary-reference-system-_0028d_0029">10.1 Stationary reference system</a></li>
+    <li><a name="toc-Mobile-1" href="Mobile-_0028d_0029.html#Mobile-_0028d_0029">10.2 Mobile</a></li>
+    <li><a name="toc-Mobile-in-X_002fY-1" href="Mobile-in-X_002fY-_0028d_0029.html#Mobile-in-X_002fY-_0028d_0029">10.3 Mobile in X/Y</a></li>
+    <li><a name="toc-Block-with-vertical-movement" href="Block-vertical-_0028d_0029.html#Block-vertical-_0028d_0029">10.4 Block with vertical movement</a></li>
+    <li><a name="toc-Block-with-horizontal-movement" href="Block-horizontal-_0028d_0029.html#Block-horizontal-_0028d_0029">10.5 Block with horizontal movement</a></li>
+    <li><a name="toc-Block-with-movement-along-an-inclined-plane-to-the-left" href="Block-plane-to-the-left-_0028d_0029.html#Block-plane-to-the-left-_0028d_0029">10.6 Block with movement along an inclined plane to the left</a></li>
+    <li><a name="toc-Block-with-movement-along-an-inclined-plane-to-the-right" href="Block-plane-to-the-right-_0028d_0029.html#Block-plane-to-the-right-_0028d_0029">10.7 Block with movement along an inclined plane to the right</a></li>
+    <li><a name="toc-Pulley-1" href="Pulley-_0028d_0029.html#Pulley-_0028d_0029">10.8 Pulley</a></li>
+    <li><a name="toc-Springs-1" href="Springs-_0028d_0029.html#Springs-_0028d_0029">10.9 Springs</a></li>
+    <li><a name="toc-Forces-2" href="Forces-_0028d_0029.html#Forces-_0028d_0029">10.10 Forces</a></li>
+    <li><a name="toc-Frictions-2" href="Frictions-_0028d_0029.html#Frictions-_0028d_0029">10.11 Frictions</a></li>
+    <li><a name="toc-Frictions-between-blocks-_0028contacts_0029" href="Frictions-between-blocks-_0028d_0029.html#Frictions-between-blocks-_0028d_0029">10.12 Frictions between blocks (contacts)</a></li>
+    <li><a name="toc-Relation-between-accelerations" href="Relation-between-accelerations-_0028d_0029.html#Relation-between-accelerations-_0028d_0029">10.13 Relation between accelerations</a></li>
+    <li><a name="toc-Relative-motion" href="Relative-motion-_0028d_0029.html#Relative-motion-_0028d_0029">10.14 Relative motion</a></li>
+    <li><a name="toc-Collision" href="Collision-_0028d_0029.html#Collision-_0028d_0029">10.15 Collision</a></li>
+    <li><a name="toc-Energy" href="Energy-_0028d_0029.html#Energy-_0028d_0029">10.16 Energy</a></li>
+    <li><a name="toc-Momentum" href="Momentum-_0028d_0029.html#Momentum-_0028d_0029">10.17 Momentum</a></li>
+    <li><a name="toc-Power" href="Power-_0028d_0029.html#Power-_0028d_0029">10.18 Power</a></li>
+  </ul></li>
+  <li><a name="toc-Examples-dynamics-of-particles-1" href="Examples-dynamics-of-particles.html#Examples-dynamics-of-particles">11 Examples dynamics of particles</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Example-1-4" href="Example-1-_0028d_0029.html#Example-1-_0028d_0029">11.1 Example 1</a></li>
+    <li><a name="toc-Example-2-4" href="Example-2-_0028d_0029.html#Example-2-_0028d_0029">11.2 Example 2</a></li>
+    <li><a name="toc-Example-3-4" href="Example-3-_0028d_0029.html#Example-3-_0028d_0029">11.3 Example 3</a></li>
+    <li><a name="toc-Example-4-4" href="Example-4-_0028d_0029.html#Example-4-_0028d_0029">11.4 Example 4</a></li>
+    <li><a name="toc-Example-5-4" href="Example-5-_0028d_0029.html#Example-5-_0028d_0029">11.5 Example 5</a></li>
+    <li><a name="toc-Example-6-3" href="Example-6-_0028d_0029.html#Example-6-_0028d_0029">11.6 Example 6</a></li>
+    <li><a name="toc-Example-7-3" href="Example-7-_0028d_0029.html#Example-7-_0028d_0029">11.7 Example 7</a></li>
+    <li><a name="toc-Example-8-2" href="Example-8-_0028d_0029.html#Example-8-_0028d_0029">11.8 Example 8</a></li>
+    <li><a name="toc-Example-9-2" href="Example-9-_0028d_0029.html#Example-9-_0028d_0029">11.9 Example 9</a></li>
+    <li><a name="toc-Example-10-1" href="Example-10-_0028d_0029.html#Example-10-_0028d_0029">11.10 Example 10</a></li>
+    <li><a name="toc-Example-11-1" href="Example-11-_0028d_0029.html#Example-11-_0028d_0029">11.11 Example 11</a></li>
+    <li><a name="toc-Example-12-1" href="Example-12-_0028d_0029.html#Example-12-_0028d_0029">11.12 Example 12</a></li>
+  </ul></li>
+  <li><a name="toc-Module-circular-dynamics-of-particles" href="Circular-dynamics.html#Circular-dynamics">12 Module circular dynamics of particles</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Stationary-reference-system-5" href="Stationary-reference-system-_0028cd_0029.html#Stationary-reference-system-_0028cd_0029">12.1 Stationary reference system</a></li>
+    <li><a name="toc-Object-in-rest" href="Object-in-rest-_0028cd_0029.html#Object-in-rest-_0028cd_0029">12.2 Object in rest</a></li>
+    <li><a name="toc-Mobile-with-linear-movement" href="Mobile-linear-_0028cd_0029.html#Mobile-linear-_0028cd_0029">12.3 Mobile with linear movement</a></li>
+    <li><a name="toc-Mobile-with-circular-movement" href="Mobile-circular-_0028cd_0029.html#Mobile-circular-_0028cd_0029">12.4 Mobile with circular movement</a></li>
+    <li><a name="toc-Mobile-with-polar-circular-movement" href="Mobile-polar-_0028cd_0029.html#Mobile-polar-_0028cd_0029">12.5 Mobile with polar circular movement</a></li>
+    <li><a name="toc-Mobile-with-perpendicular-circular-movement" href="Mobile-perpendicular-_0028cd_0029.html#Mobile-perpendicular-_0028cd_0029">12.6 Mobile with perpendicular circular movement</a></li>
+    <li><a name="toc-Angular-velocity-1" href="Angular-velocity-_0028cd_0029.html#Angular-velocity-_0028cd_0029">12.7 Angular velocity</a></li>
+    <li><a name="toc-Centripetal-acceleration" href="Centripetal-acceleration-_0028cd_0029.html#Centripetal-acceleration-_0028cd_0029">12.8 Centripetal acceleration</a></li>
+    <li><a name="toc-Angular-acceleration-1" href="Angular-acceleration-_0028cd_0029.html#Angular-acceleration-_0028cd_0029">12.9 Angular acceleration</a></li>
+    <li><a name="toc-Energy-1" href="Energy-_0028cd_0029.html#Energy-_0028cd_0029">12.10 Energy</a></li>
+    <li><a name="toc-Angular-momentum" href="Angular-momentum-_0028cd_0029.html#Angular-momentum-_0028cd_0029">12.11 Angular momentum</a></li>
+    <li><a name="toc-Linear-momentum" href="Linear-momentum-_0028cd_0029.html#Linear-momentum-_0028cd_0029">12.12 Linear momentum</a></li>
+    <li><a name="toc-Power-1" href="Power-_0028cd_0029.html#Power-_0028cd_0029">12.13 Power</a></li>
+    <li><a name="toc-Initial-System" href="Initial-System-_0028cd_0029.html#Initial-System-_0028cd_0029">12.14 Initial System</a></li>
+    <li><a name="toc-Final-System" href="Final-System-_0028cd_0029.html#Final-System-_0028cd_0029">12.15 Final System</a></li>
+    <li><a name="toc-Center-of-rotation-1" href="Center-of-rotation-_0028cd_0029.html#Center-of-rotation-_0028cd_0029">12.16 Center of rotation</a></li>
+    <li><a name="toc-Springs-2" href="Springs-_0028cd_0029.html#Springs-_0028cd_0029">12.17 Springs</a></li>
+    <li><a name="toc-Forces-3" href="Forces-_0028cd_0029.html#Forces-_0028cd_0029">12.18 Forces</a></li>
+    <li><a name="toc-Frictions-3" href="Frictions-_0028cd_0029.html#Frictions-_0028cd_0029">12.19 Frictions</a></li>
+    <li><a name="toc-Angles-2" href="Angles-_0028cd_0029.html#Angles-_0028cd_0029">12.20 Angles</a></li>
+    <li><a name="toc-Moment-of-a-force-or-couple-of-forces" href="Moment-_0028cd_0029.html#Moment-_0028cd_0029">12.21 Moment of a force or couple of forces</a></li>
+    <li><a name="toc-Total-acceleration-_0028Triangle-of-accelerations_0029" href="Total-acceleration-_0028cd_0029.html#Total-acceleration-_0028cd_0029">12.22 Total acceleration (Triangle of accelerations)</a></li>
+    <li><a name="toc-Maximum-acceleration" href="Maximum-acceleration-_0028cd_0029.html#Maximum-acceleration-_0028cd_0029">12.23 Maximum acceleration</a></li>
+    <li><a name="toc-Inertia" href="Inertia-_0028cd_0029.html#Inertia-_0028cd_0029">12.24 Inertia</a></li>
+    <li><a name="toc-Absolute-velocity" href="Absolute-velocity-_0028cd_0029.html#Absolute-velocity-_0028cd_0029">12.25 Absolute velocity</a></li>
+    <li><a name="toc-Sine-of-angle" href="Sine-of-angle-_0028cd_0029.html#Sine-of-angle-_0028cd_0029">12.26 Sine of angle</a></li>
+    <li><a name="toc-Supported-combinations-of-elements-Energy_002c-Angular-Momentum_002c-Linear-Momentum-and-Power" href="Combinations-_0028cd_0029.html#Combinations-_0028cd_0029">12.27 Supported combinations of elements Energy, Angular Momentum, Linear Momentum and Power</a></li>
+  </ul></li>
+  <li><a name="toc-Examples-circular-dynamics-of-particles" href="Examples-circular-dynamics.html#Examples-circular-dynamics">13 Examples circular dynamics of particles</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Example-1-5" href="Example-1-_0028cd_0029.html#Example-1-_0028cd_0029">13.1 Example 1</a></li>
+    <li><a name="toc-Example-2-5" href="Example-2-_0028cd_0029.html#Example-2-_0028cd_0029">13.2 Example 2</a></li>
+    <li><a name="toc-Example-3-5" href="Example-3-_0028cd_0029.html#Example-3-_0028cd_0029">13.3 Example 3</a></li>
+    <li><a name="toc-Example-4-5" href="Example-4-_0028cd_0029.html#Example-4-_0028cd_0029">13.4 Example 4</a></li>
+    <li><a name="toc-Example-5-5" href="Example-5-_0028cd_0029.html#Example-5-_0028cd_0029">13.5 Example 5</a></li>
+    <li><a name="toc-Example-6-4" href="Example-6-_0028cd_0029.html#Example-6-_0028cd_0029">13.6 Example 6</a></li>
+    <li><a name="toc-Example-7-4" href="Example-7-_0028cd_0029.html#Example-7-_0028cd_0029">13.7 Example 7</a></li>
+    <li><a name="toc-Example-8-3" href="Example-8-_0028cd_0029.html#Example-8-_0028cd_0029">13.8 Example 8</a></li>
+    <li><a name="toc-Example-9-3" href="Example-9-_0028cd_0029.html#Example-9-_0028cd_0029">13.9 Example 9</a></li>
+    <li><a name="toc-Example-10-2" href="Example-10-_0028cd_0029.html#Example-10-_0028cd_0029">13.10 Example 10</a></li>
+    <li><a name="toc-Example-11-2" href="Example-11-_0028cd_0029.html#Example-11-_0028cd_0029">13.11 Example 11</a></li>
+    <li><a name="toc-Example-12-2" href="Example-12-_0028cd_0029.html#Example-12-_0028cd_0029">13.12 Example 12</a></li>
+    <li><a name="toc-Example-13-1" href="Example-13-_0028cd_0029.html#Example-13-_0028cd_0029">13.13 Example 13</a></li>
+  </ul></li>
+  <li><a name="toc-Calorimetry-1" href="Calorimetry.html#Calorimetry">14 Calorimetry</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Laboratory-clock" href="Laboratory-clock-_0028cal_0029.html#Laboratory-clock-_0028cal_0029">14.1 Laboratory clock</a></li>
+    <li><a name="toc-Applied-heat" href="Applied-heat-_0028cal_0029.html#Applied-heat-_0028cal_0029">14.2 Applied heat</a></li>
+    <li><a name="toc-Applied-heat-flow" href="Applied-heat-flow-_0028cal_0029.html#Applied-heat-flow-_0028cal_0029">14.3 Applied heat flow</a></li>
+    <li><a name="toc-Heat-extracted" href="Heat-extracted-_0028cal_0029.html#Heat-extracted-_0028cal_0029">14.4 Heat extracted</a></li>
+    <li><a name="toc-Refrigeration" href="Refrigeration-_0028cal_0029.html#Refrigeration-_0028cal_0029">14.5 Refrigeration</a></li>
+    <li><a name="toc-Block-1" href="Block-_0028cal_0029.html#Block-_0028cal_0029">14.6 Block</a></li>
+    <li><a name="toc-Liquid" href="Liquid-_0028cal_0029.html#Liquid-_0028cal_0029">14.7 Liquid</a></li>
+    <li><a name="toc-Gas" href="Gas-_0028cal_0029.html#Gas-_0028cal_0029">14.8 Gas</a></li>
+    <li><a name="toc-Linear-expansion" href="Linear-expansion-_0028cal_0029.html#Linear-expansion-_0028cal_0029">14.9 Linear expansion</a></li>
+    <li><a name="toc-Superficial-expansion" href="Superficial-expansion-_0028cal_0029.html#Superficial-expansion-_0028cal_0029">14.10 Superficial expansion</a></li>
+    <li><a name="toc-Volumetric-expansion" href="Volumetric-expansion-_0028cal_0029.html#Volumetric-expansion-_0028cal_0029">14.11 Volumetric expansion</a></li>
+    <li><a name="toc-Change-of-state-solid_002dliquid" href="Change-solid_002dliquid-_0028cal_0029.html#Change-solid_002dliquid-_0028cal_0029">14.12 Change of state solid-liquid</a></li>
+    <li><a name="toc-Change-of-state-liquid_002dgas" href="Change-liquid_002dgas-_0028cal_0029.html#Change-liquid_002dgas-_0028cal_0029">14.13 Change of state liquid-gas</a></li>
+    <li><a name="toc-Process" href="Process-_0028cal_0029.html#Process-_0028cal_0029">14.14 Process</a></li>
+    <li><a name="toc-Calorimeter" href="Calorimeter-_0028cal_0029.html#Calorimeter-_0028cal_0029">14.15 Calorimeter</a></li>
+    <li><a name="toc-Gas-at-constant-pressure" href="Gas-constant-pressure-_0028cal_0029.html#Gas-constant-pressure-_0028cal_0029">14.16 Gas at constant pressure</a></li>
+    <li><a name="toc-Gas-at-constant-temperature" href="Gas-constant-temperature-_0028cal_0029.html#Gas-constant-temperature-_0028cal_0029">14.17 Gas at constant temperature</a></li>
+    <li><a name="toc-Gas-at-constant-volume" href="Gas-constant-volume-_0028cal_0029.html#Gas-constant-volume-_0028cal_0029">14.18 Gas at constant volume</a></li>
+    <li><a name="toc-Gas-PV_002fT" href="Gas-PV_002fT-_0028cal_0029.html#Gas-PV_002fT-_0028cal_0029">14.19 Gas PV/T</a></li>
+    <li><a name="toc-Heat-exchanger" href="Heat-exchanger-_0028cal_0029.html#Heat-exchanger-_0028cal_0029">14.20 Heat exchanger</a></li>
+  </ul></li>
+  <li><a name="toc-Examples-calorimetry-1" href="Examples-calorimetry.html#Examples-calorimetry">15 Examples calorimetry</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Example-1-6" href="Example-1-_0028cal_0029.html#Example-1-_0028cal_0029">15.1 Example 1</a></li>
+    <li><a name="toc-Example-2-6" href="Example-2-_0028cal_0029.html#Example-2-_0028cal_0029">15.2 Example 2</a></li>
+    <li><a name="toc-Example-3-6" href="Example-3-_0028cal_0029.html#Example-3-_0028cal_0029">15.3 Example 3</a></li>
+    <li><a name="toc-Example-4-6" href="Example-4-_0028cal_0029.html#Example-4-_0028cal_0029">15.4 Example 4</a></li>
+    <li><a name="toc-Example-5-6" href="Example-5-_0028cal_0029.html#Example-5-_0028cal_0029">15.5 Example 5</a></li>
+    <li><a name="toc-Example-6-5" href="Example-6-_0028cal_0029.html#Example-6-_0028cal_0029">15.6 Example 6</a></li>
+    <li><a name="toc-Example-7-5" href="Example-7-_0028cal_0029.html#Example-7-_0028cal_0029">15.7 Example 7</a></li>
+    <li><a name="toc-Example-8-4" href="Example-8-_0028cal_0029.html#Example-8-_0028cal_0029">15.8 Example 8</a></li>
+    <li><a name="toc-Example-9-4" href="Example-9-_0028cal_0029.html#Example-9-_0028cal_0029">15.9 Example 9</a></li>
+    <li><a name="toc-Example-10-3" href="Example-10-_0028cal_0029.html#Example-10-_0028cal_0029">15.10 Example 10</a></li>
+    <li><a name="toc-Example-11-3" href="Example-11-_0028cal_0029.html#Example-11-_0028cal_0029">15.11 Example 11</a></li>
+    <li><a name="toc-Example-12-3" href="Example-12-_0028cal_0029.html#Example-12-_0028cal_0029">15.12 Example 12</a></li>
+    <li><a name="toc-Example-13-2" href="Example-13-_0028cal_0029.html#Example-13-_0028cal_0029">15.13 Example 13</a></li>
+  </ul></li>
+  <li><a name="toc-GNU-Free-Documentation-License" href="GFDL.html#GFDL">16 GNU Free Documentation License</a></li>
+  <li><a name="toc-Indice-1" href="Indice.html#Indice">Indice</a></li>
+</ul>
+</div>
+
+
+<a name="Top"></a>
+<div class="header">
+<p>
+Next: <a href="Welcome.html#Welcome" accesskey="n" rel="next">Welcome</a>, Previous: <a href="../dir/index.html" accesskey="p" rel="prev">(dir)</a>, Up: <a href="../dir/index.html" accesskey="u" rel="up">(dir)</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Contenido"></a>
+<h1 class="top">Contenido</h1>
+
+<p>FisicaLab is an educational application to solve physics problems. Its main objective is let the user to focus in physics concepts, leaving aside the mathematical details (FisicaLab take care of them). This allows the user to become familiar with the physical concepts without running the risk of getting lost in mathematical details. And so, when the user gain confidence in applying physical concepts, will be better prepared to solve the problems by hand (with pen and paper). FisicaLab is easy to use and very intuitive. However, in order to take advantage of all its features, we recommend you read first these help files.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="Welcome.html#Welcome" accesskey="1">Welcome</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Kinematics.html#Kinematics" accesskey="2">Kinematics</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Examples-kinematics-of-particles.html#Examples-kinematics-of-particles" accesskey="3">Examples kinematics of particles</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Circular-kinematics.html#Circular-kinematics" accesskey="4">Circular kinematics</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Examples-circular-kinematics-of-particles.html#Examples-circular-kinematics-of-particles" accesskey="5">Examples circular kinematics of particles</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Statics.html#Statics" accesskey="6">Statics</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Examples-statics.html#Examples-statics" accesskey="7">Examples statics</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Rigid-statics.html#Rigid-statics" accesskey="8">Rigid statics</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Examples-statics-rigid-bodies.html#Examples-statics-rigid-bodies" accesskey="9">Examples statics rigid bodies</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Dynamics.html#Dynamics">Dynamics</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Examples-dynamics-of-particles.html#Examples-dynamics-of-particles">Examples dynamics of particles</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Circular-dynamics.html#Circular-dynamics">Circular dynamics</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Examples-circular-dynamics.html#Examples-circular-dynamics">Examples circular dynamics</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Calorimetry.html#Calorimetry">Calorimetry</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Examples-calorimetry.html#Examples-calorimetry">Examples calorimetry</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="GFDL.html#GFDL">GFDL</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Indice.html#Indice">Indice</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+</pre></th></tr><tr><th colspan="3" align="left" valign="top"><pre class="menu-comment"> &mdash; The Detailed Node Listing &mdash;
+
+Introduction
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Handling-the-elements.html#Handling-the-elements">Handling the elements</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Element-data.html#Element-data">Element data</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="How-it-works.html#How-it-works">How it works</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Messages.html#Messages">Messages</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Module kinematics of particles
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Stationary-reference-system-_0028k_0029.html#Stationary-reference-system-_0028k_0029">Stationary reference system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-reference-system-_0028k_0029.html#Mobile-reference-system-_0028k_0029">Mobile reference system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-reference-system-in-X_002fY-_0028k_0029.html#Mobile-reference-system-in-X_002fY-_0028k_0029">Mobile reference system in X/Y</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-_0028k_0029.html#Mobile-_0028k_0029">Mobile</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-in-X_002fY-_0028k_0029.html#Mobile-in-X_002fY-_0028k_0029">Mobile in X/Y</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-in-X_002fY-with-constant-velocity-_0028k_0029.html#Mobile-in-X_002fY-with-constant-velocity-_0028k_0029">Mobile in X/Y with constant velocity</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Cannon-_0028k_0029.html#Cannon-_0028k_0029">Cannon</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-radial-_0028k_0029.html#Mobile-radial-_0028k_0029">Mobile radial</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Distance-_0028k_0029.html#Distance-_0028k_0029">Distance</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Distance-XY-_0028k_0029.html#Distance-XY-_0028k_0029">Distance XY</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Point-_0028k_0029.html#Point-_0028k_0029">Point</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Relative-velocity-_0028k_0029.html#Relative-velocity-_0028k_0029">Relative velocity</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Examples kinematics of particles
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Example-1-_0028k_0029.html#Example-1-_0028k_0029">Example 1 (k)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-2-_0028k_0029.html#Example-2-_0028k_0029">Example 2 (k)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-3-_0028k_0029.html#Example-3-_0028k_0029">Example 3 (k)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-4-_0028k_0029.html#Example-4-_0028k_0029">Example 4 (k)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-5-_0028k_0029.html#Example-5-_0028k_0029">Example 5 (k)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-6-_0028k_0029.html#Example-6-_0028k_0029">Example 6 (k)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-7-_0028k_0029.html#Example-7-_0028k_0029">Example 7 (k)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Module circular kinematics of particles
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Stationary-reference-system-_0028ck_0029.html#Stationary-reference-system-_0028ck_0029">Stationary reference system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-circular-_0028ck_0029.html#Mobile-circular-_0028ck_0029">Mobile with circular motion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-polar-_0028ck_0029.html#Mobile-polar-_0028ck_0029">Mobile with polar circular motion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Angular-velocity-_0028ck_0029.html#Angular-velocity-_0028ck_0029">Angular velocity</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Angular-acceleration-_0028ck_0029.html#Angular-acceleration-_0028ck_0029">Angular acceleration</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Total-acceleration-_0028ck_0029.html#Total-acceleration-_0028ck_0029">Total acceleration</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Frequency-_0028ck_0029.html#Frequency-_0028ck_0029">Frequency</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Period-_0028ck_0029.html#Period-_0028ck_0029">Period</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Number-of-laps-_0028ck_0029.html#Number-of-laps-_0028ck_0029">Number of laps</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Center-of-rotation-_0028ck_0029.html#Center-of-rotation-_0028ck_0029">Center of rotation</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Distance-_0028ck_0029.html#Distance-_0028ck_0029">Distance</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Arc-length-_0028ck_0029.html#Arc-length-_0028ck_0029">Arc length</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Coordinate-_0028ck_0029.html#Coordinate-_0028ck_0029">Coordinate</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Relative-velocity-_0028ck_0029.html#Relative-velocity-_0028ck_0029">Relative velocity</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Examples circular kinematics of particles
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Example-1-_0028ck_0029.html#Example-1-_0028ck_0029">Example 1 (ck)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-2-_0028ck_0029.html#Example-2-_0028ck_0029">Example 2 (ck)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-3-_0028ck_0029.html#Example-3-_0028ck_0029">Example 3 (ck)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-4-_0028ck_0029.html#Example-4-_0028ck_0029">Example 4 (ck)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-5-_0028ck_0029.html#Example-5-_0028ck_0029">Example 5 (ck)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Module statics of particles
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Stationary-reference-system-_0028s_0029.html#Stationary-reference-system-_0028s_0029">Stationary reference system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-_0028s_0029.html#Block-_0028s_0029">Block</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-left-_0028s_0029.html#Block-left-_0028s_0029">Block above an inclined plane to the left</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-right-_0028s_0029.html#Block-right-_0028s_0029">Block above an inclined plane to the right</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Springs-_0028s_0029.html#Springs-_0028s_0029">Springs</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Pulley-_0028s_0029.html#Pulley-_0028s_0029">Pulley</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Static-point-_0028s_0029.html#Static-point-_0028s_0029">Static point</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Angles-_0028s_0029.html#Angles-_0028s_0029">Angles</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Forces-_0028s_0029.html#Forces-_0028s_0029">Forces</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Frictions-_0028s_0029.html#Frictions-_0028s_0029">Frictions</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="V_002fH-resultant-_0028s_0029.html#V_002fH-resultant-_0028s_0029">Vertical/Horizontal resultant</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Resultant-_0028s_0029.html#Resultant-_0028s_0029">Resultant</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Examples statics
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Example-1-_0028s_0029.html#Example-1-_0028s_0029">Example 1 (s)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-2-_0028s_0029.html#Example-2-_0028s_0029">Example 2 (s)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-3-_0028s_0029.html#Example-3-_0028s_0029">Example 3 (s)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-4-_0028s_0029.html#Example-4-_0028s_0029">Example 4 (s)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-5-_0028s_0029.html#Example-5-_0028s_0029">Example 5 (s)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-6-_0028s_0029.html#Example-6-_0028s_0029">Example 6 (s)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-7-_0028s_0029.html#Example-7-_0028s_0029">Example 7 (s)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-8-_0028s_0029.html#Example-8-_0028s_0029">Example 8 (s)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-9-_0028s_0029.html#Example-9-_0028s_0029">Example 9 (s)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Module rigid statics
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Stationary-reference-system-_0028rs_0029.html#Stationary-reference-system-_0028rs_0029">Stationary reference system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Points-_0028rs_0029.html#Points-_0028rs_0029">Points</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Beam-_0028rs_0029.html#Beam-_0028rs_0029">Beam</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Solid-_0028rs_0029.html#Solid-_0028rs_0029">Solid</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Point-_0028rs_0029.html#Point-_0028rs_0029">Point</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Angles-_0028rs_0029.html#Angles-_0028rs_0029">Angles</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Elements-of-beam-_0028rs_0029.html#Elements-of-beam-_0028rs_0029">Elements of beam</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Elements-of-solid-_0028rs_0029.html#Elements-of-solid-_0028rs_0029">Elements of solid</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Forces-_0028rs_0029.html#Forces-_0028rs_0029">Forces</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Frictions-_0028rs_0029.html#Frictions-_0028rs_0029">Frictions</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Couple-_0028rs_0029.html#Couple-_0028rs_0029">Couple</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Beams-of-2-forces-_0028rs_0029.html#Beams-of-2-forces-_0028rs_0029">Beams of 2 forces</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Truss-_0028rs_0029.html#Truss-_0028rs_0029">Truss</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Joint-_0028rs_0029.html#Joint-_0028rs_0029">Joint</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Beams-of-truss-_0028rs_0029.html#Beams-of-truss-_0028rs_0029">Beams of truss</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Resultant-_0028rs_0029.html#Resultant-_0028rs_0029">Resultant</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Resultant-horizontal-_0028rs_0029.html#Resultant-horizontal-_0028rs_0029">Resultant with horizontal force</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Resultant-vertical-_0028rs_0029.html#Resultant-vertical-_0028rs_0029">Resultant with vertical force</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Examples statics rigid bodies
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Example-1-_0028rs_0029.html#Example-1-_0028rs_0029">Example 1 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-2-_0028rs_0029.html#Example-2-_0028rs_0029">Example 2 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-3-_0028rs_0029.html#Example-3-_0028rs_0029">Example 3 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-4-_0028rs_0029.html#Example-4-_0028rs_0029">Example 4 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-5-_0028rs_0029.html#Example-5-_0028rs_0029">Example 5 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-6-_0028rs_0029.html#Example-6-_0028rs_0029">Example 6 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-7-_0028rs_0029.html#Example-7-_0028rs_0029">Example 7 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-8-_0028rs_0029.html#Example-8-_0028rs_0029">Example 8 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-9-_0028rs_0029.html#Example-9-_0028rs_0029">Example 9 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-10-_0028rs_0029.html#Example-10-_0028rs_0029">Example 10 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-11-_0028rs_0029.html#Example-11-_0028rs_0029">Example 11 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-12-_0028rs_0029.html#Example-12-_0028rs_0029">Example 12 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-13-_0028rs_0029.html#Example-13-_0028rs_0029">Example 13 (rs)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Module dynamics of particles
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Stationary-reference-system-_0028d_0029.html#Stationary-reference-system-_0028d_0029">Stationary reference system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-_0028d_0029.html#Mobile-_0028d_0029">Mobile</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-in-X_002fY-_0028d_0029.html#Mobile-in-X_002fY-_0028d_0029">Mobile in X/Y</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-vertical-_0028d_0029.html#Block-vertical-_0028d_0029">Block with vertical movement</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-horizontal-_0028d_0029.html#Block-horizontal-_0028d_0029">Block with horizontal movement</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-plane-to-the-left-_0028d_0029.html#Block-plane-to-the-left-_0028d_0029">Block with movement along an inclined plane to the left</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-plane-to-the-right-_0028d_0029.html#Block-plane-to-the-right-_0028d_0029">Block with movement along an inclined plane to the right</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Pulley-_0028d_0029.html#Pulley-_0028d_0029">Pulley</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Springs-_0028d_0029.html#Springs-_0028d_0029">Springs</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Forces-_0028d_0029.html#Forces-_0028d_0029">Forces</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Frictions-_0028d_0029.html#Frictions-_0028d_0029">Frictions</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Frictions-between-blocks-_0028d_0029.html#Frictions-between-blocks-_0028d_0029">Frictions between blocks (contacts)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Relation-between-accelerations-_0028d_0029.html#Relation-between-accelerations-_0028d_0029">Relation between accelerations</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Relative-motion-_0028d_0029.html#Relative-motion-_0028d_0029">Relative motion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Collision-_0028d_0029.html#Collision-_0028d_0029">Collision</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Energy-_0028d_0029.html#Energy-_0028d_0029">Energy</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Momentum-_0028d_0029.html#Momentum-_0028d_0029">Momentum</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Power-_0028d_0029.html#Power-_0028d_0029">Power</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Examples dynamics of particles
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Example-1-_0028d_0029.html#Example-1-_0028d_0029">Example 1 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-2-_0028d_0029.html#Example-2-_0028d_0029">Example 2 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-3-_0028d_0029.html#Example-3-_0028d_0029">Example 3 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-4-_0028d_0029.html#Example-4-_0028d_0029">Example 4 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-5-_0028d_0029.html#Example-5-_0028d_0029">Example 5 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-6-_0028d_0029.html#Example-6-_0028d_0029">Example 6 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-7-_0028d_0029.html#Example-7-_0028d_0029">Example 7 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-8-_0028d_0029.html#Example-8-_0028d_0029">Example 8 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-9-_0028d_0029.html#Example-9-_0028d_0029">Example 9 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-10-_0028d_0029.html#Example-10-_0028d_0029">Example 10 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-11-_0028d_0029.html#Example-11-_0028d_0029">Example 11 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-12-_0028d_0029.html#Example-12-_0028d_0029">Example 12 (d)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Module circular dynamics of particles
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Stationary-reference-system-_0028cd_0029.html#Stationary-reference-system-_0028cd_0029">Stationary reference system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Object-in-rest-_0028cd_0029.html#Object-in-rest-_0028cd_0029">Object in rest</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-linear-_0028cd_0029.html#Mobile-linear-_0028cd_0029">Mobile with linear movement</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-circular-_0028cd_0029.html#Mobile-circular-_0028cd_0029">Mobile with circular movement</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-polar-_0028cd_0029.html#Mobile-polar-_0028cd_0029">Mobile with polar circular movement</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Mobile-perpendicular-_0028cd_0029.html#Mobile-perpendicular-_0028cd_0029">Mobile with perpendicular circular movement</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Angular-velocity-_0028cd_0029.html#Angular-velocity-_0028cd_0029">Angular velocity</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Centripetal-acceleration-_0028cd_0029.html#Centripetal-acceleration-_0028cd_0029">Centripetal acceleration</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Angular-acceleration-_0028cd_0029.html#Angular-acceleration-_0028cd_0029">Angular acceleration</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Energy-_0028cd_0029.html#Energy-_0028cd_0029">Energy</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Angular-momentum-_0028cd_0029.html#Angular-momentum-_0028cd_0029">Angular momentum</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Linear-momentum-_0028cd_0029.html#Linear-momentum-_0028cd_0029">Linear momentum</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Power-_0028cd_0029.html#Power-_0028cd_0029">Power</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Initial-System-_0028cd_0029.html#Initial-System-_0028cd_0029">Initial System</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Final-System-_0028cd_0029.html#Final-System-_0028cd_0029">Final System</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Center-of-rotation-_0028cd_0029.html#Center-of-rotation-_0028cd_0029">Center of rotation</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Springs-_0028cd_0029.html#Springs-_0028cd_0029">Springs</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Forces-_0028cd_0029.html#Forces-_0028cd_0029">Forces</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Frictions-_0028cd_0029.html#Frictions-_0028cd_0029">Frictions</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Angles-_0028cd_0029.html#Angles-_0028cd_0029">Angles</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Moment-_0028cd_0029.html#Moment-_0028cd_0029">Moment of a force or couple of forces</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Total-acceleration-_0028cd_0029.html#Total-acceleration-_0028cd_0029">Total acceleration (Triangle of accelerations)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Maximum-acceleration-_0028cd_0029.html#Maximum-acceleration-_0028cd_0029">Maximum acceleration</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Inertia-_0028cd_0029.html#Inertia-_0028cd_0029">Inertia</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Absolute-velocity-_0028cd_0029.html#Absolute-velocity-_0028cd_0029">Absolute velocity</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Sine-of-angle-_0028cd_0029.html#Sine-of-angle-_0028cd_0029">Sine of angle</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Combinations-_0028cd_0029.html#Combinations-_0028cd_0029">Supported combinations of elements Energy, Angular Momentum, Linear Momentum and Power</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Examples circular dynamics of particles
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Example-1-_0028cd_0029.html#Example-1-_0028cd_0029">Example 1 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-2-_0028cd_0029.html#Example-2-_0028cd_0029">Example 2 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-3-_0028cd_0029.html#Example-3-_0028cd_0029">Example 3 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-4-_0028cd_0029.html#Example-4-_0028cd_0029">Example 4 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-5-_0028cd_0029.html#Example-5-_0028cd_0029">Example 5 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-6-_0028cd_0029.html#Example-6-_0028cd_0029">Example 6 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-7-_0028cd_0029.html#Example-7-_0028cd_0029">Example 7 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-8-_0028cd_0029.html#Example-8-_0028cd_0029">Example 8 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-9-_0028cd_0029.html#Example-9-_0028cd_0029">Example 9 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-10-_0028cd_0029.html#Example-10-_0028cd_0029">Example 10 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-11-_0028cd_0029.html#Example-11-_0028cd_0029">Example 11 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-12-_0028cd_0029.html#Example-12-_0028cd_0029">Example 12 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-13-_0028cd_0029.html#Example-13-_0028cd_0029">Example 13 (cd)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Calorimetry
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Laboratory-clock-_0028cal_0029.html#Laboratory-clock-_0028cal_0029">Laboratory clock</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Applied-heat-_0028cal_0029.html#Applied-heat-_0028cal_0029">Applied heat</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Applied-heat-flow-_0028cal_0029.html#Applied-heat-flow-_0028cal_0029">Applied heat flow</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Heat-extracted-_0028cal_0029.html#Heat-extracted-_0028cal_0029">Heat extracted</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Refrigeration-_0028cal_0029.html#Refrigeration-_0028cal_0029">Refrigeration</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Block-_0028cal_0029.html#Block-_0028cal_0029">Block</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Liquid-_0028cal_0029.html#Liquid-_0028cal_0029">Liquid</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Gas-_0028cal_0029.html#Gas-_0028cal_0029">Gas</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Linear-expansion-_0028cal_0029.html#Linear-expansion-_0028cal_0029">Linear expansion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Superficial-expansion-_0028cal_0029.html#Superficial-expansion-_0028cal_0029">Superficial expansion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Volumetric-expansion-_0028cal_0029.html#Volumetric-expansion-_0028cal_0029">Volumetric expansion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Change-solid_002dliquid-_0028cal_0029.html#Change-solid_002dliquid-_0028cal_0029">Change of state solid-liquid</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Change-liquid_002dgas-_0028cal_0029.html#Change-liquid_002dgas-_0028cal_0029">Change of state liquid-gas</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Process-_0028cal_0029.html#Process-_0028cal_0029">Process</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Calorimeter-_0028cal_0029.html#Calorimeter-_0028cal_0029">Calorimeter</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Gas-constant-pressure-_0028cal_0029.html#Gas-constant-pressure-_0028cal_0029">Gas at constant pressure</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Gas-constant-temperature-_0028cal_0029.html#Gas-constant-temperature-_0028cal_0029">Gas at constant temperature</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Gas-constant-volume-_0028cal_0029.html#Gas-constant-volume-_0028cal_0029">Gas at constant volume</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Gas-PV_002fT-_0028cal_0029.html#Gas-PV_002fT-_0028cal_0029">Gas PV/T</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Heat-exchanger-_0028cal_0029.html#Heat-exchanger-_0028cal_0029">Heat exchanger</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Examples calorimetry
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Example-1-_0028cal_0029.html#Example-1-_0028cal_0029">Example 1 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-2-_0028cal_0029.html#Example-2-_0028cal_0029">Example 2 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-3-_0028cal_0029.html#Example-3-_0028cal_0029">Example 3 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-4-_0028cal_0029.html#Example-4-_0028cal_0029">Example 4 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-5-_0028cal_0029.html#Example-5-_0028cal_0029">Example 5 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-6-_0028cal_0029.html#Example-6-_0028cal_0029">Example 6 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-7-_0028cal_0029.html#Example-7-_0028cal_0029">Example 7 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-8-_0028cal_0029.html#Example-8-_0028cal_0029">Example 8 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-9-_0028cal_0029.html#Example-9-_0028cal_0029">Example 9 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-10-_0028cal_0029.html#Example-10-_0028cal_0029">Example 10 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-11-_0028cal_0029.html#Example-11-_0028cal_0029">Example 11 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-12-_0028cal_0029.html#Example-12-_0028cal_0029">Example 12 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Example-13-_0028cal_0029.html#Example-13-_0028cal_0029">Example 13 (cal)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+</pre></th></tr></table>
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Welcome.html#Welcome" accesskey="n" rel="next">Welcome</a>, Previous: <a href="../dir/index.html" accesskey="p" rel="prev">(dir)</a>, Up: <a href="../dir/index.html" accesskey="u" rel="up">(dir)</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

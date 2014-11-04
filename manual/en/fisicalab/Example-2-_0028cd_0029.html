@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Example 2 (cd)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Example 2 (cd)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Example 2 (cd)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Examples-circular-dynamics.html#Examples-circular-dynamics" rel="up" title="Examples circular dynamics">
+<link href="Example-3-_0028cd_0029.html#Example-3-_0028cd_0029" rel="next" title="Example 3 (cd)">
+<link href="Example-1-_0028cd_0029.html#Example-1-_0028cd_0029" rel="prev" title="Example 1 (cd)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Example-2-_0028cd_0029"></a>
+<div class="header">
+<p>
+Next: <a href="Example-3-_0028cd_0029.html#Example-3-_0028cd_0029" accesskey="n" rel="next">Example 3 (cd)</a>, Previous: <a href="Example-1-_0028cd_0029.html#Example-1-_0028cd_0029" accesskey="p" rel="prev">Example 1 (cd)</a>, Up: <a href="Examples-circular-dynamics.html#Examples-circular-dynamics" accesskey="u" rel="up">Examples circular dynamics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Example-2-5"></a>
+<h3 class="section">13.2 Example 2</h3>
+
+<a name="index-Example-2-_0028cd_0029"></a>
+
+<p>A small block A is on a table that rotates from rest with a constant tangential acceleration. If the coefficient of static friction between the block and the turntable is 0.57, find the minimum interval of time for the block to reach a speed of 1.2 m/s without slip.
+</p>
+<div align="center"><img src="dc-e2-1.jpg" alt="dc-e2-1">
+</div>
+<br>
+<br>
+
+<p><strong>Solution with FisicaLab</strong>
+</p>
+<p>Select the Dynamics group and, inside this, the Circular module. Erase the content of the chalkboard and select the SI system. And add one element Stationary reference system, two elements Mobile with circular movement, one element Mobile with perpendicular circular movement, two element Force, one element Angular momentum, one element Moment of a force and one element Maximum acceleration. As show the image below:
+</p>
+<div align="center"><img src="dc-e2-2.jpg" alt="dc-e2-2">
+</div>
+<p>The element Stationary reference system write to default the gravity value. And the time is unknown.
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>g</strong></dt>
+<dd><p>9.81
+</p>
+</dd>
+<dt><strong>t</strong></dt>
+<dd><p>time
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>The mass of the block is not provided, since it is irrelevant to what is asked. But as we need to specify a mass, will place 1 kg. Thus, for the element Mobile with circular movement placed at left, which represents the initial state, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>initial
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>40 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>For the another element Mobile with circular movement, placed at right, which represents the final state, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>1.2
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>40 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now we add both objects to element Angular momentum, where M is the moment that causes the acceleration of the block:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>System i</strong></dt>
+<dd><p>initial
+</p>
+</dd>
+<dt><strong>System f</strong></dt>
+<dd><p>final
+</p>
+</dd>
+<dt><strong>M</strong></dt>
+<dd><p>M
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>The element Mobile with perpendicular circular motion is used to set additional conditions on the final state. Calling it A and leaving the center of rotation to the right, we have (both, the tangential acceleration and the tangential force, are unknowns):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>1
+</p>
+</dd>
+<dt><strong>vt</strong></dt>
+<dd><p>1.2
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>40 @ cm
+</p>
+</dd>
+<dt><strong>at</strong></dt>
+<dd><p>at
+</p>
+</dd>
+<dt><strong>Ft</strong></dt>
+<dd><p>Ft
+</p>
+</dd>
+<dt><strong>C</strong></dt>
+<dd><p>&gt;
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And in the element Maximum acceleration, we add the coefficient of friction, which ensures that both, the tangential force (Ft) and the centripetal force, are due to the maximum friction force:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Object</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>u</strong></dt>
+<dd><p>0.57
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now the element Moment of a force, is used to relate the maximum tangential force (Ft) with the applied moment:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>M</strong></dt>
+<dd><p>M
+</p>
+</dd>
+<dt><strong>f</strong></dt>
+<dd><p>Ft
+</p>
+</dd>
+<dt><strong>d</strong></dt>
+<dd><p>40 @ cm
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Finally, for normal and centripetal forces we have, respectively:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>normal
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>centripetal
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now click in the icon Solve to get the answer:
+</p>
+<div class="example">
+<pre class="example">
+centripetal = 3.600 N ;  time = 0.280 s ;  M = 1.711 N*m ;
+at = 4.279 m/s2 ;  Ft = 4.279 N ;  normal = 9.810 N ;
+Status = success.
+
+</pre></div>
+
+<p>The minimum time is 0.28 seconds.
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Example-3-_0028cd_0029.html#Example-3-_0028cd_0029" accesskey="n" rel="next">Example 3 (cd)</a>, Previous: <a href="Example-1-_0028cd_0029.html#Example-1-_0028cd_0029" accesskey="p" rel="prev">Example 1 (cd)</a>, Up: <a href="Examples-circular-dynamics.html#Examples-circular-dynamics" accesskey="u" rel="up">Examples circular dynamics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

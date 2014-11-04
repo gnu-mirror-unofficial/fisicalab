@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Example 4 (ck)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Example 4 (ck)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Example 4 (ck)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Examples-circular-kinematics-of-particles.html#Examples-circular-kinematics-of-particles" rel="up" title="Examples circular kinematics of particles">
+<link href="Example-5-_0028ck_0029.html#Example-5-_0028ck_0029" rel="next" title="Example 5 (ck)">
+<link href="Example-3-_0028ck_0029.html#Example-3-_0028ck_0029" rel="prev" title="Example 3 (ck)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Example-4-_0028ck_0029"></a>
+<div class="header">
+<p>
+Next: <a href="Example-5-_0028ck_0029.html#Example-5-_0028ck_0029" accesskey="n" rel="next">Example 5 (ck)</a>, Previous: <a href="Example-3-_0028ck_0029.html#Example-3-_0028ck_0029" accesskey="p" rel="prev">Example 3 (ck)</a>, Up: <a href="Examples-circular-kinematics-of-particles.html#Examples-circular-kinematics-of-particles" accesskey="u" rel="up">Examples circular kinematics of particles</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Example-4-1"></a>
+<h3 class="section">5.4 Example 4</h3>
+
+<a name="index-Example-4-_0028ck_0029"></a>
+
+<p>A mobile left the rest from the origin of the coordinate system, with an angular velocity of 0.4 rad/s, a radial velocity of 0.2 m/s (in the direction of the positive X axis) and with a radial acceleration of 0.12 m/s2. What is the coordinate of its position after 5 seconds? What is its radial velocity at that time? What is its distance from the origin? What is the average frequency of its circular motion?
+</p>
+<br>
+<br>
+
+<p><strong>Solution with FisicaLab</strong>
+</p>
+<p>Select the Kinematic group and, inside this, the Particles circular module. Erase the content of the chalkboard and select the SI system. Now add one element Mobile with polar circular motion, one element Coordinate, one element Frequency and one element Stationary reference system. As show the image below:
+</p>
+<div align="center"><img src="kc-e4.jpg" alt="kc-e4">
+</div>
+<p>We know the time, then to the element Stationary reference system:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>tf</strong></dt>
+<dd><p>5
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now to the element Mobile with polar circular motion, gonna be called <em>Mobile</em>, its initial position correspond with the angle 0 (because the initial radial velocity have the direction of the positive X axis). The center of rotation, is established as 0, because the mobile tour around the origin. The initial radius is 0 (because left the origin), the angular acceleration is 0 too, and the final angular velocity is established as an unknown data, because the element have an entry to angular acceleration then this assume that the final angular velocity can be different from the initial. And the final radial velocity is an unknown data:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>Mobile
+</p>
+</dd>
+<dt><strong>C</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>aa</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ar</strong></dt>
+<dd><p>0.12
+</p>
+</dd>
+<dt><strong>angi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ri</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vai</strong></dt>
+<dd><p>0.4
+</p>
+</dd>
+<dt><strong>vri</strong></dt>
+<dd><p>0.2
+</p>
+</dd>
+<dt><strong>ti</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>angf</strong></dt>
+<dd><p>angf
+</p>
+</dd>
+<dt><strong>rf</strong></dt>
+<dd><p>rf
+</p>
+</dd>
+<dt><strong>vaf</strong></dt>
+<dd><p>vaf
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>To the element Coordinate, we set our <em>Mobile</em> as the measured object, and the coordinates X and Y are unknown data:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Object</strong></dt>
+<dd><p>Mobile
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>x
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>y
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now in the element Frequency, the frequency is an unknown data too:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Object</strong></dt>
+<dd><p>Mobile
+</p>
+</dd>
+<dt><strong>f</strong></dt>
+<dd><p>f
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now click in the icon Solve to get the answer:
+</p>
+<div class="example">
+<pre class="example">
+x = -1.040 m ;  y = 2.273 m ;  f = 0.064 hz ;
+angf = 114.592 degrees ;  rf = 2.500 m ;
+vaf = 0.400 rad/s ;  vrf = 0.800 m/s ;
+Status = success.
+
+</pre></div>
+
+<p>The distance of the mobile to the origin is, of course, the final radius 2.500 m.
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Example-5-_0028ck_0029.html#Example-5-_0028ck_0029" accesskey="n" rel="next">Example 5 (ck)</a>, Previous: <a href="Example-3-_0028ck_0029.html#Example-3-_0028ck_0029" accesskey="p" rel="prev">Example 3 (ck)</a>, Up: <a href="Examples-circular-kinematics-of-particles.html#Examples-circular-kinematics-of-particles" accesskey="u" rel="up">Examples circular kinematics of particles</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

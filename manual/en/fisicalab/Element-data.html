@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Element data</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Element data">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Element data">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Welcome.html#Welcome" rel="up" title="Welcome">
+<link href="How-it-works.html#How-it-works" rel="next" title="How it works">
+<link href="Handling-the-elements.html#Handling-the-elements" rel="prev" title="Handling the elements">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Element-data"></a>
+<div class="header">
+<p>
+Next: <a href="How-it-works.html#How-it-works" accesskey="n" rel="next">How it works</a>, Previous: <a href="Handling-the-elements.html#Handling-the-elements" accesskey="p" rel="prev">Handling the elements</a>, Up: <a href="Welcome.html#Welcome" accesskey="u" rel="up">Welcome</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Element-data-1"></a>
+<h3 class="section">1.2 Element data</h3>
+
+<a name="index-Element-data"></a>
+
+<p>When you select an element in the chalkboard, or add a new element, you will see a table at the bottom of the window <em>Modules and elements</em>. With a double click above any field of the second column, you can write the data. FisicaLab supports scientific notation, to use this use the letter E. For example, to write the number &lsquo;<samp>3.45x10-5</samp>&rsquo;, write:
+</p>
+<div class="example">
+<pre class="example">
+3.45E-5
+
+</pre></div>
+
+<p>All numerical data must be without spaces. For example, the following numbers are wrong:
+</p>
+<div class="example">
+<pre class="example">
+- 5.3
+7.8E - 8
+
+</pre></div>
+
+<p>Also, FisicaLab can use many conversion factors. To use these, add the character <kbd>@</kbd> before the conversion. If you have selected the SI system, FisicaLab assumes that all data are in meters, kg, seconds, etc. With the English system, FisicaLab assumes that all data are in feet, pounds, slugs, seconds, etc. (in the English system the mass must be in slugs). For example, if you want write an speed of &lsquo;<samp>75 km/h</samp>&rsquo;, use:
+</p>
+<div class="example">
+<pre class="example">
+75 @ km/h
+
+</pre></div>
+
+<p>Here, we have one space before and after the character <kbd>@</kbd>, but these are for clarity, and are not required. Each module has its how conversion factors, as you can see in the sections that deal about these. 
+</p>
+<p>You can use letters or words to represent the unknown data. If, for example, the final velocity is an unknown data, you can represent this like:
+</p>
+<div class="example">
+<pre class="example">
+fv
+finalv
+fvel
+
+</pre></div>
+
+<p>or any other combination. But, we recommend you use letters or words that are related with the unknown data. Also, the conversion factors can be used with the unknown data. For example, if the time is unknown, and you want this in minutes, write something like:
+</p>
+<div class="example">
+<pre class="example">
+t @ min
+
+</pre></div>
+
+<p>The scientific notation can be used with the unknowns, adding the characters <kbd>#E</kbd> at the end of the name. For example, for a coefficient of thermal expansion, that is a small value:
+</p>
+<div class="example">
+<pre class="example">
+coefficient#E
+
+</pre></div>
+
+<p>Also, this can be used with a conversion factor. For example, for a very long distance that we want in kilometers:
+</p>
+<div class="example">
+<pre class="example">
+distance#E @ km
+
+</pre></div>
+
+<p>All the conversion factors are available in a contextual menu. After select the row of data where want add the factor, a right mouse click open a context menu with all available factors.
+</p>
+<br>
+
+<div align="center"><img src="MenuContextual.jpg" alt="MenuContextual">
+</div>
+<p>FisicaLab allows mathematical operations directly on the fields where you enter data. Can be carried out operations of addition (<kbd>+</kbd>), subtraction (<kbd>-</kbd>), multiplication (<kbd>*</kbd>) and division (<kbd>/</kbd>). Although not allowed to group operations by parentheses. It also provides some useful functions for certain calculations. These are listed below with its description:
+</p>
+<table>
+<tr><td width="30%">cos(ang)</td><td width="60%">Calculates the cosine of the sexagesimal angle &quot;ang&quot;.</td></tr>
+<tr><td width="30%">sin(ang)</td><td width="60%">Calculates the sine of the sexagesimal angle &quot;ang&quot;.</td></tr>
+<tr><td width="30%">tan(ang)</td><td width="60%">Calculates the tangent of the sexagesimal angle &quot;ang&quot;.</td></tr>
+<tr><td width="30%">sqrt(x)</td><td width="60%">Calculates the square root of the number &quot;x&quot;.</td></tr>
+<tr><td width="30%">hypot(a,b)</td><td width="60%">Calculates the hypotenuse of a right triangle whose legs are &quot;a&quot; and &quot;b&quot;.</td></tr>
+<tr><td width="30%">leg(c,a)</td><td width="60%">Calculates the leg of the right triangle whose hypotenuse is &quot;c&quot; and the other leg is &quot;a&quot;.</td></tr>
+<tr><td width="30%">rd(m1,m2,d)</td><td width="60%">Calculates the distance of the mass &quot;m1&quot; to the center of mass of the system consisting of the masses &quot;m1&quot; and &quot;m2&quot;, which are spaced a distance &quot;d&quot;.</td></tr>
+</table>
+
+<p>The numbers that are passed as parameters to these functions must have consistent units. For example, in the &lsquo;<samp>hypot()</samp>&rsquo; function both legs must be in the same units, whether centimeters, meters, inches, etc. These functions can be used in operations of addition, subtraction, multiplication and division. In these operations blank spaces are not allowed. Here are some examples:
+</p>
+<div class="example">
+<pre class="example">
+8*cos(34)
+hypot(4,3)-2
+rd(3,6,40)*sin(30) @ cm
+15*8/hypot(13,8)
+
+</pre></div>
+
+<p>Once entered the operation, FisicaLab will do the calculation and will write the result in the entry. Note that is possible to apply conversion factors. Although these can also be applied after carrying out the calculation.
+</p>
+<p>The fields where you enter angles do not allow the operations and functions described above. This is because these fields have their own operations and functions. For example, FisicaLab allows write the angles as slopes (a/b), and automatically convert this to sexagesimal angles. What is very useful for problems of trusses.
+</p>
+<div align="center"><img src="angulos.jpg" alt="angulos">
+</div>
+<p>For these fields are available two functions that calculates an angle from other relationships. These functions are:
+</p>
+<table>
+<tr><td width="30%">acos(a/c)</td><td width="60%">Calculates the sexagesimal angle whose cosine is the ratio &quot;a/c&quot;.</td></tr>
+<tr><td width="30%">asin(b/c)</td><td width="60%">Calculates the sexagesimal angle whose sine is the ratio &quot;b/c&quot;.</td></tr>
+</table>
+
+<p>If an operation is entered incorrectly, for example if it contains spaces or contains a function with an incorrect number of parameters, FisicaLab will do nothing and will take that string as an unknown.
+</p>
+<p><strong>Caution:</strong> <em>If, for example, you add a mass conversion factor in a time data, this will cause an error in the solution. And you will not get a message about this error.</em>
+</p>
+<hr>
+<div class="header">
+<p>
+Next: <a href="How-it-works.html#How-it-works" accesskey="n" rel="next">How it works</a>, Previous: <a href="Handling-the-elements.html#Handling-the-elements" accesskey="p" rel="prev">Handling the elements</a>, Up: <a href="Welcome.html#Welcome" accesskey="u" rel="up">Welcome</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 2 (c)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 2 (c)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 2 (c)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-cinematica.html#Ejemplos-cinematica" rel="up" title="Ejemplos cinematica">
+<link href="Ejemplo-3-_0028c_0029.html#Ejemplo-3-_0028c_0029" rel="next" title="Ejemplo 3 (c)">
+<link href="Ejemplo-1-_0028c_0029.html#Ejemplo-1-_0028c_0029" rel="prev" title="Ejemplo 1 (c)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-2-_0028c_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-3-_0028c_0029.html#Ejemplo-3-_0028c_0029" accesskey="n" rel="next">Ejemplo 3 (c)</a>, Previous: <a href="Ejemplo-1-_0028c_0029.html#Ejemplo-1-_0028c_0029" accesskey="p" rel="prev">Ejemplo 1 (c)</a>, Subir: <a href="Ejemplos-cinematica.html#Ejemplos-cinematica" accesskey="u" rel="up">Ejemplos cinematica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-2"></a>
+<h3 class="section">3.2 Ejemplo 2</h3>
+
+<a name="index-Ejemplo-2-_0028c_0029"></a>
+
+<p>Un autom&oacute;vil parte de un punto B a una velocidad de 75 km/h, hacia el este. 8 minutos despu&eacute;s, un segundo autom&oacute;vil parte de un punto A, a 5 km al oeste del punto B, con una velocidad de 88 km/h y tambi&eacute;n hacia el este. &iquest;En cuantos minutos este &uacute;ltimo auto le da alcance al que sali&oacute; de B? &iquest;A que distancia, en km, se encuentran del punto A en ese momento?
+</p>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Una vez seleccionado el m&oacute;dulo correspondiente y el sistema de unidades, borramos todo lo que contenga la Pizarra. Agregamos ahora dos elementos M&oacute;vil en X con velocidad constante, y un elemento Sistema de referencia fijo, como se muestra en la siguiente imagen:
+</p>
+<div align="center"><img src="k-e2.jpg" alt="k-e2">
+</div>
+<p>Donde el elemento de la izquierda es el auto que sale de A. Ahora en el elemento Sistema de referencia fijo, colocamos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>tf</strong></dt>
+<dd><p>t @ min
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>para el tiempo final, ya que el tiempo final es una inc&oacute;gnita, y queremos el resultado en minutos. En el elemento M&oacute;vil en X con velocidad constante de la izquierda, colocamos los datos del auto que sale de A. El cual supondremos que esta en el origen del sistema de referencia. Por tanto, sus datos quedan de la siguiente forma:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Auto A
+</p>
+</dd>
+<dt><strong>xi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>xf</strong></dt>
+<dd><p>d @ km
+</p>
+</dd>
+<dt><strong>ti</strong></dt>
+<dd><p>8 @ min
+</p>
+</dd>
+<dt><strong>vx</strong></dt>
+<dd><p>88 @ km/h
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para el auto que sale de B tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Auto B
+</p>
+</dd>
+<dt><strong>xi</strong></dt>
+<dd><p>5 @ km
+</p>
+</dd>
+<dt><strong>xf</strong></dt>
+<dd><p>d @ km
+</p>
+</dd>
+<dt><strong>ti</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vx</strong></dt>
+<dd><p>75 @ km/h
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Obs&eacute;rvese que la coordenada inicial para este auto, esta a 5 km del origen (hacia el este del punto A), puesto que esa es la distancia que inicialmente separa a los autos. Obs&eacute;rvese tambi&eacute;n que la inc&oacute;gnita para la distancia final se a colocado en los dos autos con el factor de conversi&oacute;n para kil&oacute;metros. Si el factor se coloca s&oacute;lo en uno de los autos, F&iacute;sicaLab entender&aacute; que se trata de inc&oacute;gnitas diferentes. Pero en este caso, es la misma inc&oacute;gnita, la distancia a la que el auto que sale de A le da alcance al auto que sale de B. Ingresados los datos correctamente, damos un clic en el icono de Resolver, para obtener la soluci&oacute;n:
+</p>
+<div class="example">
+<pre class="example">
+d = 101.538 k m ;  t = 77.231 min ;
+Estado = success.
+
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-3-_0028c_0029.html#Ejemplo-3-_0028c_0029" accesskey="n" rel="next">Ejemplo 3 (c)</a>, Previous: <a href="Ejemplo-1-_0028c_0029.html#Ejemplo-1-_0028c_0029" accesskey="p" rel="prev">Ejemplo 1 (c)</a>, Subir: <a href="Ejemplos-cinematica.html#Ejemplos-cinematica" accesskey="u" rel="up">Ejemplos cinematica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

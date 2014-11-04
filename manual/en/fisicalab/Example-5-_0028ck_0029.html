@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Example 5 (ck)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Example 5 (ck)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Example 5 (ck)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Examples-circular-kinematics-of-particles.html#Examples-circular-kinematics-of-particles" rel="up" title="Examples circular kinematics of particles">
+<link href="Statics.html#Statics" rel="next" title="Statics">
+<link href="Example-4-_0028ck_0029.html#Example-4-_0028ck_0029" rel="prev" title="Example 4 (ck)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Example-5-_0028ck_0029"></a>
+<div class="header">
+<p>
+Previous: <a href="Example-4-_0028ck_0029.html#Example-4-_0028ck_0029" accesskey="p" rel="prev">Example 4 (ck)</a>, Up: <a href="Examples-circular-kinematics-of-particles.html#Examples-circular-kinematics-of-particles" accesskey="u" rel="up">Examples circular kinematics of particles</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Example-5-1"></a>
+<h3 class="section">5.5 Example 5</h3>
+
+<a name="index-Example-5-_0028ck_0029"></a>
+
+<p>A mobile A with an uniform circular motion, tour around the origin describing a circle with radius 83 cm and with a tangential velocity of 0.7 m/s. In the moment in which the radius vector of this mobile is 59 degrees above the horizontal, a mobile B left the point (10, 17)cm with a constant radial velocity of 8 cm/s (in the direction of the positive X axis), and with a constant angular velocity of 0.6 rad/s. 12 seconds after the mobile B begin its movement, What is the distance between the two mobiles? What is the relative velocity of the mobile B in reference to the mobile A? How many laps described each of the mobiles?
+</p>
+<br>
+<br>
+
+<p><strong>Solution with FisicaLab</strong>
+</p>
+<p>Select the Kinematic group and, inside this, the Particles circular module. Erase the content of the chalkboard and select the SI system. Now add one element Mobile with circular motion, one Mobile with polar circular motion, one element Center of rotation, one element Distance, one element Relative velocity, two elements Number of laps and one element Stationary reference system. As show the image below:
+</p>
+<div align="center"><img src="kc-e5.jpg" alt="kc-e5">
+</div>
+<p>To the element Stationary reference system:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>tf</strong></dt>
+<dd><p>12
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>To the element Mobile with circular motion (the mobile A that tour around the origin):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>C</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>r</strong></dt>
+<dd><p>83 @ cm
+</p>
+</dd>
+<dt><strong>aci</strong></dt>
+<dd><p>aciA
+</p>
+</dd>
+<dt><strong>at</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>angi</strong></dt>
+<dd><p>59
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>0.7
+</p>
+</dd>
+<dt><strong>ti</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>angf</strong></dt>
+<dd><p>angfA
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vfA
+</p>
+</dd>
+<dt><strong>acf</strong></dt>
+<dd><p>acfA
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>To the element Center of rotation, the center of the mobile B, we have:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>Center
+</p>
+</dd>
+<dt><strong>x</strong></dt>
+<dd><p>10 @ cm
+</p>
+</dd>
+<dt><strong>y</strong></dt>
+<dd><p>17 @ cm
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now to the element Mobile with polar circular motion:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Name</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>C</strong></dt>
+<dd><p>Center
+</p>
+</dd>
+<dt><strong>aa</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ar</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>angi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ri</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vai</strong></dt>
+<dd><p>0.6
+</p>
+</dd>
+<dt><strong>vri</strong></dt>
+<dd><p>8 @ cm/s
+</p>
+</dd>
+<dt><strong>ti</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>angf</strong></dt>
+<dd><p>angfB
+</p>
+</dd>
+<dt><strong>rf</strong></dt>
+<dd><p>rfB
+</p>
+</dd>
+<dt><strong>vaf</strong></dt>
+<dd><p>vafB
+</p>
+</dd>
+<dt><strong>vrf</strong></dt>
+<dd><p>vrfB
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>The element Distance:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Object 1</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>Object 2</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>d</strong></dt>
+<dd><p>d
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And the element Relative velocity:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Object 1</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>Object 2</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>v</strong></dt>
+<dd><p>vrBA
+</p>
+</dd>
+<dt><strong>ang</strong></dt>
+<dd><p>angBA
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>And for each of the elements Number of laps, one for each mobile:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Object</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>n</strong></dt>
+<dd><p>nA
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>Object</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>n</strong></dt>
+<dd><p>nB
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Now click in the icon Solve to get the answer:
+</p>
+<div class="example">
+<pre class="example">
+aciA = 0.590 m/s2 ;  angfA = 278.861 degrees ;
+vfA = 0.700 m/s ;  acfA = 0.590 m/s2 ;
+d = 1.838 m ;  vrBA = 1.142 m/s ;
+angBA = 164.452 degrees ;  nA = 1.611 rev ;
+nB = 1.146 rev ;  angfB = 52.530 degrees ;
+rfB = 0.960 m ;  vafB = 0.600 rad/s ;
+vrfB = 0.080 m/s ;
+Status = success.
+
+</pre></div>
+
+<hr>
+<div class="header">
+<p>
+Previous: <a href="Example-4-_0028ck_0029.html#Example-4-_0028ck_0029" accesskey="p" rel="prev">Example 4 (ck)</a>, Up: <a href="Examples-circular-kinematics-of-particles.html#Examples-circular-kinematics-of-particles" accesskey="u" rel="up">Examples circular kinematics of particles</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indice.html#Indice" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 1 (c)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 1 (c)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 1 (c)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-cinematica.html#Ejemplos-cinematica" rel="up" title="Ejemplos cinematica">
+<link href="Ejemplo-2-_0028c_0029.html#Ejemplo-2-_0028c_0029" rel="next" title="Ejemplo 2 (c)">
+<link href="Ejemplos-cinematica.html#Ejemplos-cinematica" rel="prev" title="Ejemplos cinematica">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-1-_0028c_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-2-_0028c_0029.html#Ejemplo-2-_0028c_0029" accesskey="n" rel="next">Ejemplo 2 (c)</a>, Previous: <a href="Ejemplos-cinematica.html#Ejemplos-cinematica" accesskey="p" rel="prev">Ejemplos cinematica</a>, Subir: <a href="Ejemplos-cinematica.html#Ejemplos-cinematica" accesskey="u" rel="up">Ejemplos cinematica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-1"></a>
+<h3 class="section">3.1 Ejemplo 1</h3>
+
+<a name="index-Ejemplo-1-_0028c_0029"></a>
+
+<p>Un autom&oacute;vil parte del reposo con una aceleraci&oacute;n de 3 m/s2, &iquest;Que velocidad, en km/h, tiene despu&eacute;s de 7 segundos? &iquest;Que distancia en metros a recorrido?
+</p>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el grupo Cinem&aacute;tica y, dentro de este, el m&oacute;dulo Puntual (este es el m&oacute;dulo seleccionado por defecto). Si la Pizarra contiene elementos, los borramos dando un clic en el icono Borrar todo. Seleccionamos entonces el sistema de unidades SI (el sistema de unidades por defecto). Y ahora agregamos a la Pizarra un elemento M&oacute;vil en X y un Sistema de referencia fijo, como muestra la siguiente imagen:
+</p>
+<div align="center"><img src="k-e1.jpg" alt="k-e1">
+</div>
+<p>En el elemento Sistema de referencia fijo, el tiempo final es un dato conocido, 7 segundos. Por lo que colocamos 7.
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>tf</strong></dt>
+<dd><p>7
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>En el elemento M&oacute;vil en X, colocamos como nombre del m&oacute;vil <em>Auto</em> (en realidad, este dato es irrelevante para este ejemplo). Asumimos que el m&oacute;vil se mueve en la direcci&oacute;n del eje X positivo, y que parte del origen al tiempo 0. Con esto, en aceleraci&oacute;n colocamos la aceleraci&oacute;n dada, 3. Para el dato de coordenada inicial en X, dejamos 0. En el dato de velocidad inicial, dejamos tambi&eacute;n el valor 0. Para el dato del tiempo en que comienza a moverse el auto, dejamos tambi&eacute;n 0. Para el dato de coordenada X final, coloquemos d (de distancia). Y para la velocidad final colocamos:
+</p>
+<br>
+
+<div class="example">
+<pre class="example">
+vf @ km/h
+
+</pre></div>
+
+<br>
+
+<p>Los datos ingresados quedan como:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Auto
+</p>
+</dd>
+<dt><strong>ax</strong></dt>
+<dd><p>3
+</p>
+</dd>
+<dt><strong>xi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vxi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>ti</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>xf</strong></dt>
+<dd><p>d
+</p>
+</dd>
+<dt><strong>vxf</strong></dt>
+<dd><p>vf @ km/h
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Una vez ingresados los datos, damos un clic en el icono de Resolver, y F&iacute;sicaLab mostrara el resultado.
+</p>
+<div class="example">
+<pre class="example">
+d = 73.500 m ;  vf = 75.600 km/h ;
+Estado = success.
+
+</pre></div>
+
+<p>En caso de que se obtenga un mensaje de error, verif&iacute;quese que los datos est&eacute;n ingresados correctamente.
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-2-_0028c_0029.html#Ejemplo-2-_0028c_0029" accesskey="n" rel="next">Ejemplo 2 (c)</a>, Previous: <a href="Ejemplos-cinematica.html#Ejemplos-cinematica" accesskey="p" rel="prev">Ejemplos cinematica</a>, Subir: <a href="Ejemplos-cinematica.html#Ejemplos-cinematica" accesskey="u" rel="up">Ejemplos cinematica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

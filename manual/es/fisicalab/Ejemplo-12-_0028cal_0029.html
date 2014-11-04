@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 12 (cal)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 12 (cal)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 12 (cal)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-calorimetria.html#Ejemplos-calorimetria" rel="up" title="Ejemplos calorimetria">
+<link href="Ejemplo-13-_0028cal_0029.html#Ejemplo-13-_0028cal_0029" rel="next" title="Ejemplo 13 (cal)">
+<link href="Ejemplo-11-_0028cal_0029.html#Ejemplo-11-_0028cal_0029" rel="prev" title="Ejemplo 11 (cal)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-12-_0028cal_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-13-_0028cal_0029.html#Ejemplo-13-_0028cal_0029" accesskey="n" rel="next">Ejemplo 13 (cal)</a>, Previous: <a href="Ejemplo-11-_0028cal_0029.html#Ejemplo-11-_0028cal_0029" accesskey="p" rel="prev">Ejemplo 11 (cal)</a>, Subir: <a href="Ejemplos-calorimetria.html#Ejemplos-calorimetria" accesskey="u" rel="up">Ejemplos calorimetria</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-12-3"></a>
+<h3 class="section">15.12 Ejemplo 12</h3>
+
+<a name="index-Ejemplo-12-_0028cal_0029"></a>
+
+<p>Un calor&iacute;metro de cobre de 105 g contiene 307 g de agua a 23 C. Si se adicionan 95 g de hielo a -4 C al calor&iacute;metro, &iquest;Cual es la temperatura final del sistema en grados Celsius? (Calor especifico del hielo = 2090 J/kg*K, calor especifico del agua = 4187 J/kg*K, calor especifico del cobre = 390 J/kg*K, y calor de fusi&oacute;n del agua = 79.7 cal/g).
+</p>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el grupo Termodin&aacute;mica y, dentro de este, el m&oacute;dulo Calorimetr&iacute;a y gases. Si la Pizarra contiene elementos, los borramos dando un clic en el icono Borrar todo. Y ahora agregamos a la Pizarra un elemento Calor&iacute;metro, dos elementos Bloque, dos elementos Liquido, un elemento Cambio de fase solido-liquido y un elemento Proceso, como muestra la siguiente imagen (el circulo en amarillo encierra los elementos que representan el cambio sufrido por el hielo):
+</p>
+<div align="center"><img src="cal-e12-1.jpg" alt="cal-e12-1">
+</div>
+<p>Para el elemento Bloque, que representa el calor&iacute;metro de cobre y que llamaremos justamente <em>Cobre</em>, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Cobre
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>105 @ g
+</p>
+</dd>
+<dt><strong>c</strong></dt>
+<dd><p>390
+</p>
+</dd>
+<dt><strong>Ti</strong></dt>
+<dd><p>23 @ C
+</p>
+</dd>
+<dt><strong>Tf</strong></dt>
+<dd><p>Tf @ C
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el elemento liquido, que representa el agua dentro del calor&iacute;metro y que llamaremos <em>Agua</em>, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Agua
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>307 @ g
+</p>
+</dd>
+<dt><strong>c</strong></dt>
+<dd><p>4187
+</p>
+</dd>
+<dt><strong>Ti</strong></dt>
+<dd><p>23 @ C
+</p>
+</dd>
+<dt><strong>Tf</strong></dt>
+<dd><p>Tf @ C
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora, vamos a suponer que el hielo se derrite completamente y que el liquido resultante alcanza una temperatura mayor a los 0 C. Entonces para el segundo elemento Bloque, que representa al hielo en el intervalo de temperatura -4 C a 0 C y que llamaremos <em>HieloA</em>, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>HieloA
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>95 @ g
+</p>
+</dd>
+<dt><strong>c</strong></dt>
+<dd><p>2090
+</p>
+</dd>
+<dt><strong>Ti</strong></dt>
+<dd><p>-4 @ C
+</p>
+</dd>
+<dt><strong>Tf</strong></dt>
+<dd><p>0 @ C
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el elemento Cambio de fase solido-liquido, que representa la fusi&oacute;n del hielo y que llamaremos <em>HieloB</em>, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>HieloB
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>95 @ g
+</p>
+</dd>
+<dt><strong>cf</strong></dt>
+<dd><p>79.7 @ cal/g
+</p>
+</dd>
+<dt><strong>Sentido</strong></dt>
+<dd><p>&gt;
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para el segundo elemento liquido, que representa el agua liquida obtenida al derretirse el hielo y que llamaremos <em>HieloC</em>, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>HieloC
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>95 @ g
+</p>
+</dd>
+<dt><strong>c</strong></dt>
+<dd><p>4187
+</p>
+</dd>
+<dt><strong>Ti</strong></dt>
+<dd><p>0 @ C
+</p>
+</dd>
+<dt><strong>Tf</strong></dt>
+<dd><p>Tf @ C
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora para el elemento Proceso, que representa el cambio total sufrido por el agua del hielo y que llamaremos <em>Hielo</em>, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Hielo
+</p>
+</dd>
+<dt><strong>Objeto 1</strong></dt>
+<dd><p>HieloA
+</p>
+</dd>
+<dt><strong>Objeto 2</strong></dt>
+<dd><p>HieloB
+</p>
+</dd>
+<dt><strong>Objeto 3</strong></dt>
+<dd><p>HieloC
+</p>
+</dd>
+<dt><strong>Objeto 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>Objeto 5</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Obs&eacute;rvese que la temperatura final es la misma inc&oacute;gnita en todos los elementos, tal y como debe ser. Por &uacute;ltimo, para el elemento Calor&iacute;metro:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Objeto 1</strong></dt>
+<dd><p>Cobre
+</p>
+</dd>
+<dt><strong>Objeto 2</strong></dt>
+<dd><p>Agua
+</p>
+</dd>
+<dt><strong>Objeto 3</strong></dt>
+<dd><p>Hielo
+</p>
+</dd>
+<dt><strong>Objeto 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ingresados los datos, damos un clic en el icono de Resolver para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+Tf = -1.154 C ;
+Estado = success.
+
+Verifique que la temperatura calculada este dentro del
+rango esperado. Si no es asi, algun proceso o cambio
+indicado, nunca se lleva a cabo debido a que la
+energ&iacute;a no es suficiente.
+
+</pre></div>
+
+<p>El mensaje de advertencia nos dice que debemos verificar que la temperatura este dentro del rango esperado. Obviamente la temperatura final obtenida no esta dentro del rango esperado, puesto que asumimos que el hielo se derret&iacute;a completamente y que el agua liquida resultante adquir&iacute;a una temperatura final superior a 0 C. Esto indica (como nos dice el mensaje de advertencia) que alg&uacute;n proceso no se lleva a cabo. La posibilidad inmediata es que la energ&iacute;a del calor&iacute;metro y del agua, no sea suficiente para derretir todo el hielo. As&iacute; que vamos a asumir que el hielo si alcanza los 0 C, pero que solo parte de este se derrite. Eliminamos por tanto el elemento Liquido, que representa el agua obtenida del hielo, y borramos tambi&eacute;n su nombre del elemento Proceso. La temperatura final ya no es entonces una inc&oacute;gnita, porque si solo parte del hielo se derrite, entonces la temperatura final es 0 C. La nueva inc&oacute;gnita es la masa de hielo que se funde. As&iacute;, los elementos de la nueva hip&oacute;tesis quedan como muestra la siguiente imagen:
+</p>
+<div align="center"><img src="cal-e12-2.jpg" alt="cal-e12-2">
+</div>
+<p>Eliminamos el nombre <em>HieloC</em> del elemento Proceso:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Hielo
+</p>
+</dd>
+<dt><strong>Objeto 1</strong></dt>
+<dd><p>HieloA
+</p>
+</dd>
+<dt><strong>Objeto 2</strong></dt>
+<dd><p>HieloB
+</p>
+</dd>
+<dt><strong>Objeto 3</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>Objeto 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>Objeto 5</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>En el elemento Cambio de fase solido-liquido, la masa es ahora una inc&oacute;gnita (dejamos el factor de conversi&oacute;n de gramos):
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>HieloB
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>m @ g
+</p>
+</dd>
+<dt><strong>cf</strong></dt>
+<dd><p>79.7 @ cal/g
+</p>
+</dd>
+<dt><strong>Sentido</strong></dt>
+<dd><p>&gt;
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y en los elementos que representan al cobre y al agua del calor&iacute;metro, la temperatura final es ahora 0 C:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Cobre
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>105 @ g
+</p>
+</dd>
+<dt><strong>c</strong></dt>
+<dd><p>390
+</p>
+</dd>
+<dt><strong>Ti</strong></dt>
+<dd><p>23 @ C
+</p>
+</dd>
+<dt><strong>Tf</strong></dt>
+<dd><p>0 @ C
+</p>
+</dd>
+</dl>
+
+<br>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Agua
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>307 @ g
+</p>
+</dd>
+<dt><strong>c</strong></dt>
+<dd><p>4187
+</p>
+</dd>
+<dt><strong>Ti</strong></dt>
+<dd><p>23 @ C
+</p>
+</dd>
+<dt><strong>Tf</strong></dt>
+<dd><p>0 @ C
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Replanteado el problema, damos un clic en el icono de Resolver para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+m = 89.037 g ;
+Estado = success.
+
+</pre></div>
+
+<p>Por lo tanto, la temperatura final es de 0 C, derriti&eacute;ndose &uacute;nicamente 89 g de hielo.
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-13-_0028cal_0029.html#Ejemplo-13-_0028cal_0029" accesskey="n" rel="next">Ejemplo 13 (cal)</a>, Previous: <a href="Ejemplo-11-_0028cal_0029.html#Ejemplo-11-_0028cal_0029" accesskey="p" rel="prev">Ejemplo 11 (cal)</a>, Subir: <a href="Ejemplos-calorimetria.html#Ejemplos-calorimetria" accesskey="u" rel="up">Ejemplos calorimetria</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

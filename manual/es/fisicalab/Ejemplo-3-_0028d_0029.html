@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 3 (d)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 3 (d)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 3 (d)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-dinamica.html#Ejemplos-dinamica" rel="up" title="Ejemplos dinamica">
+<link href="Ejemplo-4-_0028d_0029.html#Ejemplo-4-_0028d_0029" rel="next" title="Ejemplo 4 (d)">
+<link href="Ejemplo-2-_0028d_0029.html#Ejemplo-2-_0028d_0029" rel="prev" title="Ejemplo 2 (d)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-3-_0028d_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-4-_0028d_0029.html#Ejemplo-4-_0028d_0029" accesskey="n" rel="next">Ejemplo 4 (d)</a>, Previous: <a href="Ejemplo-2-_0028d_0029.html#Ejemplo-2-_0028d_0029" accesskey="p" rel="prev">Ejemplo 2 (d)</a>, Subir: <a href="Ejemplos-dinamica.html#Ejemplos-dinamica" accesskey="u" rel="up">Ejemplos dinamica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-3-4"></a>
+<h3 class="section">11.3 Ejemplo 3</h3>
+
+<a name="index-Ejemplo-3-_0028d_0029"></a>
+
+<p>Dos bloques se encuentran amarrados como muestra la figura. Si el sistema parte del reposo, &iquest;cual es la aceleraci&oacute;n del sistema? &iquest;Que velocidad tienen los bloques despu&eacute;s de 0.5 segundos? &iquest;Que distancia han recorrido durante ese tiempo?
+</p>
+<div align="center"><img src="d-e3-1.jpg" alt="d-e3-1">
+</div>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el sistema de unidades SI, y borramos todo lo que contenga la Pizarra. Agregamos un elemento Sistema de referencia fijo, un elemento Bloque con movimiento vertical, un elemento Bloque con movimiento horizontal, y un elemento Relaci&oacute;n. Agregamos los elementos Fuerza necesarios para formar los dos diagramas de cuerpo libre correspondientes, tal y como se muestra en la siguiente imagen:
+</p>
+<div align="center"><img src="d-e3-2.jpg" alt="d-e3-2">
+</div>
+<p>En el elemento Sistema de referencia fijo el tiempo es un dato conocido, por lo tanto:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>g</strong></dt>
+<dd><p>9.81
+</p>
+</dd>
+<dt><strong>t</strong></dt>
+<dd><p>0.5
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el bloque sobre la mesa tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Bloque A
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>3
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>a_A
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vf_A
+</p>
+</dd>
+<dt><strong>d</strong></dt>
+<dd><p>d_A
+</p>
+</dd>
+<dt><strong>Relativo a</strong></dt>
+<dd><p>sf
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Donde el nombre es irrelevante, puesto que no se utiliza en otro elemento. Para la fuerza que corresponde a su normal:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>n_A
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para la fuerza que corresponde a la tensi&oacute;n de la cuerda:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>t
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>El bloque que cuelga de la cuerda queda entonces como:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Bloque B
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>5
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>a_B
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vf_B
+</p>
+</dd>
+<dt><strong>d</strong></dt>
+<dd><p>d_B
+</p>
+</dd>
+<dt><strong>Relativo a</strong></dt>
+<dd><p>sf
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Aqu&iacute; el nombre tambi&eacute;n es irrelevante. Y para la cuerda que lo sostiene:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>t
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>La misma inc&oacute;gnita que para la tensi&oacute;n de la cuerda aplicada al bloque sobre la mesa, puesto que es la misma cuerda. Para el elemento Relaci&oacute;n tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>a1</strong></dt>
+<dd><p>a_A
+</p>
+</dd>
+<dt><strong>a2</strong></dt>
+<dd><p>a_B
+</p>
+</dd>
+<dt><strong>z</strong></dt>
+<dd><p>-1
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Esto relaciona las magnitudes de las aceleraciones de los bloques. Que deben tener la misma magnitud, pero son de signo contrario por estar medidos en diferentes sistemas locales. Ingresados los datos, damos clic en el icono Resolver, para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+a_B = -6.131 m/s2 ;  vf_B = -3.066 m/s ;  d_B = -0.766 m ;
+a_A = 6.131 m/s2 ;  t = 18.394 N ;  vf_A = 3.066 m/s ;
+d_A = 0.766 m ;  n_A = 29.430 N ;
+Estado = success.
+
+</pre></div>
+
+<p>Como era de esperarse, las velocidades finales y las distancias recorridas, son las mismas para ambos bloques. Aunque los signos son contrarios debido a los diferentes sistemas de referencia local para cada bloque.
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-4-_0028d_0029.html#Ejemplo-4-_0028d_0029" accesskey="n" rel="next">Ejemplo 4 (d)</a>, Previous: <a href="Ejemplo-2-_0028d_0029.html#Ejemplo-2-_0028d_0029" accesskey="p" rel="prev">Ejemplo 2 (d)</a>, Subir: <a href="Ejemplos-dinamica.html#Ejemplos-dinamica" accesskey="u" rel="up">Ejemplos dinamica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>

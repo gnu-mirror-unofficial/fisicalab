@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2009, 2010, 2012, 2013, 2014 Germa'n A. Arias.
+
+Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License". -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>GNU F&iacute;sicaLab: Ejemplo 5 (d)</title>
+
+<meta name="description" content="GNU F&iacute;sicaLab: Ejemplo 5 (d)">
+<meta name="keywords" content="GNU F&iacute;sicaLab: Ejemplo 5 (d)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Indice.html#Indice" rel="index" title="Indice">
+<link href="index.html#SEC_Contents" rel="contents" title="&Iacute;ndice General">
+<link href="Ejemplos-dinamica.html#Ejemplos-dinamica" rel="up" title="Ejemplos dinamica">
+<link href="Ejemplo-6-_0028d_0029.html#Ejemplo-6-_0028d_0029" rel="next" title="Ejemplo 6 (d)">
+<link href="Ejemplo-4-_0028d_0029.html#Ejemplo-4-_0028d_0029" rel="prev" title="Ejemplo 4 (d)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Ejemplo-5-_0028d_0029"></a>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-6-_0028d_0029.html#Ejemplo-6-_0028d_0029" accesskey="n" rel="next">Ejemplo 6 (d)</a>, Previous: <a href="Ejemplo-4-_0028d_0029.html#Ejemplo-4-_0028d_0029" accesskey="p" rel="prev">Ejemplo 4 (d)</a>, Subir: <a href="Ejemplos-dinamica.html#Ejemplos-dinamica" accesskey="u" rel="up">Ejemplos dinamica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+<hr>
+<a name="Ejemplo-5-4"></a>
+<h3 class="section">11.5 Ejemplo 5</h3>
+
+<a name="index-Ejemplo-5-_0028d_0029"></a>
+
+<p>Un resorte con constante de 1300 N/m, que esta comprimido 8 cm, se encuentra entre dos bloques como muestra la figura. Uno de los bloques tiene una masa de 0.5 kilogramos, y el otro una de 0.7 kilogramos. Si el resorte se suelta repentinamente, y no hay fricci&oacute;n, &iquest;Con que velocidad dejan los bloques el resorte?
+</p>
+<div align="center"><img src="d-e5-1.jpg" alt="d-e5-1">
+</div>
+<br>
+<br>
+
+<p><strong>Soluci&oacute;n con F&iacute;sicaLab</strong>
+</p>
+<p>Seleccionamos el sistema de unidades SI, y borramos todo lo que contenga la Pizarra. Agregamos un elemento Sistema de referencia fijo, un elemento Resorte, dos elementos Bloque con movimiento horizontal, y un elemento Energ&iacute;a. Y agregamos los elementos Fuerza necesarios para formar los tres diagramas de cuerpo libre correspondientes, tal y como se muestra en la siguiente imagen:
+</p>
+<div align="center"><img src="d-e5-2.jpg" alt="d-e5-2">
+</div>
+<p>En el elemento Sistema de referencia fijo el tiempo es una inc&oacute;gnita:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>g</strong></dt>
+<dd><p>9.81
+</p>
+</dd>
+<dt><strong>t</strong></dt>
+<dd><p>t
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el bloque de la izquierda, que supondremos es el de 0.5 kilogramos, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>0.5
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>a_A
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vf_A
+</p>
+</dd>
+<dt><strong>d</strong></dt>
+<dd><p>d_A
+</p>
+</dd>
+<dt><strong>Relativo a</strong></dt>
+<dd><p>sf
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para la fuerza que corresponde a la normal, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>n_A
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para el bloque de la derecha, que supondremos es el de 0.7 kilogramos, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>m</strong></dt>
+<dd><p>0.7
+</p>
+</dd>
+<dt><strong>a</strong></dt>
+<dd><p>a_B
+</p>
+</dd>
+<dt><strong>vi</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>vf</strong></dt>
+<dd><p>vf_B
+</p>
+</dd>
+<dt><strong>d</strong></dt>
+<dd><p>d_B
+</p>
+</dd>
+<dt><strong>Relativo a</strong></dt>
+<dd><p>sf
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para su fuerza normal:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>n_B
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Para cada una de la fuerzas aplicadas en los bloques por el resorte, tenemos.
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>f
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Ahora, para para cada una de las fuerzas en el resorte, tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>f</strong></dt>
+<dd><p>f
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>La misma inc&oacute;gnita que para las fuerzas aplicadas en los bloques. Adem&aacute;s, el sentido de las fuerzas es alej&aacute;ndose del resorte, puesto que este se estirar&aacute;. Ahora, para el elemento Resorte tenemos:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Nombre</strong></dt>
+<dd><p>Resorte
+</p>
+</dd>
+<dt><strong>k</strong></dt>
+<dd><p>1300
+</p>
+</dd>
+<dt><strong>xi</strong></dt>
+<dd><p>-8 @ cm
+</p>
+</dd>
+<dt><strong>xf</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Y para el elemento Energ&iacute;a:
+</p>
+<br>
+
+<dl compact="compact">
+<dt><strong>Objeto 1</strong></dt>
+<dd><p>A
+</p>
+</dd>
+<dt><strong>Objeto 2</strong></dt>
+<dd><p>B
+</p>
+</dd>
+<dt><strong>Objeto 3</strong></dt>
+<dd><p>Resorte
+</p>
+</dd>
+<dt><strong>Objeto 4</strong></dt>
+<dd><p>0
+</p>
+</dd>
+<dt><strong>W</strong></dt>
+<dd><p>0
+</p>
+</dd>
+</dl>
+
+<br>
+
+<p>Puesto que el trabajo realizado por fuerzas externas es 0 (no hay fricci&oacute;n). Ingresados los datos, damos clic en el icono Resolver, para obtener la respuesta:
+</p>
+<div class="example">
+<pre class="example">
+t = 0.030 s ;  f = 52.000 N ;  n_B = 6.867 N ;
+a_A = -104.000 m/s2 ;  vf_A = -3.116 m/s ;
+d_A = -0.047 m ;  a_B = 74.286 m/s2 ; vf_B = 2.225 m/s ;
+d_B = 0.033 m ;  n_A = 4.905 N ;
+Estado = success.
+
+</pre></div>
+
+<p>Donde los datos que nos interesan son vf_A = -3.116 m/s y vf_B = 2.225 m/s.
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Siguiente: <a href="Ejemplo-6-_0028d_0029.html#Ejemplo-6-_0028d_0029" accesskey="n" rel="next">Ejemplo 6 (d)</a>, Previous: <a href="Ejemplo-4-_0028d_0029.html#Ejemplo-4-_0028d_0029" accesskey="p" rel="prev">Ejemplo 4 (d)</a>, Subir: <a href="Ejemplos-dinamica.html#Ejemplos-dinamica" accesskey="u" rel="up">Ejemplos dinamica</a> &nbsp; [<a href="index.html#SEC_Contents" title="&Iacute;ndice general" rel="contents">&Iacute;ndice general</a>][<a href="Indice.html#Indice" title="&Iacute;ndice" rel="index">&Iacute;ndice</a>]</p>
+</div>
+
+
+
+</body>
+</html>
