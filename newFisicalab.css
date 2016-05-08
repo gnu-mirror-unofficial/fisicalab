@@ -14,6 +14,13 @@ body {
     float:left;
 }
 
+a.translate:link, a.translate:visited {
+    color:yellow;
+    background-color:transparent;
+    text-decoration:none
+    margin: 4px 20px;
+}
+
 #subtitle {
     text-align: right;
     margin: 4px 20px;
