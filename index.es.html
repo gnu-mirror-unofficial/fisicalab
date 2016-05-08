@@ -1,319 +1,122 @@
-<!--#include virtual="/server/header.html" -->
-<!-- Parent-Version: 1.14 -->
-
-<!-- This is the template document for GNU web pages.  We use
-     server side includes (#include) for common elements, for
-     instance, the very first line of the file.  If you're reading
-     this in its expanded form, you can retrieve the original source,
-     with the SSI statements intact, from
-     http://web.cvs.savannah.gnu.org/viewvc/*checkout*/www/server/standards/boilerplate.html?root=www&content-type=text%2Fplain
--->
-
-<!-- Instructions for adapting this boilerplate to a new project: -->
-
-<!-- 1. In the line above starting "Parent-Version:", remove the
-        "$Revision...$" from around the revision number,
-        leaving just Parent-Version: and the number. -->
-
-<!-- 2. Replace "baz" with the name of your project.
-        You should be able to do this with search and replace;
-        making sure that the search is case insensitive and
-        that the case of the replacement matches the case
-        of the string found. In Emacs, query-replace will do this
-        when case-fold-search and case-replace are both non-nil
-        and both search and replacement string are given in lower case. -->
-
-<!-- 3. Of course update the actual information according to your project,
-        such as mailing lists, project locations, and maintainer name.  -->
-
-<!-- 4. You can use the patch-from-parent script to semi-automate
-        merging future changes to the boilerplate with your file:
-        http://web.cvs.savannah.gnu.org/viewvc/*checkout*/www/server/standards/patch-from-parent?root=www&content-type=text%2Fplain
-        -->
-
-<!-- If you would like to make sure your page validates with HTML5, that
-     would be a good thing.  To do that, change the first line from
-     to /server/html5-header.html before trying the validation.  Maybe
-     someday we will be able to make /server/header be HTML5.  -->
-
-<title>FisicaLab
+<!DOCTYPE html>
+<meta charset="UTF-8"> 
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="newFisicalab.css">
+  </head>
+  <body>
+    <title>FisicaLab
 - GNU Project - Free Software Foundation</title>
-<!--#include virtual="provide.translist" -->
-<!--#include virtual="/server/banner.html" -->
 
-<link rel="stylesheet" href="fisicalab.css" media="screen" />
-<link rel="stylesheet" href="combo.css" media="screen" />
+    <div id="header">
+      <img id="logo" border="0" src="images/fisicalab.png" alt="FisicaLab logo"
+	   style="width:70px;height:70px;">
+      <h1>GNU FísicaLab</h1>
+      <h3 id="subtitle">El software libre para la física</h3>
+    </div>
 
+    <nav>
+      <a class="button" href="http://www.gnu.org/software/fisicalab/index.es.html">Principal</a>
+      <a class="button" href="http://www.gnu.org/software/fisicalab/get.es.html">Descargar</a>
+      <a class="button" href="http://www.gnu.org/software/fisicalab/videos.es.html">Videos</a>
+      <a class="button" href="https://gnustep.wordpress.com/tag/fisicalab/">Noticias</a>
+      <a class="announce" href="https://gnustep.wordpress.com/2015/06/09/gnu-fisicalab-0-3-5/">Mayo 29, 2015: FisicaLab 0.3.5!</a>
+    </nav>
 
-<table border="0" style="width: 100%">
-<tbody>
-<tr>
-<td>
-<h2>GNU FísicaLab</h2>
-</td>
-<td>
-<a> <img src="images/fisicalab.png" alt="[ FisicaLab ]" width="90"
-/></a>
-</td>
-</tr>
-</tbody>
-</table>
+    <section>
+      <p> FísicaLab es una aplicación educativa para resolver problemas físicos. Su principal objetivo es permitirle al usuario enfocarse en los conceptos físicos, dejando a un lado los detalles matemáticos (de los que se encargara FísicaLab). Esto le permite al usuario familiarizarse con la física sin correr el riesgo de perderse en la matemática implicada. De esta forma, cuando el usuario gane confianza en la aplicación de los conceptos físicos, estará mejor preparado para resolver los problemas a mano (con papel y lápiz). La última versión de FísicaLab incluye los siguientes módulos:</p>
+      
+      <div class="image">
+	<a href="images/es/fisicalab.jpg"> <img src="images/en/fisicalab.jpg" 
+						alt="[ FisicaLab ]" width="300"
+						/></a>
+      </div>
+      
+      <ul>
+	<li>Cinemática de partículas en 2D.</li>
+	<li>Cinemática circular de partículas en 2D.</li>
+	<li>Estática de partículas en 2D.</li>
+	<li>Estática de cuerpos rígidos en 2D.</li>
+	<li>Dinámica de partículas en 2D.</li>
+	<li>Dinámica circular de partículas en 2D.</li>
+	<li>Calorimetría, gases ideales y dilatación.</li>
+      </ul>
+      
+      <p> Los problemas de estática y dinámica se establecen construyendo los diagramas de cuerpo libre de los objetos involucrados. Aunque FísicaLab es fácil e intuitivo, recomendamos leer primero la documentación. La cual puede consultarse en la opción de menú <em>Info -> Help</em> (o <em>FisicaLab -> Info -> Help</em>). También es posible obtener la documentación en formato PDF o consultarla en linea (ver abajo). </p>
+    </section>
+    
+    <section class="block_left" id="donate">
+      <h2>Donar al proyecto</h2>  
+      
+      <p>FísicaLab en un proyecto de software libre que conlleva bastante tiempo tanto en su desarrollo como en la preparación de la documentación correspondiente. Por lo que se agradece cualquier donación para poder continuar con su desarrollo. Las donaciones pueden realizarse a través de los siguientes servicios:</p>
+      
+      <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="SSJBNLHPYEB8L">
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+      </form>
+      <br>
+      <p class="center"><b>Bitcoin:</b>
+      <font size="1">1HQnoCPd676XHP2XdWyYuRER66gnsktNr7</font></p>
+    </section>
+    
+    <section class="block_left" id="doc">
+      <h2>Documentación</h2>
+      
+      <p>La documentación de FísicaLab esta disponible en <a class="customize" href="http://www.gnu.org/software/fisicalab/manual/es/fisicalab/index.html">linea</a> y como <a class="customize" href="http://www.gnu.org/software/fisicalab/manual/es/fisicalab.pdf">PDF</a>. Contiene una completa descripción de cada uno de los elementos de la interfaz gráfica, así como una gran cantidad de ejemplos que se resuelven paso a paso facilitando un aprendijaze rápido. </p>
+      
+      <img src="http://www.gnu.org/software/fisicalab/manual/es/fisicalab/sr-e12-1.jpg" border="0" alt="Un ejemplo de estática." style="width:150px;padding:0% 25%;">
+      
+    </section>
+    
+    <section class="block_left" id="community">
+      <h2>Comunidad</h2>
+      
+      <p>FísicaLab
+	dispone de las siguientes listas:</p>
+      
+      <ul>
+	<li><a class="customize"
+	       href="https://lists.gnu.org/mailman/listinfo/fisicalab-discusion">fisicalab-discusion</a> es
+	  la lista para los usuarios, donde pueden obtener ayuda sobre el uso e instalación de FísicaLab.</li>
+	<li><a class="customize" href="https://lists.gnu.org/mailman/listinfo/bug-fisicalab">bug-fisicalab</a>
+	  es usada para discutir aspectos de desarrollo, petición de mejoras y el reporte de errores.</li>
+      </ul>
+      
+      <p>Los anuncios sobre
+	FísicaLab
+	y otros paquetes GNU se publican en
+	<a class="customize" href="http://lists.gnu.org/mailman/listinfo/info-gnu">info-gnu</a>
+	(<a class="customize" href="http://lists.gnu.org/archive/html/info-gnu/">archivo</a>).</p>
+    </section>
 
-<div class="yui-g" id="fisicalab-nav-links">
-  <ul>
-    <li><a href="/software/fisicalab/index.es.html">FisicaLab</a></li>
-    <li><a href="/software/fisicalab/get.es.html">Descargar</a></li>
-    <li><a href="/software/fisicalab/videos.es.html">Videos</a></li>
-    <!-- <li><a href="/software/fisicalab/faq.es.html">FAQ</a></li> -->
-    <!-- <li><a href="/software/fisicalab/donate.es.html">Donar</a></li> -->
-    <!-- <li><a href="/software/fisicalab/campaign.es.html">Donar</a></li> -->
-    <!-- <li><a href="/software/fisicalab/manual/">Doc</a></li> -->
-  </ul>
-</div>
-
-<div class="announcement">
-<a href="https://gnustep.wordpress.com/2015/06/09/gnu-fisicalab-0-3-5/">Mayo 29, 2015: ¡FísicaLab 0.3.5!<a>
-</div>
-
-<p  class="odd-para">
-<a href="images/es/fisicalab.jpg"> <img src="images/es/fisicalab.jpg" 
-     alt="[ FisicaLab ]" width="250"
-/></a>
-FísicaLab es una aplicación educativa para resolver problemas físicos. Su principal objetivo es permitirle al usuario enfocarse en los conceptos físicos, dejando a un lado los detalles matemáticos (de los que se encargara FísicaLab). Esto le permite al usuario familiarizarse con la física sin correr el riesgo de perderse en la matemática implicada. De esta forma, cuando el usuario gane confianza en la aplicación de los conceptos físicos, estará mejor preparado para resolver los problemas a mano (con papel y lápiz). La última versión de FísicaLab incluye los siguientes módulos:</p>
-
-<ul>
-<li>Cinemática de partículas en 2D.</li>
-<li>Cinemática circular de partículas en 2D.</li>
-<li>Estática de partículas en 2D.</li>
-<li>Estática de cuerpos rígidos en 2D.</li>
-<li>Dinámica de partículas en 2D.</li>
-<li>Dinámica circular de partículas en 2D.</li>
-<li>Calorimetría, gases ideales y dilatación.</li>
-</ul>
-
-Los problemas de estática y dinámica se establecen construyendo los diagramas de cuerpo libre de los objetos involucrados. Aunque FísicaLab es fácil e intuitivo, recomendamos leer primero la documentación. La cual puede consultarse en la opción de menú <em>Info -> Help</em> (o <em>FisicaLab -> Info -> Help</em>). También es posible obtener la documentación en formato PDF o consultarla en linea (ver abajo).
-
-
-<h3 id="download">Obteniendo
- FísicaLab</h3>
-
-<p>El código fuente de
-FísicaLab
-puede encontrarse en el servidor principal ftp de GNU:
-<a href="http://ftp.gnu.org/gnu/fisicalab/">http://ftp.gnu.org/gnu/fisicalab/</a>
-(vía HTTP) y
-<a href="ftp://ftp.gnu.org/gnu/fisicalab/">ftp://ftp.gnu.org/gnu/fisicalab/</a>
-(vía FTP).  También puede encontrarse en los
-<a href="/prep/ftp.html">espejos GNU</a>;
-por favor
-<a href="http://ftpmirror.gnu.org/fisicalab/">utilice
-un espejo</a> de ser posible.</p>
-
-<p>
-Hay binarios disponibles y otras formas de <a href="get.es.html">Descargar y Obtener</a> FísicaLab.
-</p>
-
-<h3 id="donate">Donar al proyecto</h3>
-
-<p>
-FísicaLab en un proyecto de software libre que conlleva bastante tiempo tanto en su desarrollo como en la preparación de la documentación correspondiente. Por lo que se agradece cualquier donación para poder continuar con su desarrollo. Las donaciones pueden realizarse a través de los siguientes servicios:
-</p>
-
-<table border="0" style="width: 100%">
-<tbody>
-<tr>
-<td>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="SSJBNLHPYEB8L">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
-</td>
-<td>
-<p>Bitcoin:</p>
-<p> <font size="1">1HQnoCPd676XHP2XdWyYuRER66gnsktNr7</font></p>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-<h3 id="documentation">Documentación</h3>
-
-<p>La documentación de FísicaLab esta disponible en <a href="http://www.gnu.org/software/fisicalab/manual/es/fisicalab/index.html">linea</a> y como <a href="http://www.gnu.org/software/fisicalab/manual/es/fisicalab.pdf">PDF</a>.
-
-<!--
-<p><a href="manual/">Documentation for
-FisicaLab</a>
-is available online, as
-is <a href="/manual/">documentation for most GNU software</a>.  You may
-also find more information about
-FisicaLab
-by running
-<em>info&nbsp;fisicalab</em>
-or
-<em>man&nbsp;fisicalab</em>,
-or by looking at
-<em>/usr/share/doc/fisicalab/</em>,
-<em>/usr/local/doc/fisicalab/</em>,
-or similar directories on your system.  A brief summary is available by
-running <em>fisicalab&nbsp;--help</em>.</p>
--->
-
-
-<h3 id="mail">Listas de correo</h3>
-
-<p>FísicaLab
-dispone de las siguientes listas:</p>
-
-<ul>
-<li><a
-href="https://lists.gnu.org/mailman/listinfo/fisicalab-discusion">fisicalab-discusion</a> es
-la lista para los usuarios, donde pueden obtener ayuda sobre el uso e instalación de FísicaLab.</li>
-<li><a href="https://lists.gnu.org/mailman/listinfo/bug-fisicalab">bug-fisicalab</a>
-es usada para discutir aspectos de desarrollo, petición de mejoras y el reporte de errores.</li>
-</ul>
-
-<p>Los anuncios sobre
-FísicaLab
-y otros paquetes GNU se publican en
-<a href="http://lists.gnu.org/mailman/listinfo/info-gnu">info-gnu</a>
-(<a href="http://lists.gnu.org/archive/html/info-gnu/">archivo</a>).</p>
-
-
-<h3 id="contribute">Participar</h3>
-
-<p>El desarrollo de
-FísicaLab,
-y de GNU en general, es un esfuerzo voluntario, y usted puede contribuir.  Para mayor
-información, por favor lea <a href="/help/">Como ayudar a GNU</a>.  Si usted quiere
-involucrarse, le recomendamos unirse a la lista de discusión (ver arriba).</p>
-
-
-<dl>
-<!--
-<dt>Test releases</dt>
-
-<dd>Trying the latest test release (when available) is always
-appreciated.  Test releases of
-FisicaLab
-can be found at
-<a href="http://alpha.gnu.org/gnu/fisicalab/">http://alpha.gnu.org/gnu/fisicalab/</a>
-(via HTTP) and
-<a href="ftp://alpha.gnu.org/gnu/fisicalab/">ftp://alpha.gnu.org/gnu/fisicalab/</a>
-(via FTP).</dd>
--->
-
-<dt>Desarrollo</dt>
-
-<dd>Para las fuentes en desarrollo, errores reportados, y demás
-información, por favor visite
-<a href="http://savannah.gnu.org/projects/fisicalab/">Página del proyecto FísicaLab</a>
-en <a href="http://savannah.gnu.org">savannah.gnu.org</a>.</dd>
-
-<!--
-<dt>Translating
-  FisicaLab</dt>
-
-<dd>To translate
-FisicaLab's
-messages into other languages, please see the <a
-href="http://translationproject.org/domain/fisicalab.html">Translation Project
-page for
-FisicaLab</a>.
-If you have a new translation of the message strings,
-or updates to the existing strings, please have the changes made in this
-repository.  Only translations from this site will be incorporated into
-FisicaLab.
-For more information, see the <a
-href="http://translationproject.org/html/welcome.html">Translation
-Project</a>.</dd>
--->
-
-<dt>Desarrollador</dt>
-
-<dd>FísicaLab
-es mantenido y desarrollado por
-Germ&aacute;n Arias.
-Por favor use la lista de correo si desea contactarlo.</dd>
-
-
-</dl>
-
-
-<h3 id="license">Licencia</h3>
-
-<p>FísicaLab
-es software libre; usted puede redistribuir y/o modificar este bajo los
-términos de la <a href="http://www.gnu.org/licenses/gpl.html"
-rel="license">GNU General Public License</a> publicada por la Free
-Software Foundation; en su versión&nbsp;3, o (a su
-opción) cualquier versión posterior.</p>
-
-</div><!-- for id="content", starts in the include above -->
-
-              <!-- begin server/footer-text.html -->
-<!--#include virtual="/server/footer.html" -->
-<div id="footer">
-<div class="unprintable">
-
-<p>Please send general FSF &amp; GNU inquiries to
-<a href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.
-There are also <a href="/contact/">other ways to contact</a>
-the FSF.  Broken links and other corrections or suggestions can be sent
-to <a href="mailto:bug-baz@gnu.org">&lt;bug-baz@gnu.org&gt;</a>.</p>
-
-<p><!-- TRANSLATORS: Ignore the original text in this paragraph,
-        replace it with the translation of these two:
-
-        We work hard and do our best to provide accurate, good quality
-        translations.  However, we are not exempt from imperfection.
-        Please send your comments and general suggestions in this regard
-        to <a href="mailto:web-translators@gnu.org">
-        &lt;web-translators@gnu.org&gt;</a>.</p>
-
-        <p>For information on coordinating and submitting translations of
-        our web pages, see <a
-        href="/server/standards/README.translations.html">Translations
-        README</a>. -->
-Please see the <a
-href="/server/standards/README.translations.html">Translations
-README</a> for information on coordinating and submitting translations
-of this article.</p>
-</div>
-
-<!-- Regarding copyright, in general, standalone pages (as opposed to
-     files generated as part of manuals) on the GNU web server should
-     be under CC BY-ND 3.0 US.  Please do NOT change or remove this
-     without talking with the webmasters or licensing team first.
-     Please make sure the copyright date is consistent with the
-     document.  For web pages, it is ok to list just the latest year the
-     document was modified, or published.
-     
-     If you wish to list earlier years, that is ok too.
-     Either "2001, 2002, 2003" or "2001-2003" are ok for specifying
-     years, as long as each year in the range is in fact a copyrightable
-     year, i.e., a year in which the document was published (including
-     being publicly visible on the web or in a revision control system).
-     
-     There is more detail about copyright years in the GNU Maintainers
-     Information document, www.gnu.org/prep/maintain. -->
-
-<p>Copyright &copy; 2014 Free Software Foundation, Inc.</p>
-
-<p>This page is licensed under a <a rel="license"
-href="http://creativecommons.org/licenses/by-nd/3.0/us/">Creative
-Commons Attribution-NoDerivs 3.0 United States License</a>.</p>
-
-<!--#include virtual="/server/bottom-notes.html" -->
-
-<p></p><p class="unprintable">Updated:
-<!-- timestamp start -->
-$Date: 2016/02/16 06:16:53 $
-<!-- timestamp end -->
-</p>
-</div>
-</div>
-</body>
+    <section id="project">
+      <h2>Proyecto</h2>
+    
+      <p>Para las fuentes en desarrollo, errores reportados, y demás
+	información, por favor visite la
+	<a class="customize" href="http://savannah.gnu.org/projects/fisicalab/">Página del proyecto FísicaLab</a>
+	en <a class="customize" href="http://savannah.gnu.org">savannah.gnu.org</a>. El autor y desarrollador de FísicaLab es
+	<strong>Germ&aacute;n Arias</strong>.
+	Por favor use la lista de correo si desea contactarlo.</p>
+    </section>
+    
+    <section id="license">
+    <h2>Licencia</h2>
+    
+    <p>FísicaLab
+      es software libre; usted puede redistribuir y/o modificar este bajo los
+      términos de la <a class="customize" href="http://www.gnu.org/licenses/gpl.html"
+			rel="license">GNU General Public License</a> publicada por la Free
+      Software Foundation; en su versión&nbsp;3, o (a su
+      opción) cualquier versión posterior.</p>
+    </section>
+    
+    <p></p><p class="center">Updated:
+      <!-- timestamp start -->
+      $Date: 2016/05/08 06:23:37 $
+      <!-- timestamp end -->
+    </p>
+  </body>
 </html>

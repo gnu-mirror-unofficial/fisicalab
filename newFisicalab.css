@@ -1,0 +1,139 @@
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#header {
+    background-color:indigo;
+    color:white;
+    text-align:left;
+    padding:5px;
+}
+
+#logo {
+    margin:8px 10px;
+    float:left;
+}
+
+#subtitle {
+    text-align: right;
+    margin: 4px 20px;
+}
+
+a.button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+a.button:hover {
+    background-color: orange;
+}
+
+a.announce {
+    background-color: teal;
+    color: yellow;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+a.announce:hover {
+    color: green;
+    background-color: orange;
+}
+
+h2 {
+    color: seashell;
+}
+
+section {
+    padding:10px;
+    margin: 10px;
+}
+
+section.block {
+    width: 27%;
+    height: 370px;
+}
+
+section.block_left {
+    float: left;
+    width: 27%;
+    min-height: 370px;
+}
+
+div.image {
+    float:right;
+    padding:10px;
+}
+
+p.center {
+    text-align: center;
+}
+
+form.paypal {
+    text-align: center;
+}
+
+a.customize:link {
+    color:yellow;
+    background-color:transparent;
+    text-decoration:none
+}
+
+a.customize:visited {
+    color:lawngreen;
+    background-color:transparent;
+    text-decoration:none
+}
+
+#donate {
+    background-color: orangered;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 16px 16px 16px 16px;
+}
+
+#doc {
+    background-color: teal;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 16px 16px 16px 16px;
+}
+
+#community {
+    background-color: slateblue;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 16px 16px 16px 16px;
+}
+
+#project {
+    background-color: brown;
+    color: white;
+    clear: left;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 16px 16px 16px 16px;
+}
+
+#license {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 16px 16px 16px 16px;  
+}
+
+#item {
+    margin: 12px 5px;
+}
+
+#movie {
+    width: 80%;
+}
