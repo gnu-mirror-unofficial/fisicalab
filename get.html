@@ -1,192 +1,92 @@
-<!--#include virtual="/server/header.html" -->
-<!-- Parent-Version: 1.14 -->
+<!DOCTYPE html>
+<meta charset="UTF-8"> 
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="newFisicalab.css">
+  </head>
 
-<!-- This is the template document for GNU web pages.  We use
-     server side includes (#include) for common elements, for
-     instance, the very first line of the file.  If you're reading
-     this in its expanded form, you can retrieve the original source,
-     with the SSI statements intact, from
-     http://web.cvs.savannah.gnu.org/viewvc/*checkout*/www/server/standards/boilerplate.html?root=www&content-type=text%2Fplain
--->
+  <body>
+    <title>FisicaLab
+      - GNU Project - Free Software Foundation</title>
 
-<!-- Instructions for adapting this boilerplate to a new project: -->
+    <div id="header">
+      <h2>Obtaining GNU FisicaLab</h2>
+    </div>
 
-<!-- 1. In the line above starting "Parent-Version:", remove the
-        "$Revision...$" from around the revision number,
-        leaving just Parent-Version: and the number. -->
+    <section>
+      <h3>Downloading the Source Code</h3>
 
-<!-- 2. Replace "baz" with the name of your project.
-        You should be able to do this with search and replace;
-        making sure that the search is case insensitive and
-        that the case of the replacement matches the case
-        of the string found. In Emacs, query-replace will do this
-        when case-fold-search and case-replace are both non-nil
-        and both search and replacement string are given in lower case. -->
+      <p>The source tarball of
+	FisicaLab
+	can be found on the main GNU ftp server:
+	<a href="http://ftp.gnu.org/gnu/fisicalab/">http://ftp.gnu.org/gnu/fisicalab/</a>
+	(via HTTP) and
+	<a href="ftp://ftp.gnu.org/gnu/fisicalab/">ftp://ftp.gnu.org/gnu/fisicalab/</a>
+	(via FTP).  It can also be found
+	on the <a href="/prep/ftp.html">GNU mirrors</a>;
+	please
+	<a href="http://ftpmirror.gnu.org/fisicalab/">use
+	  a mirror</a> if possible.</p>
+      
+      <h3>Binaries</h3>
+      
+      <ul>
+	<li id="item">Universal binary for GNU/Linux i686 distributions
+	  <ul>
+	    <li id="item"><a
+		   href="http://ftpmirror.gnu.org/fisicalab/binaries/fisicalab-0.3.5-gnulinux-i686.tar.gz">fisicalab-0.3.5-gnulinux-i686.tar.gz</a>
+            </li>
+	  </ul>
+	</li>
+	<li id="item">Universal binary for GNU/Linux x86_64 distributions
+	  <ul>
+	    <li id="item"><a
+		   href="http://ftpmirror.gnu.org/fisicalab/binaries/fisicalab-0.3.5-gnulinux-x86_64.tar.gz">fisicalab-0.3.5-gnulinux-x86_64.tar.gz</a>
+            </li>
+	  </ul>
+	</li>
+	<li id="item">GNU/Linux and BSD Systems
+	  <ul>
+	    <li id="item">Executable versions of FisicaLab for GNU/Linux and BSD systems are provided by the individual distributions. Distributions known to package FisicaLab include: Gentoo and OpenBSD. These packages are created by volunteers. The delay between a FisicaLab source release and the availability of a package for a particular GNU/Linux or BSD distribution varies. The FisicaLab project has no control over that process.</li>
+	  </ul>
+	</li>
+	<li id="item">Unofficial packages for Debian and Ubuntu
+	  <ul>
+	    <li id="item">Add the corresponding <a href="http://coyote.octets.fr/pub/gnustep/packages/">Unofficial Repository</a> (the available version of fisicalab isn't up to date)</li>
+	  </ul>
+	</li>
+	<li id="item">MS Windows 
+	  <ul>
+	    <li id="item">
+	      <a href="http://ftpmirror.gnu.org/fisicalab/windows/fisicalab-0.3.5-setup.exe">FisicaLab 0.3.5 Windows Installer</a>. This package is self contained, so you don't need install any third party packages. If you have a previous version of FisicaLab, uninstall first all the related packages before install this new. Keep in mind that in Windows systems you can't write the character @, needed to use conversion factors, with the combination Alt-64. You should write this character with the key Alt or Shift in combination with another alfanumeric key.
+	    </li>
+	  </ul>
+	</li>
+	<li id="item">Source tarball for Mac OS X
+	  <ul>
+	    <li id="item"><a
+		   href="http://ftpmirror.gnu.org/fisicalab/mac/fisicalab-mac-0.3.5-1.tar.gz">fisicalab-mac-0.3.5-1.tar.gz</a>. See the file INSTALL for instructions.
+            </li>
+	  </ul>
+	</li>
+      </ul>
+    </section>
 
-<!-- 3. Of course update the actual information according to your project,
-        such as mailing lists, project locations, and maintainer name.  -->
+    <section id="license">
+      <h3>Licensing</h3>
 
-<!-- 4. You can use the patch-from-parent script to semi-automate
-        merging future changes to the boilerplate with your file:
-        http://web.cvs.savannah.gnu.org/viewvc/*checkout*/www/server/standards/patch-from-parent?root=www&content-type=text%2Fplain
-        -->
-
-<!-- If you would like to make sure your page validates with HTML5, that
-     would be a good thing.  To do that, change the first line from
-     to /server/html5-header.html before trying the validation.  Maybe
-     someday we will be able to make /server/header be HTML5.  -->
-
-<title>FisicaLab
-- GNU Project - Free Software Foundation</title>
-<!--#include virtual="provide.translist" -->
-<!--#include virtual="/server/banner.html" -->
-
-<link rel="stylesheet" href="fisicalab.css" media="screen" />
-
-<h2>Obtaining GNU FisicaLab</h2>
-
-<div class="yui-g" id="fisicalab-nav-links">
-  <ul>
-    <li><a href="/software/fisicalab/">FisicaLab Home</a></li>
-    <li><a href="/software/fisicalab/get.html">Download</a></li>
-    <li><a href="/software/fisicalab/videos.html">Videos</a></li>
-    <!-- <li><a href="/software/fisicalab/faq.html">FAQ</a></li> -->
-    <!-- <li><a href="/software/fisicalab/donate.html">Donate</a></li> -->
-    <!-- <li><a href="/software/fisicalab/campaign.html">Donate</a></li> -->
-    <!-- <li><a href="/software/fisicalab/manual/">Doc</a></li> -->
-  </ul>
-</div>
-
-<h3 id="source">Downloading the Source Code</h3>
-
-<p>The source tarball of
-FisicaLab
-can be found on the main GNU ftp server:
-<a href="http://ftp.gnu.org/gnu/fisicalab/">http://ftp.gnu.org/gnu/fisicalab/</a>
-(via HTTP) and
-<a href="ftp://ftp.gnu.org/gnu/fisicalab/">ftp://ftp.gnu.org/gnu/fisicalab/</a>
-(via FTP).  It can also be found
-on the <a href="/prep/ftp.html">GNU mirrors</a>;
-please
-<a href="http://ftpmirror.gnu.org/fisicalab/">use
-a mirror</a> if possible.</p>
-
-<h3 id="binaries">Binaries</h3>
-
-<ul>
-  <li>Universal binary for GNU/Linux i686 distributions
-    <ul>
-      <li><a
-        href="http://ftpmirror.gnu.org/fisicalab/binaries/fisicalab-0.3.5-gnulinux-i686.tar.gz">fisicalab-0.3.5-gnulinux-i686.tar.gz</a>
-        </li>
-    </ul>
-  </li>
-  <li>Universal binary for GNU/Linux x86_64 distributions
-    <ul>
-      <li><a
-        href="http://ftpmirror.gnu.org/fisicalab/binaries/fisicalab-0.3.5-gnulinux-x86_64.tar.gz">fisicalab-0.3.5-gnulinux-x86_64.tar.gz</a>
-        </li>
-    </ul>
-  </li>
-  <li>GNU/Linux and BSD Systems
-    <ul>
-      <li>Executable versions of FisicaLab for GNU/Linux and BSD systems are provided by the individual distributions. Distributions known to package FisicaLab include: Gentoo and OpenBSD. These packages are created by volunteers. The delay between a FisicaLab source release and the availability of a package for a particular GNU/Linux or BSD distribution varies. The FisicaLab project has no control over that process.</li>
-    </ul>
-  </li>
-  <li>Unofficial packages for Debian and Ubuntu
-    <ul>
-      <li>Add the corresponding <a href="http://coyote.octets.fr/pub/gnustep/packages/">Unofficial Repository</a> (the available version of fisicalab isn't up to date)</li>
-    </ul>
-  </li>
-  <li>MS Windows 
-    <ul>
-      <li>
-	<a href="http://ftpmirror.gnu.org/fisicalab/windows/fisicalab-0.3.5-setup.exe">FisicaLab 0.3.5 Windows Installer</a>. This package is self contained, so you don't need install any third party packages. If you have a previous version of FisicaLab, uninstall first all the related packages before install this new. Keep in mind that in Windows systems you can't write the character @, needed to use conversion factors, with the combination Alt-64. You should write this character with the key Alt or Shift in combination with another alfanumeric key.
-      </li>
-    </ul>
-  </li>
-  <li>Source tarball for Mac OS X
-    <ul>
-      <li><a
-        href="http://ftpmirror.gnu.org/fisicalab/mac/fisicalab-mac-0.3.5-1.tar.gz">fisicalab-mac-0.3.5-1.tar.gz</a>. See the file INSTALL for instructions.
-        </li>
-    </ul>
-  </li>
-</ul>
-
-
-<h3 id="license">Licensing</h3>
-
-<p>FisicaLab
-is free software; you can redistribute it and/or modify it under the
-terms of the <a href="http://www.gnu.org/licenses/gpl.html"
-rel="license">GNU General Public License</a> as published by the Free
-Software Foundation; either version&nbsp;3 of the License, or (at your
-option) any later version.</p>
-
-</div><!-- for id="content", starts in the include above -->
-
-              <!-- begin server/footer-text.html -->
-<!--#include virtual="/server/footer.html" -->
-<div id="footer">
-<div class="unprintable">
-
-<p>Please send general FSF &amp; GNU inquiries to
-<a href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.
-There are also <a href="/contact/">other ways to contact</a>
-the FSF.  Broken links and other corrections or suggestions can be sent
-to <a href="mailto:bug-baz@gnu.org">&lt;bug-baz@gnu.org&gt;</a>.</p>
-
-<p><!-- TRANSLATORS: Ignore the original text in this paragraph,
-        replace it with the translation of these two:
-
-        We work hard and do our best to provide accurate, good quality
-        translations.  However, we are not exempt from imperfection.
-        Please send your comments and general suggestions in this regard
-        to <a href="mailto:web-translators@gnu.org">
-        &lt;web-translators@gnu.org&gt;</a>.</p>
-
-        <p>For information on coordinating and submitting translations of
-        our web pages, see <a
-        href="/server/standards/README.translations.html">Translations
-        README</a>. -->
-Please see the <a
-href="/server/standards/README.translations.html">Translations
-README</a> for information on coordinating and submitting translations
-of this article.</p>
-</div>
-
-<!-- Regarding copyright, in general, standalone pages (as opposed to
-     files generated as part of manuals) on the GNU web server should
-     be under CC BY-ND 3.0 US.  Please do NOT change or remove this
-     without talking with the webmasters or licensing team first.
-     Please make sure the copyright date is consistent with the
-     document.  For web pages, it is ok to list just the latest year the
-     document was modified, or published.
-     
-     If you wish to list earlier years, that is ok too.
-     Either "2001, 2002, 2003" or "2001-2003" are ok for specifying
-     years, as long as each year in the range is in fact a copyrightable
-     year, i.e., a year in which the document was published (including
-     being publicly visible on the web or in a revision control system).
-     
-     There is more detail about copyright years in the GNU Maintainers
-     Information document, www.gnu.org/prep/maintain. -->
-
-<p>Copyright &copy; 2014 Free Software Foundation, Inc.</p>
-
-<p>This page is licensed under a <a rel="license"
-href="http://creativecommons.org/licenses/by-nd/3.0/us/">Creative
-Commons Attribution-NoDerivs 3.0 United States License</a>.</p>
-
-<!--#include virtual="/server/bottom-notes.html" -->
-
-<p></p><p class="unprintable">Updated:
-<!-- timestamp start -->
-$Date: 2015/06/02 01:48:53 $
-<!-- timestamp end -->
-</p>
-</div>
-</div>
-</body>
+      <p>FisicaLab
+	is free software; you can redistribute it and/or modify it under the
+	terms of the <a class="customize" href="http://www.gnu.org/licenses/gpl.html"
+			rel="license">GNU General Public License</a> as published by the Free
+	Software Foundation; either version&nbsp;3 of the License, or (at your
+	option) any later version.</p>
+    </section>
+      
+    <p></p><p class="center">Updated:
+      <!-- timestamp start -->
+      $Date: 2016/05/08 07:09:58 $
+      <!-- timestamp end -->
+    </p>
+  </body>
 </html>
